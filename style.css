@@ -13,6 +13,10 @@ header {
     background: repeating-linear-gradient(to bottom, rgba(255, 255, 255, 1) 0cm, rgba(255, 255, 255, 1) 0.15cm, rgba(225, 225, 225, 1) 0.15cm, rgba(230, 230, 230, 1) 0.2cm);
 }
 
+button {
+    cursor: pointer;
+}
+
 main {
     margin-top: 2cm;
 }
@@ -117,4 +121,29 @@ main {
 #headtop-chosen::after {
     background: rgba(185, 255, 255, 0.5);
     top: calc(-100% - 0.1cm);
+}
+
+footer {
+    padding: 1cm 0.5cm;
+    font-size: 0.75rem;
+}
+
+footer a {
+    color: black;
+    text-decoration: none;
+}
+
+#foot-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#foot-nav li, #foot-nav ul {
+    list-style: none;
+    text-indent: -1cm;
+}
+
+#foot-nav ul {
+    margin-top: -0.25cm;
 }
