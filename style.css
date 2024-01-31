@@ -124,6 +124,7 @@ main {
 }
 
 footer {
+    cursor: alias;
     padding: 1cm 0.5cm;
     font-size: 0.75rem;
 }
