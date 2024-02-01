@@ -60,7 +60,6 @@ function copy(text="") {
     t.type = "text";
     t.id = uuid(1, 1).toString();
     t.value = text;
-    debugger;
     t.select();
     t.setSelectionRange(0, 999999999999999);
     navigator.clipboard.writeText(t.value);
