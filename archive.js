@@ -6,6 +6,7 @@ var archive = [
     "meta": {
       "description": "This is a test article.",
       "author": "Gabriel Lazaro",
+      "uuid": "5FC9FE74-2A7A-2810-20BA-3FCC270F68F3",
       "tags": ["Test", "Placeholder"],
       "image": {
         "source": null,
