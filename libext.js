@@ -55,6 +55,17 @@ function regUUID(id, description = "Unknown Item") {
     }
 }
 
+function copy(text="") {
+    let t = document.createElement("textarea");
+    t.id = uuid(1, 1);
+    document.getElementById(t.id.toString()).value = text;
+    t.select();
+    t.setSelectionRange(0, 999999999999999);
+    navigator.clipboard.writeText(t.value);
+    t.remove();
+    return text;
+}
+
 // Relies of UUID Function Above
 // Creates a Tracked Object
 class object {
