@@ -56,9 +56,11 @@ function regUUID(id, description = "Unknown Item") {
 }
 
 function copy(text="") {
-    let t = document.createElement("textarea");
-    t.id = uuid(1, 1);
-    document.getElementById(t.id.toString()).value = text;
+    let t = document.createElement("input");
+    t.type = "text";
+    t.id = uuid(1, 1).toString();
+    t.value = text;
+    debugger;
     t.select();
     t.setSelectionRange(0, 999999999999999);
     navigator.clipboard.writeText(t.value);
