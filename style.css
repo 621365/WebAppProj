@@ -14,7 +14,7 @@ header {
 }
 
 button {
-    cursor: context-menu;
+    cursor: default;
 }
 
 main {
