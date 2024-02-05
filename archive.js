@@ -55,7 +55,7 @@ function retrieve(title) {
 
   // Search
   let j = 1;
-  for (var i = 0; Ii < archive.length; i++) {
+  for (var i = 0; i < archive.length; i++) {
     if (archive[i].title == title) { results[j] = archive[i]; j++; }
   }
 
