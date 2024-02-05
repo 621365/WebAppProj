@@ -55,8 +55,8 @@ function retrieve(title) {
 
   // Search
   let j = 1;
-  for (var i = 0; I < archive.length; i++) {
-    if (article[i].title == title) { results[j] = article[i]; j++; }
+  for (var i = 0; Ii < archive.length; i++) {
+    if (archive[i].title == title) { results[j] = archive[i]; j++; }
   }
 
   // Return Based on Duplicates
