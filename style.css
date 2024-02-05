@@ -22,12 +22,32 @@ main {
 }
 
 select, form, option, label {
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, system-ui, sans-serif
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, system-ui, sans-serif;
 }
 
-select {
+select, input {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, system-ui, sans-serif;
     border-radius: 0.1cm;
+    vertical-align: middle;
+    padding: 0.05cm 0.1cm;
+    border: solid black 0.01cm;
+    cursor: pointer;
     background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(240, 240, 240, 1) 50%, rgba(230, 230, 230, 1) 50%, rgba(250, 250, 250, 1) 100%);
+}
+
+option {
+    cursor: pointer;
+}
+
+input {
+    padding: 0.09cm 0.1cm;
+    margin: 0;
+    vertical-align: inherit;
+    font-size: 0.8rem;
+}
+
+label {
+    cursor: text;
 }
 
 #headlow {
@@ -166,8 +186,9 @@ footer a {
 }
 
 #highlight {
-    max-width: 100%;
-
+    max-width: 30cm;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #highlight img {
@@ -179,4 +200,12 @@ footer a {
 #highlight div {
     display: inline-block;
     vertical-align: top;
+}
+
+#main-grid {
+    display: grid;
+}
+
+.card {
+    
 }
