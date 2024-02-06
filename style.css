@@ -311,6 +311,7 @@ footer a {
     font-family: Helvetica, sans, sans-serif;
     font-weight: bold;
     cursor: pointer;
+    text-decoration: none;
     display: block;
     padding: 0.5rem 1rem;
     margin: 0.1rem;
@@ -319,15 +320,18 @@ footer a {
 }
 
 .skipper a:focus {
+    text-shadow: 0 -0.05rem black;
     outline: none;
 }
 
 .skipper a:hover {
     background: linear-gradient(#FFFFFF80 0%, #6F6F8880 50%, #55555580 50%, #9999BB80 100%);
+    text-shadow: 0 -0.05rem black;
 }
 
 .skipper a:active {
     background: linear-gradient(#DDDDDDA0 0%, #3F3F55A0 50%, #333333A0 50%, #666699A0 100%);
+    text-shadow: 0 -0.05rem black;
 }
 
 .skipper-text {
