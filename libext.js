@@ -95,3 +95,5 @@ class winNT extends object {
     }
 }
 
+// Imported From Placehorsey, which was in turn imported from StackOverflow
+function GET(q,s){s=(s)?s:window.location.search;let r=new RegExp("&"+q+"=([^&]*)","i");return (s=s.replace(/^\?/,"&").match(r))?s=s[1]:s="";}
