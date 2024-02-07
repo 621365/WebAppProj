@@ -89,11 +89,19 @@ label {
     .card img {
         min-width: 100%;
     }
+
+    .headlow {
+        margin: 0 1cm;
+    }
 }
 
 @media (min-width: 15cm) {
     .card img {
         min-width: 50%;
+    }
+
+    .headlow {
+        margin: 0 0;
     }
 }
 
