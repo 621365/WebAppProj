@@ -7,7 +7,6 @@
     <meta property="og:description description" content="Untitled Web Application Project">
     <script src="./libext.js"></script>
     <script src="./archive.js"></script>
-    <script src="./viewer.js"></script>
     <link rel="stylesheet" type="text/css" href="./style.css">
   </head>
   <body>
@@ -193,6 +192,8 @@
       <div id="foot-cop">
         Copyright © 2024 Unnamed Entity
       </div>
+      <!--This script loads at the end of the website because it makes references to parts of this site that need to load before the script can reference the parts of the website. -->
+      <script src="./viewer.js"></script>
     </footer>
   </body>
 </html>
