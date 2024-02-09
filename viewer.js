@@ -25,6 +25,7 @@ if (error.real) {
   if (typeof data.length == "undefined") {
     document.getElementById("title").innerHTML = data.title;
     document.title = data.title + " - " + data.meta.author;
-    document.getElementById("words").innerHTML = data.description
+    document.getElementById("words").innerHTML = data.content;
+    document.getElementById("foot-desc").innerHTML = data.meta.description;
   }
 }
