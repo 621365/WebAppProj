@@ -10,7 +10,8 @@ var archive = [
       "tags": ["Test", "Placeholder"],
       "image": {
         "source": null,
-        "alt": "No Image Shown"
+        "alt": "No Image Shown",
+        "type": [null]
       },
       "timestamp": {
           "year": 2024,
