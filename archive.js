@@ -4,6 +4,7 @@ var archive = [
     "title": "Test Article",
     "content": "This is a test article. This holds the template for which all articles will be made.",
     "meta": {
+      "error": true,
       "description": "This is a test article.",
       "author": "Gabriel Lazaro",
       "uuid": "5FC9FE74-2A7A-2810-20BA-3FCC270F68F3",
@@ -35,6 +36,7 @@ function retrieve(title) {
     "title": "Duplicate Articles",
     "content": "There is more than one article with the name that you are searching for. Please select one of the articles below to view it.<br><br>",
     "meta": {
+      "error": true,
       "description": "This is a test article.",
       "author": "Gabriel Lazaro",
       "tags": ["Error", "Duplicate"],
