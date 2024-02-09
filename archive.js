@@ -55,11 +55,36 @@ function retrieve(title) {
   }];
 
   // Search
-  let j = 1;
+  let j = 0;
   for (var i = 0; i < archive.length; i++) {
     if (archive[i].title == title) { results[j] = archive[i]; j++; }
   }
 
+  if (!j) {
+    results = [{
+      "title": "No Such Article",
+      "content": "There is no such article with the title specified.",
+      "meta": {
+        "description": "This is a test article.",
+        "author": "Gabriel Lazaro",
+        "tags": ["Error", "Duplicate"],
+        "image": {
+          "source": null,
+          "alt": "No Image Shown"
+        },
+        "timestamp": {
+            "year": 1987,
+            "month": 11,
+            "day": 13,
+            "hour": 3,
+            "minute": 13,
+            "second": 6,
+            "UTC": 0
+          }
+      }
+    }];
+  }
+  
   // Return Based on Duplicates
   return (results.length > 2) ? results : results[1];
 }
