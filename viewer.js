@@ -21,4 +21,10 @@ if (error.real) {
   document.title = "ERROR: " + error.error;
   document.getElementById("words").innerHTML = "An error has occurred retrieving the article. Please refer to the title of the article for more information. ";
   document.getElementById("foot-desc").innerHTML = "An error has occurred that prevented the article from being retrieved. No more information about the supposed contents of the requested article can be retrieved. ";
+} else {
+  if (data.length == 1) {
+    document.getElementById("title").innerHTML = data.title;
+    document.title = data.title + " - " + data.meta.author;
+    document.getElementById("words").innerHTML = data.description
+  }
 }
