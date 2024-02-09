@@ -2,7 +2,7 @@
 var data;
 var error = {"error": "", "real":false};
 if (GET("id").length) {
-  for (var i = 0; I < archive.length; i++) {
+  for (var i = 0; i < archive.length; i++) {
     if (archive[i].meta.uuid == GET("id")) {
       data = archive[i];
     }
