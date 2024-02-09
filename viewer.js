@@ -15,3 +15,9 @@ if (GET("id").length) {
   error.real = true;
   error.error = "No Article Requested for Viewing";
 }
+
+if (error.real) {
+  document.getElementById("title").innerHTML = error.error;
+  document.title = "ERROR: " + error.error;
+  document.getElementById("words").innerHTML = "An error has occurred retrieving the article. Please refer to the title of the article for more information. ";
+}
