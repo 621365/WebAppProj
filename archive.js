@@ -36,7 +36,7 @@ function retrieve(title) {
     "title": "Duplicate Articles",
     "content": "There is more than one article with the name that you are searching for. Please select one of the articles below to view it.<br><br>",
     "meta": {
-      "error": true,
+      "error": NaN,
       "description": "This is a test article.",
       "author": "Gabriel Lazaro",
       "tags": ["Error", "Duplicate"],
