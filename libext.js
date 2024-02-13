@@ -97,7 +97,7 @@ class winNT extends object {
 
 // Capitalize First N Letters (Defaults to 1)
 function muranize(string, n = 1) {
-    return string.charAt(n - 1).toUpperCase() + string.slice(n);
+    return string.slice(0, n).toUpperCase() + string.slice(n);
 }
 
 // Imported From Placehorsey, which was in turn imported from StackOverflow
