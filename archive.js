@@ -24,6 +24,56 @@ var archive = [
           "UTC": -8
         }
     }
+  },
+    {
+    "title": "Test Article",
+    "content": "This is a test article. This holds the template for which all articles will be made.",
+    "meta": {
+      "error": true,
+      "description": "This is a test article.",
+      "author": "Gabriel Lazaro",
+      "uuid": "5FC9FE74-2A7A-2210-20BA-3FCC270F68F3",
+      "tags": ["Test", "Placeholder"],
+      "image": {
+        "source": null,
+        "alt": "No Image Shown",
+        "type": [null]
+      },
+      "timestamp": {
+          "year": 2024,
+          "month": 1,
+          "day": 30,
+          "hour": 10,
+          "minute": 59,
+          "second": 3.14159,
+          "UTC": -8
+        }
+    }
+  },
+  {
+    "title": "Test Article 2",
+    "content": "This is a test article. This holds the template for which all articles will be made.",
+    "meta": {
+      "error": true,
+      "description": "This is a test article.",
+      "author": "Gabriel Lazaro",
+      "uuid": "51CEFE74-2A7A-2210-20BA-3FCC270F68F3",
+      "tags": ["Test", "Placeholder"],
+      "image": {
+        "source": null,
+        "alt": "No Image Shown",
+        "type": [null]
+      },
+      "timestamp": {
+          "year": 2024,
+          "month": 1,
+          "day": 30,
+          "hour": 10,
+          "minute": 59,
+          "second": 3.14159,
+          "UTC": -8
+        }
+    }
   } 
 ]
 
