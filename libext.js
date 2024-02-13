@@ -95,5 +95,10 @@ class winNT extends object {
     }
 }
 
+// Capitalize First N Letters (Defaults to 1)
+function muranize(string, n = 1) {
+    return string.charAt(n - 1).toUpperCase() + string.slice(n);
+}
+
 // Imported From Placehorsey, which was in turn imported from StackOverflow
 function GET(q,s){s=(s)?s:window.location.search;let r=new RegExp("&"+q+"=([^&]*)","i");return (s=s.replace(/^\?/,"&").match(r))?s=s[1]:s="";}
