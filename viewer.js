@@ -10,7 +10,7 @@ if (GET("id").length) {
   }
 } else if (GET("title").length) {
   data = retrieve(GET("title"));
-  if (data.meta.error) {error.real = true; error.error = "No Such Article Title";} else if (data.length > 1) error.error = "Duplicates";
+  if (typeof data.length == "undefined") if (data.meta.error) {error.real = true; error.error = "No Such Article Title";} else if (data.length > 1) error.error = "Duplicates";
 } else {
   error.real = true;
   error.error = "No Article Requested for Viewing";
