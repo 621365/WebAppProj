@@ -33,7 +33,7 @@ if (error.real) {
     for (var l = 0; l < fancyDate.length; l++) {
       fancyDate[l] = muranize(fancyDate[l]);  
     }
-  fancyDate = fancyDate.toString().replaceAll(",", ", ").replaceAll(":", ": ");
+  fancyDate = fancyDate.toString().replaceAll(",", "; ").replaceAll(":", ": ");
     
     document.getElementById("meta").innerHTML = "Error: " + ((data.meta.error) ? "Yes" : "None") + ", UUID: " + data.meta.uuid + ", Tags: #" + data.meta.tags.toString().replaceAll(",", " #") + ", Timestamp: " + fancyDate;
   }
