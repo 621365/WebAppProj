@@ -27,6 +27,14 @@ if (error.real) {
     document.title = data.title + " - " + data.meta.author;
     document.getElementById("words").innerHTML = data.content;
     document.getElementById("foot-desc").innerHTML = data.meta.description;
-    document.getElementById("meta").innerHTML = "Error: " + ((data.meta.error) ? "Yes" : "None") + ", UUID: " + data.meta.uuid + ", Tags: #" + data.meta.tags.toString().replaceAll(",", " #") + ", Timestamp: " + data.meta.timestamp.toString();
+
+  // Time Formating
+    let fancyDate = JSON.stringify(data.meta.timestamp).replaceAll("\"", "").slice(1).slice(0, -1).split(",");
+    for (var l = 0; l < fancyDate.length; l++) {
+      fancyDate[l] = meranize(fancyDate[l]);  
+    }
+  fancyDate = fancyDate.toString().replaceAll(",", ", ").replaceAll(":", ": ");
+    
+    document.getElementById("meta").innerHTML = "Error: " + ((data.meta.error) ? "Yes" : "None") + ", UUID: " + data.meta.uuid + ", Tags: #" + data.meta.tags.toString().replaceAll(",", " #") + ", Timestamp: " + fancyDate;
   }
 }
