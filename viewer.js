@@ -9,7 +9,7 @@ if (GET("id").length) {
     if (typeof data == "undefined") {error = true; error.error = "Nonexistent Article";}
   }
 } else if (GET("title").length) {
-  data = retrieve(GET("title"));
+  data = retrieve(decodeURIComponent(GET("title")));
   if (typeof data.length == "undefined") if (data.meta.error) {error.real = true; error.error = "No Such Article Title";} else if (data.length > 1) error.error = "Duplicates";
 } else {
   error.real = true;
