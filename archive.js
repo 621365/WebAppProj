@@ -138,5 +138,5 @@ function retrieve(title) {
   }
   
   // Return Based on Duplicates
-  return (results.length > 2) ? results : results[1];
+  return (results.length >= 2) ? results : results[1];
 }
