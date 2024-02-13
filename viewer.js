@@ -28,10 +28,10 @@ if (error.real) {
     document.getElementById("words").innerHTML = data.content;
     document.getElementById("foot-desc").innerHTML = data.meta.description;
 
-  // Time Formating
+  // Time Formatting
     let fancyDate = JSON.stringify(data.meta.timestamp).replaceAll("\"", "").slice(1).slice(0, -1).split(",");
     for (var l = 0; l < fancyDate.length; l++) {
-      fancyDate[l] = meranize(fancyDate[l]);  
+      fancyDate[l] = muranize(fancyDate[l]);  
     }
   fancyDate = fancyDate.toString().replaceAll(",", ", ").replaceAll(":", ": ");
     
