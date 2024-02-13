@@ -55,14 +55,15 @@ function regUUID(id, description = "Unknown Item") {
     }
 }
 
-function copy(text="") {
+// Copy Text (Second Variable Delays Action in Milliseconds For Debug Purposes)
+function copy(text = "", delay = 1) {
     let t = document.createElement("input");
     t.type = "text";
     t.id = uuid(1, 1).toString();
     t.value = text;
     t.select();
     t.setSelectionRange(0, 999999999999999);
-    navigator.clipboard.writeText(t.value);
+    setInterval(function () { navigator.clipboard.writeText(t.value); }, delay);
     t.remove();
     return text;
 }
