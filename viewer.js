@@ -27,6 +27,6 @@ if (error.real) {
     document.title = data.title + " - " + data.meta.author;
     document.getElementById("words").innerHTML = data.content;
     document.getElementById("foot-desc").innerHTML = data.meta.description;
-    document.getElementById("meta").innerHTML = "Error: " + ((data.meta.error) ? "Yes" : "None") + ", UUID: " + data.meta.uuid + ", Tags: " + data.meta.tags.toString() + ", Timestamp: " + data.meta.timestamp.toString();
+    document.getElementById("meta").innerHTML = "Error: " + ((data.meta.error) ? "Yes" : "None") + ", UUID: " + data.meta.uuid + ", Tags: #" + data.meta.tags.toString().replaceAll(",", " #") + ", Timestamp: " + data.meta.timestamp.toString();
   }
 }
