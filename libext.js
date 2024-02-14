@@ -63,7 +63,7 @@ function copy(text = "", delay = 1) {
     t.value = text;
     t.select();
     t.setSelectionRange(0, 999999999999999);
-    setInterval(function () { navigator.clipboard.writeText(t.value); }, delay);
+    setTimeout(function () { navigator.clipboard.writeText(t.value); }, delay);
     t.remove();
     return text;
 }
