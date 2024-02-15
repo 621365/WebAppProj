@@ -22,7 +22,7 @@ if (error.real) {
   document.getElementById("words").innerHTML = "An error has occurred retrieving the article. Please refer to the title of the article for more information. ";
   document.getElementById("foot-desc").innerHTML = "An error has occurred that prevented the article from being retrieved. No more information about the supposed contents of the requested article can be retrieved. ";
 } else {
-  if (typeof data.length == "undefined") {
+  if ((typeof data.type != "undefined") ? ((data.length == 1) ? true : false) : false ) {
     document.getElementById("title").innerHTML = data.title;
     document.title = data.title + " - " + data.meta.author;
     document.getElementById("words").innerHTML = data.content;
@@ -33,8 +33,10 @@ if (error.real) {
     for (var l = 0; l < fancyDate.length; l++) {
       fancyDate[l] = muranize(fancyDate[l]);  
     }
-  fancyDate = fancyDate.toString().replaceAll(",", "; ").replaceAll(":", ": ");
+    fancyDate = fancyDate.toString().replaceAll(",", "; ").replaceAll(":", ": ");
     
     document.getElementById("meta").innerHTML = "Error: " + ((data.meta.error) ? "Yes" : "None") + ", UUID: " + data.meta.uuid + ", Tags: #" + data.meta.tags.toString().replaceAll(",", " #") + ", Timestamp: " + fancyDate;
+  } else {
+        document.getElementById("title").innerHTML = "DUPLICATE_ARTICLES_TEXT";
   }
 }
