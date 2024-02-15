@@ -4,7 +4,7 @@
 function listCard(title, description, meta, id) {
  return `
  <li>
-   <a href="./viewer.html?uuid=`id`">
+   <a href="./viewer.html?uuid=`+id+`">
     <div class="card-title">`+title+`</div>
     <div class="card-descr">`+description+`</div>
     <div class="card-metas">`+JSON.strigify(meta)+`</div>
