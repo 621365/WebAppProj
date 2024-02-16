@@ -19,6 +19,7 @@ function media(type = null, subtype = null, source = null, alt = "Unknown or und
           encode = `<video id="mediaFile" src="` + source + `" title="` + alt + `">There was a high likelihood that the video would fail in playback. The following description was provided for the video: ` + alt + `</video>`;
           break;
         case "LOOP":
+          encode =  `<video id="mediaFile" src="` + source + `" title="` + alt + `"> The following description was provided for the video: ` + alt + `</video>`;
           break;
         case "MUTE":
           break;
