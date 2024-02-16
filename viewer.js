@@ -22,7 +22,7 @@ function media(type = null, subtype = null, source = null, alt = "Unknown or und
         case "MUTE":
           break;
         case "SHOK":
-          encode = `<embed id="mediaFile" src="` + source + `" quality="high">Because Shockwave has been killed by Adobe, this file may not work. If you truly want to view this file, please use the Ruffle emulator to play this file.</embed>`;
+          encode = `<embed id="mediaFile" title="` + alt + `" src="` + source + `" quality="high">Because Shockwave has been killed by Adobe, this file may not work. In the case the file fails, the following description is provided: ` + alt + ` If you truly want to view this file, please use the Ruffle emulator to play this file.</embed>`;
           break;
         case "AIDS":
           break;
