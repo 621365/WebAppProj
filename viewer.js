@@ -14,25 +14,56 @@ function media(type = null, subtype = null, source = null, alt = "Unknown or und
   var encode = "";
   switch (type) {
     case "VID":
-
+      switch (subtype) {
+        case "WEBM":
+          break;
+        case "LOOP":
+          break;
+        case "MUTE":
+          break;
+        case "SHOK":
+          break;
+        case "AIDS":
+          break;
+        default:
+          break;
+      }
       break;
     case "IMG":
-
+      switch (subtype) {
+        default:
+          break;
+      }
       break;
     case "YTV":
-
+      switch (subtype) {
+        default:
+          break;
+      }
       break;
     case "EBD":
-
+      switch (subtype) {
+        default:
+          break;
+      }
       break;
     case "AUD":
-
+      switch (subtype) {
+        default:
+          break;
+      }
       break;
     case "IDE":
-
+      switch (subtype) {
+        default:
+          break;
+      }
       break;
     default: case "NUL":
-
+      switch (subtype) {
+        default:
+          break;
+      }
       break;
   }
 }
