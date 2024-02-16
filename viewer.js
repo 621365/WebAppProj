@@ -1,6 +1,27 @@
+// After Realizing How Much May Be Used By Other Parts of the Site, I Decided to Add Supporting Functions here
+
+// Accepts VID (Video), IMG (Image), YTV (YouTube Video), EBD (Embed), AUD (Audio), IDE (Code), NUL (None)
+/* Subtypes: 
+  VID.WEBM (WORST EVER BROKEN MEDIUM), VID.LOOP (Looping Video), VID.MUTE (Muted Video), VID.SHOK (Flash File), VID.AIDS (Agonizingly Intrusive Digital Site)
+  IMG.GIF (Graphics Interchange Format), IMG.VEK (Vector Image), IMG.RTR (Raster Image), IMG.RAW (Uncompressed Image), IMG.WBP (WORST BROKEN PHOTOS)
+  YTV.NORM (Normal YouTube Embed), YTV.RICK (Rick Roll YouTube Embed)
+  EBD.FRAME (iFrame Embed), EBD.CUSTM (Custom Embed)
+  AUD.NORM (Normal Audio), AUD.LOOP (Looping Audio)
+  IDE.C (C-Based Code), IDE.A (Assembly-Based Code)
+  NUL.NULL (Absolutely Nothing), NUL.TEST (Placeholder)
+*/
+function media(type = null, subtype = null, source = null, isRaw = false) {
+  var encode = "";
+  switch (type) {
+
+  }
+}
+
+
 // Code Specifically for the Article Viewer
 var data;
 var error = {"error": "", "real":false};
+
 if (GET("id").length) {
   for (var i = 0; i < archive.length; i++) {
     if (archive[i].meta.uuid == GET("id")) {
