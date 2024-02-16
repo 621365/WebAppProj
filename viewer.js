@@ -42,8 +42,8 @@ if (error.real) {
       document.getElementById("foot-desc").innerHTML = "Two articles with the same title exist. A prompt has been given to the user that will let the user choose which article was intended to be accessed. Please access articles using their UUID to prevent this inconvenience. ";
       document.getElementById("meta").innerHTML = "An irregular has occurred that prevented this page from promptly showing your desired article. This is not an error, but is not the normal behavior expected of this site. More than one article share the same title as the one that you are wanting to view. The articles that you might want to access will be shown alongside their metadata; please choose which article to view. If you would like to prevent this error from occurring again, please refer to articles through their UUID instead of through their title. ";
       document.getElementById("words").innerHTML = "<ul>";
-      for (var k = 1; k < data.length; k++) {
-        document.getElementById("words").innerHTML += listCard(data[k].title, data[k].content, data[k].meta, data[k].meta.uuid);
+      for (var k = 0; k < data.length; k++) {
+        document.getElementById("words").innerHTML += listCard(data[k + 1].title, data[k + 1].content, data[k + 1].meta, data[k + 1].meta.uuid);
       }
       document.getElementById("words").innerHTML += "</ul>";
     }
