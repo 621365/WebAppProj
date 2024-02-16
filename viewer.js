@@ -16,7 +16,7 @@ function media(type = null, subtype = null, source = null, alt = "Unknown or und
     case "VID":
       switch (subtype) {
         case "WEBM":
-          encode = `<video>There was a veplaceholder</video>`;
+          encode = `<video id="mediaFile" src="` + source + `" title="` + alt + `">There was a high likelihood that the video would fail in playback. The following description was provided for the video: ` + alt + `</video>`;
           break;
         case "LOOP":
           break;
