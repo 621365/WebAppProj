@@ -10,10 +10,30 @@
   IDE.C (C-Based Code), IDE.A (Assembly-Based Code)
   NUL.NULL (Absolutely Nothing), NUL.TEST (Placeholder)
 */
-function media(type = null, subtype = null, source = null, isRaw = false) {
+function media(type = null, subtype = null, source = null, alt = "Unknown or undeclared type of media.", isRaw = false) {
   var encode = "";
   switch (type) {
+    case "VID":
 
+      break;
+    case "IMG":
+
+      break;
+    case "YTV":
+
+      break;
+    case "EBD":
+
+      break;
+    case "AUD":
+
+      break;
+    case "IDE":
+
+      break;
+    default: case "NUL":
+
+      break;
   }
 }
 
