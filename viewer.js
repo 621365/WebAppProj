@@ -16,6 +16,7 @@ function media(type = null, subtype = null, source = null, alt = "Unknown or und
     case "VID":
       switch (subtype) {
         case "WEBM":
+          encode = `<video>There was a veplaceholder</video>`;
           break;
         case "LOOP":
           break;
