@@ -69,6 +69,7 @@ function media(type = null, subtype = null, source = null, alt = "Unknown or und
       }
       break;
   }
+  return encode;
 }
 
 
