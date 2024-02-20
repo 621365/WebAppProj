@@ -79,19 +79,31 @@ function media(type = null, subtype = null, source = null, alt = "Unknown or und
       break;
     case "AUD":
       switch (subtype) {
-        default:
+        case "LOOP":
+          encode = `<audio class="aud" title="` + alt + `" src="` + source + `" controls loop>If you see this, it means that your browser cannot play audio. The following audio description is provided: ` + alt + `</audio>`;
+          break;
+        case "NORM": default:
+          encode = `<audio class="aud" title="` + alt + `" src="` + source + `" controls>If you see this, it means that your browser cannot play audio. The following audio description is provided: ` + alt + `</audio>`;
           break;
       }
       break;
     case "IDE":
       switch (subtype) {
-        default:
+        case "A":
+          break;
+          encode = "";
+        case "C": default:
+          encode = "";
           break;
       }
       break;
     default: case "NUL":
       switch (subtype) {
-        default:
+        case "TEST":
+          encode = "";
+          break;
+        case "NULL": default:
+          encode = "";
           break;
       }
       break;
