@@ -59,13 +59,21 @@ function media(type = null, subtype = null, source = null, alt = "Unknown or und
       break;
     case "YTV":
       switch (subtype) {
-        default:
+        case "RICK":
+          encode = `This is a placeholder for the rick-rolling code. `;
+          break;
+        case "NORM": default:
+          encode = `<iframe class="ebd" src="https://www.youtube.com/embed/` + source + `" title="` + alt + `" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>` + alt + `</iframe>`;
           break;
       }
       break;
     case "EBD":
       switch (subtype) {
-        default:
+        case "CUSTM":
+          encode = `<h1>` + alt + `</h1><div class="ebd">` + source + `</div>`;
+          break;
+        case "FRAME": default:
+          encode = `<iframe class="ebd" title="` + alt + `" src="` + source + `"></iframe>`;
           break;
       }
       break;
