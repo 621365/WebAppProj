@@ -16,25 +16,44 @@ function media(type = null, subtype = null, source = null, alt = "Unknown or und
     case "VID":
       switch (subtype) {
         case "WEBM":
-          encode = `<video id="mediaFile" src="` + source + `" title="` + alt + `">There was a high likelihood that the video would fail in playback. The following description was provided for the video: ` + alt + `</video>`;
+          encode = `<video id="mediaFile" class="" src="` + source + `" title="` + alt + `">There was a high likelihood that the video would fail in playback. The following description was provided for the video: ` + alt + `</video>`;
           break;
         case "LOOP":
-          encode =  `<video id="mediaFile" src="` + source + `" title="` + alt + `"> The following description was provided for the video: ` + alt + `</video>`;
+          encode =  `<video id="mediaFile" class="" src="` + source + `" title="` + alt + `" muted autoplay loop> The following description was provided for the video in the case that the video would fail: ` + alt + `</video>`;
           break;
         case "MUTE":
+          encode =  `<video id="mediaFile" class="" src="` + source + `" title="` + alt + `" muted> The following description was provided for the video in the case that the video would fail: ` + alt + `</video>`;
           break;
         case "SHOK":
-          encode = `<embed id="mediaFile" title="` + alt + `" src="` + source + `" quality="high">Because Shockwave has been killed by Adobe, this file may not work. In the case the file fails, the following description is provided: ` + alt + ` If you truly want to view this file, please use the Ruffle emulator to play this file.</embed>`;
+          encode = `<embed id="mediaFile" class="" title="` + alt + `" src="` + source + `" quality="high">Because Shockwave has been killed by Adobe, this file may not work. In the case the file fails, the following description is provided: ` + alt + ` If you truly want to view this file, please use the Ruffle emulator to play this file.</embed>`;
           break;
         case "AIDS":
+          encode = "This was a filetype intended for the embedding of web-viruses, but was never made because due to being considered unprofessional.";
           break;
         default:
+          encode =  `<video id="mediaFile" class="" src="` + source + `" title="` + alt + `" muted> The following description was provided for the video in the case that the video would fail: ` + alt + `</video>`;
           break;
       }
       break;
     case "IMG":
       switch (subtype) {
+        case "GIF":
+          encode = `<img id="mediaFile" class="rtr" src="` + source + `" title="` + alt + `" alt="` + alt + `" style="image-rendering: pixelated;" >`;
+          break;
+        case "VEK":
+          encode = `<iframe = src="` + source + `" class="vek" title="If you do not see an image, your browser is incapable of displaying vector graphics. " sandbox><img src="` + source + `" alt="` + alt + `" title="` + alt + `"></iframe>`;
+          break;
+        case "RTR":
+          encode = `<img id="mediaFile" class="rtr" src="` + source + `" title="` + alt + `" alt="` + alt + `">`;
+          break;
+        case "RAW":
+          encode = `<a id="mediaFile" class="raw" href="` + source + `" title="RAW: ` + alt + `" target="_blank" download>This is an uncompressed file containing the sensor information to an image. To view what image the sensor information would make, please click here to download the image. </a>`;
+          break;
+        case "WBP":
+          encode = `<img id="mediaFile" class="rtr" src="` + source + `" title="` + alt + `" alt="` + alt + `" type="image/webp" desc="This is a WEBP file, which means that this file may not be able to display on all browsers.">`;
+          break;
         default:
+          encode = `<img id="mediaFile" class="rtr" src="` + source + `" title="` + alt + `" alt="` + alt + `">`;
           break;
       }
       break;
