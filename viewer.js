@@ -12,101 +12,105 @@
 */
 function media(type = null, subtype = null, source = null, alt = "Unknown or undeclared type of media.", isRaw = false) {
   var encode = "";
-  switch (type) {
-    case "VID":
-      switch (subtype) {
-        case "WEBM":
-          encode = `<video id="mediaFile" class="" src="` + source + `" title="` + alt + `">There was a high likelihood that the video would fail in playback. The following description was provided for the video: ` + alt + `</video>`;
-          break;
-        case "LOOP":
-          encode =  `<video id="mediaFile" class="" src="` + source + `" title="` + alt + `" muted autoplay loop> The following description was provided for the video in the case that the video would fail: ` + alt + `</video>`;
-          break;
-        case "MUTE":
-          encode =  `<video id="mediaFile" class="" src="` + source + `" title="` + alt + `" muted> The following description was provided for the video in the case that the video would fail: ` + alt + `</video>`;
-          break;
-        case "SHOK":
-          encode = `<embed id="mediaFile" class="" title="` + alt + `" src="` + source + `" quality="high">Because Shockwave has been killed by Adobe, this file may not work. In the case the file fails, the following description is provided: ` + alt + ` If you truly want to view this file, please use the Ruffle emulator to play this file.</embed>`;
-          break;
-        case "AIDS":
-          encode = "This was a filetype intended for the embedding of web-viruses, but was never made because due to being considered unprofessional.";
-          break;
-        default:
-          encode =  `<video id="mediaFile" class="" src="` + source + `" title="` + alt + `" muted> The following description was provided for the video in the case that the video would fail: ` + alt + `</video>`;
-          break;
-      }
-      break;
-    case "IMG":
-      switch (subtype) {
-        case "GIF":
-          encode = `<img id="mediaFile" class="rtr" src="` + source + `" title="` + alt + `" alt="` + alt + `" style="image-rendering: pixelated;" >`;
-          break;
-        case "VEK":
-          encode = `<iframe = src="` + source + `" class="vek" title="If you do not see an image, your browser is incapable of displaying vector graphics. " sandbox><img src="` + source + `" alt="` + alt + `" title="` + alt + `"></iframe>`;
-          break;
-        case "RTR":
-          encode = `<img id="mediaFile" class="rtr" src="` + source + `" title="` + alt + `" alt="` + alt + `">`;
-          break;
-        case "RAW":
-          encode = `<a id="mediaFile" class="raw" href="` + source + `" title="RAW: ` + alt + `" target="_blank" download>This is an uncompressed file containing the sensor information to an image. To view what image the sensor information would make, please click here to download the image. </a>`;
-          break;
-        case "WBP":
-          encode = `<img id="mediaFile" class="rtr" src="` + source + `" title="` + alt + `" alt="` + alt + `" type="image/webp" desc="This is a WEBP file, which means that this file may not be able to display on all browsers.">`;
-          break;
-        default:
-          encode = `<img id="mediaFile" class="rtr" src="` + source + `" title="` + alt + `" alt="` + alt + `">`;
-          break;
-      }
-      break;
-    case "YTV":
-      switch (subtype) {
-        case "RICK":
-          encode = `This is a placeholder for the rick-rolling code. `;
-          break;
-        case "NORM": default:
-          encode = `<iframe class="ebd" src="https://www.youtube.com/embed/` + source + `" title="` + alt + `" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>` + alt + `</iframe>`;
-          break;
-      }
-      break;
-    case "EBD":
-      switch (subtype) {
-        case "CUSTM":
-          encode = `<h1>` + alt + `</h1><div class="ebd">` + source + `</div>`;
-          break;
-        case "FRAME": default:
-          encode = `<iframe class="ebd" title="` + alt + `" src="` + source + `"></iframe>`;
-          break;
-      }
-      break;
-    case "AUD":
-      switch (subtype) {
-        case "LOOP":
-          encode = `<audio class="aud" title="` + alt + `" src="` + source + `" controls loop>If you see this, it means that your browser cannot play audio. The following audio description is provided: ` + alt + `</audio>`;
-          break;
-        case "NORM": default:
-          encode = `<audio class="aud" title="` + alt + `" src="` + source + `" controls>If you see this, it means that your browser cannot play audio. The following audio description is provided: ` + alt + `</audio>`;
-          break;
-      }
-      break;
-    case "IDE":
-      switch (subtype) {
-        case "A":
-          break;
-          encode = "";
-        case "C": default:
-          encode = "";
-          break;
-      }
-      break;
-    default: case "NUL":
-      switch (subtype) {
-        case "TEST":
-          encode = "";
-          break;
-        case "NULL": default:
-          encode = "";
-          break;
-      }
-      break;
+  if (!isRaw) {
+    switch (type) {
+      case "VID":
+        switch (subtype) {
+          case "WEBM":
+            encode = `<video id="mediaFile" class="" src="` + source + `" title="` + alt + `">There was a high likelihood that the video would fail in playback. The following description was provided for the video: ` + alt + `</video>`;
+            break;
+          case "LOOP":
+            encode =  `<video id="mediaFile" class="" src="` + source + `" title="` + alt + `" muted autoplay loop> The following description was provided for the video in the case that the video would fail: ` + alt + `</video>`;
+            break;
+          case "MUTE":
+            encode =  `<video id="mediaFile" class="" src="` + source + `" title="` + alt + `" muted> The following description was provided for the video in the case that the video would fail: ` + alt + `</video>`;
+            break;
+          case "SHOK":
+            encode = `<embed id="mediaFile" class="" title="` + alt + `" src="` + source + `" quality="high">Because Shockwave has been killed by Adobe, this file may not work. In the case the file fails, the following description is provided: ` + alt + ` If you truly want to view this file, please use the Ruffle emulator to play this file.</embed>`;
+            break;
+          case "AIDS":
+            encode = "This was a filetype intended for the embedding of web-viruses, but was never made because due to being considered unprofessional.";
+            break;
+          default:
+            encode =  `<video id="mediaFile" class="" src="` + source + `" title="` + alt + `" muted> The following description was provided for the video in the case that the video would fail: ` + alt + `</video>`;
+            break;
+        }
+        break;
+      case "IMG":
+        switch (subtype) {
+          case "GIF":
+            encode = `<img id="mediaFile" class="rtr" src="` + source + `" title="` + alt + `" alt="` + alt + `" style="image-rendering: pixelated;" >`;
+            break;
+          case "VEK":
+            encode = `<iframe = src="` + source + `" class="vek" title="If you do not see an image, your browser is incapable of displaying vector graphics. " sandbox><img src="` + source + `" alt="` + alt + `" title="` + alt + `"></iframe>`;
+            break;
+          case "RTR":
+            encode = `<img id="mediaFile" class="rtr" src="` + source + `" title="` + alt + `" alt="` + alt + `">`;
+            break;
+          case "RAW":
+            encode = `<a id="mediaFile" class="raw" href="` + source + `" title="RAW: ` + alt + `" target="_blank" download>This is an uncompressed file containing the sensor information to an image. To view what image the sensor information would make, please click here to download the image. </a>`;
+            break;
+          case "WBP":
+            encode = `<img id="mediaFile" class="rtr" src="` + source + `" title="` + alt + `" alt="` + alt + `" type="image/webp" desc="This is a WEBP file, which means that this file may not be able to display on all browsers.">`;
+            break;
+          default:
+            encode = `<img id="mediaFile" class="rtr" src="` + source + `" title="` + alt + `" alt="` + alt + `">`;
+            break;
+        }
+        break;
+      case "YTV":
+        switch (subtype) {
+          case "RICK":
+            encode = `This is a placeholder for the rick-rolling code. `;
+            break;
+          case "NORM": default:
+            encode = `<iframe class="ebd" src="https://www.youtube.com/embed/` + source + `" title="` + alt + `" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>` + alt + `</iframe>`;
+            break;
+        }
+        break;
+      case "EBD":
+        switch (subtype) {
+          case "CUSTM":
+            encode = `<h1>` + alt + `</h1><div class="ebd">` + source + `</div>`;
+            break;
+          case "FRAME": default:
+            encode = `<iframe class="ebd" title="` + alt + `" src="` + source + `"></iframe>`;
+            break;
+        }
+        break;
+      case "AUD":
+        switch (subtype) {
+          case "LOOP":
+            encode = `<audio class="aud" title="` + alt + `" src="` + source + `" controls loop>If you see this, it means that your browser cannot play audio. The following audio description is provided: ` + alt + `</audio>`;
+            break;
+          case "NORM": default:
+            encode = `<audio class="aud" title="` + alt + `" src="` + source + `" controls>If you see this, it means that your browser cannot play audio. The following audio description is provided: ` + alt + `</audio>`;
+            break;
+        }
+        break;
+      case "IDE":
+        switch (subtype) {
+          case "A":
+            break;
+            encode = "";
+          case "C": default:
+            encode = "";
+            break;
+        }
+        break;
+      default: case "NUL":
+        switch (subtype) {
+          case "TEST":
+            encode = "";
+            break;
+          case "NULL": default:
+            encode = "";
+            break;
+        }
+        break;
+    }
+  } else {
+    encode = `<a title="The following is raw data that may be downloaded. " href="` + source + `" download>` + alt + `</a>`;
   }
   return encode;
 }
@@ -142,7 +146,8 @@ if (error.real) {
     document.title = data.title + " - " + data.meta.author;
     document.getElementById("words").innerHTML = data.content;
     document.getElementById("foot-desc").innerHTML = data.meta.description;
-
+    document.getElementById("media-container").innerHTML = media(data.meta.image.type[0], data.meta.image.type[1], data.meta.image.source, data.meta.image.alt, ((typeof data.meta.image.raw != "undefined") ? data.meta.image.raw : false));
+    
   // Time Formatting
     let fancyDate = JSON.stringify(data.meta.timestamp).replaceAll("\"", "").slice(1).slice(0, -1).split(",");
     for (var l = 0; l < fancyDate.length; l++) {
