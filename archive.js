@@ -74,6 +74,31 @@ var archive = [
           "UTC": -8
         }
     }
+  },
+  {
+    "title": "Flash Test",
+    "content": "This is a ters of the shockwave file media embed. If everything goes correctly, you should see a sample shockwave file. Please note that a flash emulator will be needed since Adobe Shockwave had been killed.",
+    "meta": {
+      "error": true,
+      "description": "Testing the media capability of this site with a shockwave file inserted according to documentation. ",
+      "author": "Gabriel Lazaro",
+      "uuid": "72B2447C-E922-E08C-9A23-D5505E81A7B7",
+      "tags": ["Test", "Placeholder"],
+      "image": {
+        "source": "https://cdn.jsdelivr.net/gh/belaviyo/download-with/samples/sample-1.swf",
+        "alt": "A flash file showcasing a photo of poorly-drawn bumblebee flying in the sky. ",
+        "type": ["VID", "SHOK"];
+      },
+      "timestamp": {
+          "year": 2024,
+          "month": 2,
+          "day": 21,
+          "hour": 10,
+          "minute": 28,
+          "second": 3.14159,
+          "UTC": -8
+        }
+    }
   } 
 ]
 
