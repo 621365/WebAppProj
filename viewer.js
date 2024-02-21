@@ -92,9 +92,9 @@ function media(type = null, subtype = null, source = null, alt = "Unknown or und
         switch (subtype) {
           case "A":
             break;
-            encode = "";
+            encode = `<h2>` + alt + `</h2><h3>Assembly-Like Code</h3><code>` + source + `</code>`;
           case "C": default:
-            encode = "";
+            encode = `<h2>` + alt + `</h2><h3>C-Like Code</h3><code>` + source + `</code>`;
             break;
         }
         break;
