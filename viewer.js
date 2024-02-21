@@ -17,13 +17,13 @@ function media(type = null, subtype = null, source = null, alt = "Unknown or und
       case "VID":
         switch (subtype) {
           case "WEBM":
-            encode = `<video id="mediaFile" class="" src="` + source + `" title="` + alt + `">There was a high likelihood that the video would fail in playback. The following description was provided for the video: ` + alt + `</video>`;
+            encode = `<video id="mediaFile" class="" src="` + source + `" title="` + alt + `" controls>There was a high likelihood that the video would fail in playback. The following description was provided for the video: ` + alt + `</video>`;
             break;
           case "LOOP":
             encode =  `<video id="mediaFile" class="" src="` + source + `" title="` + alt + `" muted autoplay loop> The following description was provided for the video in the case that the video would fail: ` + alt + `</video>`;
             break;
           case "MUTE":
-            encode =  `<video id="mediaFile" class="" src="` + source + `" title="` + alt + `" muted> The following description was provided for the video in the case that the video would fail: ` + alt + `</video>`;
+            encode =  `<video id="mediaFile" class="" src="` + source + `" title="` + alt + `" muted controls> The following description was provided for the video in the case that the video would fail: ` + alt + `</video>`;
             break;
           case "SHOK":
             encode = `<embed id="mediaFile" class="" title="` + alt + `" src="` + source + `" quality="high">Because Shockwave has been killed by Adobe, this file may not work. In the case the file fails, the following description is provided: ` + alt + ` If you truly want to view this file, please use the Ruffle emulator to play this file.</embed>`;
@@ -32,7 +32,7 @@ function media(type = null, subtype = null, source = null, alt = "Unknown or und
             encode = "This was a filetype intended for the embedding of web-viruses, but was never made because due to being considered unprofessional.";
             break;
           default:
-            encode =  `<video id="mediaFile" class="" src="` + source + `" title="` + alt + `" muted> The following description was provided for the video in the case that the video would fail: ` + alt + `</video>`;
+            encode =  `<video id="mediaFile" class="" src="` + source + `" title="` + alt + `" controls> The following description was provided for the video in the case that the video would fail: ` + alt + `</video>`;
             break;
         }
         break;
