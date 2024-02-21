@@ -87,7 +87,7 @@ var archive = [
       "image": {
         "source": "https://cdn.jsdelivr.net/gh/belaviyo/download-with/samples/sample-1.swf",
         "alt": "A flash file showcasing a photo of poorly-drawn bumblebee flying in the sky. ",
-        "type": ["VID", "SHOK"];
+        "type": ["VID", "SHOK"]
       },
       "timestamp": {
           "year": 2024,
