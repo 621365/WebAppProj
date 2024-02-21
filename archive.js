@@ -4,7 +4,7 @@ var archive = [
     "title": "Test Article",
     "content": "This is a test article. This holds the template for which all articles will be made.",
     "meta": {
-      "error": true,
+      "error": false,
       "description": "This is a test article.",
       "author": "Gabriel Lazaro",
       "uuid": "5FC9FE74-2A7A-2810-20BA-3FCC270F68F3",
@@ -29,7 +29,7 @@ var archive = [
     "title": "Test Article",
     "content": "This is a test article. This holds the template for which all articles will be made.",
     "meta": {
-      "error": true,
+      "error": false,
       "description": "This is a test article.",
       "author": "Gabriel Lazaro",
       "uuid": "5FC9FE74-2A7A-2210-20BA-3FCC270F68F3",
@@ -54,7 +54,7 @@ var archive = [
     "title": "Test Article 2",
     "content": "This is a test article. This holds the template for which all articles will be made.",
     "meta": {
-      "error": true,
+      "error": false,
       "description": "This is a test article.",
       "author": "Gabriel Lazaro",
       "uuid": "51CEFE74-2A7A-2210-20BA-3FCC270F68F3",
@@ -79,7 +79,7 @@ var archive = [
     "title": "Flash Test",
     "content": "This is a ters of the shockwave file media embed. If everything goes correctly, you should see a sample shockwave file. Please note that a flash emulator will be needed since Adobe Shockwave had been killed.",
     "meta": {
-      "error": true,
+      "error": false,
       "description": "Testing the media capability of this site with a shockwave file inserted according to documentation. ",
       "author": "Gabriel Lazaro",
       "uuid": "72B2447C-E922-E08C-9A23-D5505E81A7B7",
