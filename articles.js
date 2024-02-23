@@ -1,6 +1,6 @@
 // Dependent on Viewer Library and Archive Library
 
-// Punches article into whatever HTML you want (assumes UUID for article and HTMLID for others), returns -1 or 0 depending if it worked or not (non-zero means it did not work)
+// Punches article into whatever HTML you want (assumes UUID for article and HTML_SELECTED_INNERHTML for others), returns -1 or 0 depending if it worked or not (non-zero means it did not work)
 function punch(id, title, med, content, meta) {
   var data;
   for (var i = 0; i < archive.length; i++) {
