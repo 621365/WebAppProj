@@ -4,7 +4,7 @@
 function punch(id, title, med, content, meta) {
   var data;
   for (var i = 0; i < archive.length; i++) {
-    if (archive[i].meta.uuid == GET("id")) {
+    if (archive[i].meta.uuid == id) {
       data = archive[i];
     }
   }
