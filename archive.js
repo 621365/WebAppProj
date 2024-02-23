@@ -102,6 +102,9 @@ var archive = [
   } 
 ]
 
+// Date-Ordered (By the Hour)
+var datedArchive = archive.sort(function(a, b) {return parseFloat((a.meta.timestamp.year*1000) + (a.meta.timestamp.month*100) + a.meta.timestamp.day*10) + (a.meta.timestamp.hour - a.meta.timestamp.UTC) -  parseFloat((b.meta.timestamp.year*1000) + (b.meta.timestamp.month*100) + b.meta.timestamp.day*10) + (b.meta.timestamp.hour - b.meta.timestamp.UTC)});
+
 // Search Retrieval Framework
 
 // Aquires the Hard-Coded ID of the 
