@@ -105,6 +105,6 @@ function muranize(string, n = 1) {
 function GET(q,s){s=(s)?s:window.location.search;let r=new RegExp("&"+q+"=([^&]*)","i");return (s=s.replace(/^\?/,"&").match(r))?s=s[1]:s="";}
 
 // Funny lazy stuff
-function getId = getElementById();
-function dId = document.getElementById();
-function gLass = getElementsByClassName();
+var getId = getElementById;
+var dId = document.getElementById;
+var gLass = getElementsByClassName;
