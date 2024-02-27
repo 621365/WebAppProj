@@ -234,6 +234,21 @@
 
       // Load Blonder
       punch(blonder, document.getElementById("highlight-title"), document.getElementById("highlight-media"), document.getElementById("highlight-content"), null);
+
+      // Load Blondes
+      for (var card = 0; card < blonde; card++) {
+        var hold = document.getElementById("main-grid").createElement("div");
+        hold.class = "card";
+        var pic = hold.createElement("div");
+        pic.class = "card-pic";
+        var txt = hold.createElement("div");
+        txt.class = "card-text";
+        var tit = hold.createElement("div");
+        tit.class = "card-title";
+        var cont = hold.createElement("div");
+        cont.class = "card-content";
+        punch(blonde[card], tit, pic, cont, null); // This code is so out of context.
+      }
       
     </script>
   </body>
