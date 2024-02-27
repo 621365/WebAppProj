@@ -226,5 +226,15 @@
         Copyright © 2024 Unnamed Entity
       </div>
     </footer>
+    <!--This script loads at the end of the page because it modifies HTML elements.-->
+    <script>
+      // TO DESIGNER: Place the UUIDs of the articles that you want to be shown in order of how you want the articles to appear.
+      // Variable blonder used for highlighted article. 
+      var blonde = [], blonder = "5FC9FE74-2A7A-2810-20BA-3FCC270F68F3";
+
+      // Load Blonder
+      punch(blonder, document.getElementById("highlight-title"), document.getElementById("highlight-media"), document.getElementById("highlight-content"), null);
+      
+    </script>
   </body>
 </html>
