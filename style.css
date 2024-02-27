@@ -247,7 +247,7 @@ footer a {
     margin-right: auto;
 }
 
-#highlight img {
+#highlight img, #highlight video, #highlight iframe, #highlight audio, #highlight code, #highlight embed {
     display: inline-block;
     max-height: 100%;
     max-width: 50%;
