@@ -242,14 +242,10 @@
         hold.class = "card";
         //debug
         hold.id = blonde[card];
-        var pic = document.createElement("div"); hold.appendChild(pic);
-        pic.class = "card-pic";
-        var txt = document.createElement("div"); hold.appendChild(txt);
-        txt.class = "card-text";
-        var tit = document.createElement("div"); txt.appendChild(tit);
-        tit.class = "card-title";
-        var cont = document.createElement("div"); txt.appendChild(cont);
-        cont.class = "card-content";
+        var pic = document.createElement("div"); pic.class = "card-pic"; hold.appendChild(pic);
+        var txt = document.createElement("div"); txt.class = "card-text"; hold.appendChild(txt);
+        var tit = document.createElement("div"); tit.class = "card-title"; txt.appendChild(tit);
+        var cont = document.createElement("div"); cont.class = "card-content"; txt.appendChild(cont);
         punch(blonde[card], tit, pic, cont, null); // This code is so out of context.
       }
       
