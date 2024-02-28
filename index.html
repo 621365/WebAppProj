@@ -237,15 +237,16 @@
 
       // Load Blondes
       for (var card = 0; card < blonde.length; card++) {
-        var hold = document.getElementById("main-grid").createElement("div");
+        var domes = document.getElementById("main-grid");
+        var hold = document.createElement("div"); domes.appendChild(hold);
         hold.class = "card";
-        var pic = hold.createElement("div");
+        var pic = document.createElement("div"); hold.appendChild(pic);
         pic.class = "card-pic";
-        var txt = hold.createElement("div");
+        var txt = document.createElement("div"); hold.appendChild(txt);
         txt.class = "card-text";
-        var tit = hold.createElement("div");
+        var tit = document.createElement("div"); txt.appendChild(tit);
         tit.class = "card-title";
-        var cont = hold.createElement("div");
+        var cont = document.createElement("div"); txt.appendChild(cont);
         cont.class = "card-content";
         punch(blonde[card], tit, pic, cont, null); // This code is so out of context.
       }
