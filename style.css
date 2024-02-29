@@ -260,7 +260,7 @@ footer a {
 
 #main-grid {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 50% 50%;
     max-width: 30cm;
     margin-left: auto;
     margin-right: auto;
