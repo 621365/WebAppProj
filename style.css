@@ -86,7 +86,7 @@ label {
 }
 
 @media (max-width: 15cm) {
-    .card .card-pic, .card .card-txt {
+    .card .card-pic, .card .card-text {
         max-width: 100%;
     }
 
@@ -96,7 +96,7 @@ label {
 }
 
 @media (min-width: 15cm) {
-    .card .card-pic, .card .card-txt {
+    .card .card-pic, .card .card-text {
         max-width: 50%;
     }
 
