@@ -10,7 +10,7 @@ var archive = [
       "uuid": "5FC9FE74-2A7A-2810-20BA-3FCC270F68F3",
       "tags": ["Test", "Placeholder"],
       "image": {
-        "source": "https://assets.mixkit.co/videos/preview/mixkit-going-down-a-curved-highway-through-a-mountain-range-41576-large.mp4",
+        "source": "https://assets.allsamplefiles.com/mp4/ns/60s/sample-file-4k-uhd.mp4",
         "alt": "Video from the front of a car facing forward of an automobile driving down a curved highway through a mountain range.",
         "type": ["VID", "LOOP"]
       },
