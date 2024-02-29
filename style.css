@@ -19,7 +19,7 @@ button {
     cursor: pointer;
 }
 
-img {
+img, audio, video, embed {
     max-width: 100%;
     max-height: 100%;
 }
