@@ -87,7 +87,7 @@ label {
 
 @media (max-width: 15cm) {
     .card .card-pic {
-        min-width: 100%;
+        max-width: 100%;
     }
 
     .headlow {
@@ -97,7 +97,7 @@ label {
 
 @media (min-width: 15cm) {
     .card .card-pic {
-        min-width: 50%;
+        max-width: 50%;
     }
 
     .headlow {
@@ -279,6 +279,10 @@ footer a {
 }
 
 .card {
+    display: inline-block;
+}
+
+.card-pic {
     display: inline-block;
 }
 
