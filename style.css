@@ -19,7 +19,7 @@ button {
     cursor: pointer;
 }
 
-img, audio, video, embed {
+img, audio, video, embed, ruffle-embed {
     max-width: 100%;
     max-height: 100%;
 }
