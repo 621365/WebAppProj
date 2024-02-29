@@ -40,22 +40,22 @@ function media(type = null, subtype = null, source = null, alt = "Unknown or und
       case "IMG":
         switch (subtype) {
           case "GIF":
-            encode = `<img id="mediaFile" class="rtr" src="` + source + `" title="` + alt + `" alt="` + alt + `" style="image-rendering: pixelated;" >`;
+            encode = `<img class="mediaFile rtr" src="` + source + `" title="` + alt + `" alt="` + alt + `" style="image-rendering: pixelated;" >`;
             break;
           case "VEK":
             encode = `<iframe = src="` + source + `" class="vek" title="If you do not see an image, your browser is incapable of displaying vector graphics. " sandbox><img src="` + source + `" alt="` + alt + `" title="` + alt + `"></iframe>`;
             break;
           case "RTR":
-            encode = `<img id="mediaFile" class="rtr" src="` + source + `" title="` + alt + `" alt="` + alt + `">`;
+            encode = `<img class="mediaFile rtr" src="` + source + `" title="` + alt + `" alt="` + alt + `">`;
             break;
           case "RAW":
-            encode = `<a id="mediaFile" class="raw" href="` + source + `" title="RAW: ` + alt + `" target="_blank" download>This is an uncompressed file containing the sensor information to an image. To view what image the sensor information would make, please click here to download the image. </a>`;
+            encode = `<a class="mediaFile raw" href="` + source + `" title="RAW: ` + alt + `" target="_blank" download>This is an uncompressed file containing the sensor information to an image. To view what image the sensor information would make, please click here to download the image. </a>`;
             break;
           case "WBP":
-            encode = `<img id="mediaFile" class="rtr" src="` + source + `" title="` + alt + `" alt="` + alt + `" type="image/webp" desc="This is a WEBP file, which means that this file may not be able to display on all browsers.">`;
+            encode = `<img class="mediaFile rtr" src="` + source + `" title="` + alt + `" alt="` + alt + `" type="image/webp" desc="This is a WEBP file, which means that this file may not be able to display on all browsers.">`;
             break;
           default:
-            encode = `<img id="mediaFile" class="rtr" src="` + source + `" title="` + alt + `" alt="` + alt + `">`;
+            encode = `<img class="mediaFile rtr" src="` + source + `" title="` + alt + `" alt="` + alt + `">`;
             break;
         }
         break;
