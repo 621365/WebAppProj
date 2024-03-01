@@ -24,6 +24,12 @@ img, audio, video, embed, ruffle-embed {
     max-height: 100%;
 }
 
+/* Ruffle is a pain to work with. */
+.card ruffle-embed {
+    height: 5cm;
+    height: -webkit-fill-available;
+}
+
 main {
     margin-top: 2cm;
     margin-left: 0.5cm;
