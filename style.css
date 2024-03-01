@@ -29,6 +29,9 @@ img, video {
 }
 
 /* Ruffle is a pain to work with. */
+ruffle-embed {
+    z-index: -1;
+}
 .card ruffle-embed, .card video, .card img, .card audio, .card embed, .card iframe {
     height: 5cm;
     height: -webkit-fill-available !important;
