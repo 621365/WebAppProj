@@ -27,7 +27,7 @@ img, audio, video, embed, ruffle-embed {
 /* Ruffle is a pain to work with. */
 .card ruffle-embed {
     height: 5cm;
-    height: -webkit-fill-available;
+    height: -webkit-fill-available !important;
 }
 
 main {
