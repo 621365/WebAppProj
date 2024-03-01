@@ -262,6 +262,7 @@ footer a {
     display: grid;
     grid-template-columns: 50% 50%;
     max-width: 30cm;
+    grid-auto-rows: 5cm;
     margin-left: auto;
     margin-right: auto;
     grid-gap: 1cm;
@@ -269,7 +270,8 @@ footer a {
 
 .card img {
     display: inline-block;
-    max-width: 50%;
+    width: 50%;
+    height: 100%;
     transition: all 0.1s ease-in-out;
 }
 
