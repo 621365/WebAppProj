@@ -29,7 +29,7 @@ img, video {
 }
 
 /* Ruffle is a pain to work with. */
-.card ruffle-embed {
+.card ruffle-embed, .card video, .card img, .card audio, .card embed, .card iframe {
     height: 5cm;
     height: -webkit-fill-available !important;
 }
