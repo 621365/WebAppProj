@@ -296,6 +296,9 @@ footer a {
 
 .card-pic {
     display: inline-block;
+    height: 5cm; /* Ruffle and JSCanvas are a pain to deal with. */
+    height: -webkit-fill-available;
+    
 }
 
 @keyframes focus {
