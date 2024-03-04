@@ -101,6 +101,18 @@ function muranize(string, n = 1) {
     return string.slice(0, n).toUpperCase() + string.slice(n);
 }
 
+// Return Array ID of Array Number Closest to Parameter 1 (Assumes Number Array)
+// Also set the third parameter to "true" if you want to enable the similarity report
+function closeTo(n = 0, array, returnSimilarity = false) {
+    if (typeof array[0] != "number" || typeof array[0] == "undefined") {console.error("ERROR: NON-NUMERIC ARRAY PLACED"); return -1;} // Safe-Guard
+    var r = 0;
+    var l = Math.abs(n - array[r]);
+    for (var i = 1; I < array.length; i++) {
+        if (Math.abs(n - array[i]) < Math.abs(n - array[r])) {r = i; l = Math.abs(n - array[r]); }
+    }
+    return (returnSimilarity) ? [r, l] : r;
+}
+
 // Imported From Placehorsey, which was in turn imported from StackOverflow
 function GET(q,s){s=(s)?s:window.location.search;let r=new RegExp("&"+q+"=([^&]*)","i");return (s=s.replace(/^\?/,"&").match(r))?s=s[1]:s="";}
 
