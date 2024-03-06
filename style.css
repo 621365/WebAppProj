@@ -5,6 +5,17 @@ html, body {
     scroll-behavior: smooth;
 }
 
+body {
+    position: relative;
+    display: grid;
+    gap: 1cm;
+    grid-template-columns: 10cm auto;
+}
+
+/* Invert Bar */
+.right-bar {
+    grid-template-columns: auto 10cm !important;
+}
 
 header {
     position: fixed;
@@ -13,6 +24,19 @@ header {
     width: 100%;
     color: black;
     background: repeating-linear-gradient(to bottom, rgba(255, 255, 255, 1) 0cm, rgba(255, 255, 255, 1) 0.15cm, rgba(225, 225, 225, 1) 0.15cm, rgba(230, 230, 230, 1) 0.2cm);
+}
+
+nav {
+    grid-area: nav;
+    position: sticky;
+    display: block;
+    top: 1rem;
+    height: 95vh;
+    overflow-y: auto;
+}
+
+footer {
+    grid-area: footer;
 }
 
 button {
@@ -38,6 +62,7 @@ ruffle-embed {
 }
 
 main {
+    grid-area: main;
     margin-top: 2cm;
     margin-left: 0.5cm;
     margin-right: 0.5cm;
@@ -99,6 +124,20 @@ label {
 }
 
 @media (max-width: 15cm) {
+
+    body {
+        grid-template-areas: "nav nav" "main main" "footer footer";
+        animation: left 0.5s cubic-bezier(0, 1, 0.5, 1);
+    }
+
+    nav {
+        position: static;
+        height: auto;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
     .card .card-pic, .card .card-text {
         max-width: 100%;
     }
@@ -109,6 +148,12 @@ label {
 }
 
 @media (min-width: 15cm) {
+    
+    body {
+        grid-template-areas: "nav main" "footer footer";
+        animation: right 0.5s cubic-bezier(0, 1, 0.5, 1);
+    }
+    
     .card .card-pic, .card .card-text {
         max-width: 50%;
     }
@@ -118,6 +163,48 @@ label {
     }
 }
 
+@keyframes left {
+    from {
+        left: 5cm;
+    }
+    to {
+        left: 0cm;
+    }
+}
+
+@keyframes right {
+    from {
+        right: 5cm;
+    }
+    to {
+        right: 0cm;
+    }
+}
+
+/* TODO: ADD DARK THEME + HIGH CONTRAST THEME */
+/* Again, I know that I'm not supposed to do this, but I'm copying my accessibility framework from Placehorsey; I am proud of how reliable it is and how cool it looks. */
+@media (prefers-reduced-motion) {
+    html, body, button, a, nav, footer {
+        transition-duration: 0s !important;
+        animation-duration: 0s !important;
+        scroll-behavior: unset !important; 
+    }
+}
+
+/* High Contrast Theme Here */
+media (prefers-contrast: more) or (-ms-high-contrast: active) { 
+
+}
+
+/* Dark Theme Here */
+@media (prefers-color-scheme: dark) { 
+
+}
+
+/* Light Theme Here */
+@media (prefers-color-scheme: dark) { 
+
+}
 #headlow {
     border-bottom: solid rgba(150, 150, 150, 1) 0.05cm;
     background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(240, 240, 240, 1) 50%, rgba(230, 230, 230, 1) 50%, rgba(250, 250, 250, 1) 100%);
