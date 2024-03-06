@@ -9,12 +9,16 @@ body {
     position: relative;
     display: grid;
     gap: 1cm;
-    grid-template-columns: 10cm auto;
 }
 
 /* Invert Bar */
 .right-bar {
     grid-template-columns: auto 10cm !important;
+}
+
+/* Bar */
+.bar {
+    grid-template-columns: 10cm auto !important;
 }
 
 header {
