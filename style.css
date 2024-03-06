@@ -131,6 +131,9 @@ label {
 
     body {
         grid-template-areas: "nav nav" "main main" "footer footer";
+    }
+
+    main, nav {
         animation: left 0.5s cubic-bezier(0, 1, 0.5, 1);
     }
 
@@ -155,6 +158,9 @@ label {
     
     body {
         grid-template-areas: "nav main" "footer footer";
+    }
+
+    main, nav {
         animation: right 0.5s cubic-bezier(0, 1, 0.5, 1);
     }
     
