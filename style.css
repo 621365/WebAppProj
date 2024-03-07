@@ -142,33 +142,6 @@ label {
     }
 }
 
-@keyframes right {
-    from {
-        right: 5cm;
-    }
-    to {
-        right: 0cm;
-    }
-}
-
-@keyframes sticky-left {
-    from {
-        margin-left: 5cm;
-    }
-    to {
-        margin-left: 0cm;
-    }
-}
-
-@keyframes sticky-right {
-    from {
-        margin-right: 5cm;
-    }
-    to {
-        margin-right: 0cm;
-    }
-}
-
 @media (max-width: 15cm) {
 
     .bar {
@@ -199,8 +172,7 @@ label {
 @media (min-width: 15cm) {
 
     .bar nav, .right-bar nav {
-        position: sticky;
-        animation: sticky-right 0.5s cubic-bezier(0, 1, 0.5, 1);
+        position: fixed;
     }
     
     .bar {
