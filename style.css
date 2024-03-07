@@ -35,7 +35,7 @@ nav {
     grid-area: nav;
     position: sticky;
     display: block;
-    top: 1rem;
+    top: 2cm;
     height: 95vh;
     overflow-y: auto;
 }
