@@ -3,6 +3,7 @@ html, body {
     padding: 0;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, system-ui, sans-serif;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
