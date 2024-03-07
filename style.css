@@ -146,6 +146,15 @@ label {
     }
 }
 
+@keyframes right {
+    from {
+        right: 5cm;
+    }
+    to {
+        right: 0cm;
+    }
+}
+
 @media (max-width: 15cm) {
 
     .bar {
