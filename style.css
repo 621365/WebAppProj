@@ -129,7 +129,7 @@ label {
 
 @media (max-width: 15cm) {
 
-    body {
+    .bar {
         grid-template-areas: "nav nav" "main main" "footer footer";
     }
 
@@ -156,8 +156,12 @@ label {
 
 @media (min-width: 15cm) {
     
-    body {
+    .bar {
         grid-template-areas: "nav main" "footer footer";
+    }
+    
+    .right-bar {
+        grid-template-areas: "main nav" "footer footer";
     }
 
     main, nav {
