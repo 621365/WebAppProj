@@ -133,61 +133,6 @@ label {
     cursor: text;
 }
 
-@media (max-width: 15cm) {
-
-    .bar {
-        grid-template-areas: "nav nav" "main main" "footer footer";
-    }
-
-    nav {
-        position: relative;
-        height: auto;
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
-    .bar main, .bar nav, .right-bar main, .right-bar nav {
-        animation: left 0.5s cubic-bezier(0, 1, 0.5, 1);
-    }
-    
-    .card .card-pic, .card .card-text {
-        max-width: 100%;
-    }
-
-    .headlow {
-        margin: 0cm 0cm;
-    }
-}
-
-@media (min-width: 15cm) {
-
-    .bar nav, .right-bar nav {
-        animation: sticky-right 0.5s cubic-bezier(0, 1, 0.5, 1);
-        position: sticky;
-    }
-    
-    .bar {
-        grid-template-areas: "nav main" "footer footer";
-    }
-    
-    .right-bar {
-        grid-template-areas: "main nav" "footer footer";
-    }
-
-    .bar main, .bar nav, .right-bar main, .right-bar nav {
-        animation: right 0.5s cubic-bezier(0, 1, 0.5, 1);
-    }
-    
-    .card .card-pic, .card .card-text {
-        max-width: 50%;
-    }
-
-    .headlow {
-        margin: 0cm 0.5cm;
-    }
-}
-
 @keyframes left {
     from {
         left: 5cm;
@@ -223,6 +168,62 @@ label {
         margin-right: 0cm;
     }
 }
+
+@media (max-width: 15cm) {
+
+    .bar {
+        grid-template-areas: "nav nav" "main main" "footer footer";
+    }
+
+    nav {
+        position: relative;
+        height: auto;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .bar main, .bar nav, .right-bar main, .right-bar nav {
+        animation: left 0.5s cubic-bezier(0, 1, 0.5, 1);
+    }
+    
+    .card .card-pic, .card .card-text {
+        max-width: 100%;
+    }
+
+    .headlow {
+        margin: 0cm 0cm;
+    }
+}
+
+@media (min-width: 15cm) {
+
+    .bar nav, .right-bar nav {
+        position: sticky;
+        animation: sticky-right 0.5s cubic-bezier(0, 1, 0.5, 1);
+    }
+    
+    .bar {
+        grid-template-areas: "nav main" "footer footer";
+    }
+    
+    .right-bar {
+        grid-template-areas: "main nav" "footer footer";
+    }
+
+    .bar main, .bar nav, .right-bar main, .right-bar nav {
+        animation: right 0.5s cubic-bezier(0, 1, 0.5, 1);
+    }
+    
+    .card .card-pic, .card .card-text {
+        max-width: 50%;
+    }
+
+    .headlow {
+        margin: 0cm 0.5cm;
+    }
+}
+
 
 /* TODO: ADD DARK THEME + HIGH CONTRAST THEME */
 /* Again, I know that I'm not supposed to do this, but I'm copying my accessibility framework from Placehorsey; I am proud of how reliable it is and how cool it looks. */
