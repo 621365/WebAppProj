@@ -43,6 +43,7 @@ nav {
 }
 
 footer {
+    position: relative;
     grid-area: footer;
 }
 
