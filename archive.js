@@ -109,7 +109,7 @@ var datedArchive = archive.sort(function(a, b) {return parseFloat((a.meta.timest
 
 // Get Timestamp Float
 function stamp(year, month, day, UTC, hour) {
-  return parseFloat((year*1000) + (month*100) + (day*10) + (a.meta.timestamp.hour) - (a.meta.timestamp.UTC))
+  return parseFloat((year*1000) + (month*100) + (day*10) + (hour) - (UTC));
 }
 
 // Aquires the Hard-Coded ID of the 
