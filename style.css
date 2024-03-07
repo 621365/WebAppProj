@@ -67,6 +67,7 @@ ruffle-embed {
 }
 
 main {
+    position: relative;
     grid-area: main;
     margin-top: 2cm;
     margin-left: 0.5cm;
@@ -134,7 +135,7 @@ label {
         grid-template-areas: "nav nav" "main main" "footer footer";
     }
 
-    main, nav {
+    .bar main, .bar nav, .right-bar main, .right-bar nav {
         animation: left 0.5s cubic-bezier(0, 1, 0.5, 1);
     }
 
@@ -165,7 +166,7 @@ label {
         grid-template-areas: "main nav" "footer footer";
     }
 
-    main, nav {
+    .bar main, .bar nav, .right-bar main, .right-bar nav {
         animation: right 0.5s cubic-bezier(0, 1, 0.5, 1);
     }
     
