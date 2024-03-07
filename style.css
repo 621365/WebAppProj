@@ -8,6 +8,8 @@ html, body {
 body {
     grid-template-areas: "nav nav" "main main" "footer footer";
     position: relative;
+    right: 0;
+    left: 0;
     display: grid;
     gap: 1cm;
 }
