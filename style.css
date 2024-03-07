@@ -140,7 +140,7 @@ label {
     }
 
     nav {
-        position: static;
+        position: relative;
         height: auto;
         text-align: center;
         margin-left: auto;
