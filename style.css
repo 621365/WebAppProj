@@ -156,9 +156,15 @@ label {
         margin-right: auto;
     }
     
-    .bar main, .bar nav, .right-bar main, .right-bar nav {
+    .bar, .right-bar {
         animation: left 0.5s cubic-bezier(0, 1, 0.5, 1);
     }
+
+    footer {
+        animation: right 0.5s cubic-bezier(0, 1, 0.5, 1);
+    }
+
+    
     
     .card .card-pic, .card .card-text {
         max-width: 100%;
@@ -171,8 +177,8 @@ label {
 
 @media (min-width: 15cm) {
 
-    .bar nav, .right-bar nav {
-        position: fixed;
+    .bar nav, .right-bar nav{
+        position: sticky;
     }
     
     .bar {
@@ -183,8 +189,12 @@ label {
         grid-template-areas: "main nav" "footer footer";
     }
 
-    .bar main, .bar nav, .right-bar main, .right-bar nav {
+    .bar, .right-bar {
         animation: right 0.5s cubic-bezier(0, 1, 0.5, 1);
+    }
+
+    footer {
+        animation: left 0.5s cubic-bezier(0, 1, 0.5, 1);
     }
     
     .card .card-pic, .card .card-text {
