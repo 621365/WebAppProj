@@ -74,6 +74,10 @@ main {
     margin-right: 0.5cm;
 }
 
+main, nav {
+    z-index: -1;
+}
+
 h1 {
     display: block;
     max-width: 30cm;
