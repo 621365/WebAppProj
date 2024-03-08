@@ -139,19 +139,19 @@ label {
 
 @keyframes left {
     from {
-        left: 5cm;
+        transform: translateX(5cm);
     }
     to {
-        left: 0cm;
+        transform: translateX(0cm);
     }
 }
 
 @keyframes right {
     from {
-        right: 5cm;
+        transform: translateX(-5cm);
     }
     to {
-        right: 0cm;
+        transform: translateX(0cm);
     }
 }
 
@@ -169,16 +169,10 @@ label {
         margin-right: auto;
     }
     
-    .bar, .right-bar {
+    .bar main, .right-bar main, .bar nav, .right-bar nav {
         animation: left 0.5s cubic-bezier(0, 1, 0.5, 1);
     }
 
-    footer {
-        animation: right 0.5s cubic-bezier(0, 1, 0.5, 1);
-    }
-
-    
-    
     .card .card-pic, .card .card-text {
         max-width: 100%;
     }
@@ -202,14 +196,10 @@ label {
         grid-template-areas: "main nav" "footer footer";
     }
 
-    .bar, .right-bar {
+    .bar main, .right-bar main, .bar nav, .right-bar nav {
         animation: right 0.5s cubic-bezier(0, 1, 0.5, 1);
     }
 
-    footer {
-        animation: left 0.5s cubic-bezier(0, 1, 0.5, 1);
-    }
-    
     .card .card-pic, .card .card-text {
         max-width: 50%;
     }
