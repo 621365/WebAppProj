@@ -16,3 +16,13 @@ function determineUTC() {
   document.getElementsByName("utc")[0].value = uUTC;
   return uUTC;
 }
+
+// Function Intended for Exclusive Use With Archive List (Fills Out Date)
+function fillDate() {
+    document.getElementsByName("utc")[0].value = userUTC();
+    document.getElementsByName("year")[0].value = clock.getFullYear();
+    document.getElementsByName("month")[0].value = clock.getMonth();
+    document.getElementsByName("day")[0].value = clock.getDate();
+    document.getElementsByName("hour")[0].value = clock.getHours();
+    document.getElementsByName("minute")[0].value = clock.getMinutes();
+}
