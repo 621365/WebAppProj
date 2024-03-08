@@ -15,6 +15,10 @@ body {
     gap: 1cm;
 }
 
+main, footer, nav {
+    max-width: calc(100vw - 2cm);
+}
+
 /* Invert Bar */
 .right-bar {
     grid-template-columns: auto 10cm !important;
