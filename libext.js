@@ -118,7 +118,7 @@ function GET(q,s){s=(s)?s:window.location.search;let r=new RegExp("&"+q+"=([^&]*
 
 // Funny lazy stuff
 var dId = document.getElementById;
-var gLass = getElementsByClassName;
+var gLass = document.getElementsByClassName;
 var clock;
 // Turn Clock Into Live Clock
 setInterval(function(){clock = new Date();}, 1);
