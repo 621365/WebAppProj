@@ -139,7 +139,7 @@ label {
 
 @keyframes left {
     from {
-        transform: translateX(5cm);
+        transform: translateX(-5cm);
     }
     to {
         transform: translateX(0cm);
@@ -148,7 +148,7 @@ label {
 
 @keyframes right {
     from {
-        transform: translateX(-5cm);
+        transform: translateX(5cm);
     }
     to {
         transform: translateX(0cm);
