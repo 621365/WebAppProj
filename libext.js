@@ -117,7 +117,6 @@ function closeTo(n = 0, array, returnSimilarity = false) {
 function GET(q,s){s=(s)?s:window.location.search;let r=new RegExp("&"+q+"=([^&]*)","i");return (s=s.replace(/^\?/,"&").match(r))?s=s[1]:s="";}
 
 // Funny lazy stuff
-var getId = getElementById;
 var dId = document.getElementById;
 var gLass = getElementsByClassName;
 var clock;
