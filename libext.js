@@ -121,3 +121,4 @@ var getId = getElementById;
 var dId = document.getElementById;
 var gLass = getElementsByClassName;
 const timeStamper = new Date();
+function userUTC(){return timeStamper.getTimezoneOffset()/-60;}
