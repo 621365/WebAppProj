@@ -99,7 +99,7 @@ select, form, option, label {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, system-ui, sans-serif;
 }
 
-select, input {
+select, input[type="submit"] {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, system-ui, sans-serif;
     border-radius: 0.1cm;
     vertical-align: middle;
