@@ -120,3 +120,4 @@ function GET(q,s){s=(s)?s:window.location.search;let r=new RegExp("&"+q+"=([^&]*
 var getId = getElementById;
 var dId = document.getElementById;
 var gLass = getElementsByClassName;
+const timeStamper = new Date();
