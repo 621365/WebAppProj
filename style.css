@@ -16,6 +16,7 @@ body {
 }
 
 main, footer, nav {
+    z-index: 0;
     max-width: calc(100vw - 2cm);
 }
 
@@ -30,6 +31,7 @@ main, footer, nav {
 }
 
 header {
+    z-index: 1;
     position: fixed;
     top: 0;
     left: 0;
