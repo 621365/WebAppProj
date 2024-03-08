@@ -122,4 +122,4 @@ var gLass = document.getElementsByClassName;
 var clock;
 // Turn Clock Into Live Clock
 setInterval(function(){clock = new Date();}, 1);
-function userUTC(){return timeStamper.getTimezoneOffset()/-60;}
+function userUTC(){return clock.getTimezoneOffset()/-60;}
