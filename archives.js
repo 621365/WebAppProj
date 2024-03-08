@@ -24,5 +24,5 @@ function fillDate() {
     document.getElementsByName("month")[0].value = clock.getMonth();
     document.getElementsByName("day")[0].value = clock.getDate();
     document.getElementsByName("hour")[0].value = clock.getHours();
-    document.getElementsByName("minute")[0].value = clock.getMinutes();
+    document.getElementsByName("min")[0].value = clock.getMinutes();
 }
