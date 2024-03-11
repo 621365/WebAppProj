@@ -63,12 +63,13 @@ button {
     font-family: Lucia, Verdana, sans;
     font-weight: 500;
     text-shadow: 0 0.05cm 0.05cm rgba(0, 0, 0, 0.25);
-    border-radius: inherit;
-    box-shadow: 0 0.15cm 0.25cm -0.05cm rgba(10, 10, 10, 0.5) inset, 0 0.05cm 0.1cm rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0.15cm 0.25cm -0.05cm rgba(0, 0, 0, 0.5) inset, 0cm 0.05cm 0.1cm -0.01cm rgba(0, 0, 0, 0.5) inset, 0 0.05cm 0.1cm rgba(0, 0, 0, 0.5);
     background: linear-gradient(to bottom, rgba(200, 200, 200, 1) 0%, rgba(240, 240, 240) 80%, white 100%);
-    border: solid black 0.01cm;
-    height: 0.55cm;
+    border: none;
+    padding: 0cm 0.3cm;
+    height: 0.5cm;
     vertical-align: middle;
+    border-radius: 1cm;
 }
 
 button:after {
@@ -76,14 +77,15 @@ button:after {
     display: block;
     position: relative !important;
     margin: 0;
-    z-index: 100;
-    width: calc(100%);
+    z-index: -1;
+    width: calc(100% + 0.2cm);
     height: 0.15cm;
+    left: -0.1cm;
     top: -0.425cm;
     border-radius: 0.25cm 0.25cm 0.1cm 0.1cm / 0.1cm 0.1cm 0.1cm 0.1cm;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.75);
     filter: blur(0.02cm);
-    box-shadow: 0 0.3cm 0.25cm rgba(255, 255, 255, 0.25);
+    box-shadow: 0 0.3cm 0.1cm rgba(255, 255, 255, 1);
 }
 
 img, audio, video, embed, ruffle-embed {
