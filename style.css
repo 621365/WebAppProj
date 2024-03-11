@@ -56,6 +56,34 @@ footer {
 
 button {
     cursor: pointer;
+    display: block;
+    position: relative !important;
+    margin-top: 0.1cm;
+    z-index: -1;
+    font-family: Lucia, Verdana, sans;
+    font-weight: 500;
+    text-shadow: 0 0.05cm 0.05cm rgba(0, 0, 0, 0.25);
+    border-radius: inherit;
+    box-shadow: 0 0.15cm 0.25cm -0.05cm rgba(10, 10, 10, 0.5) inset, 0 0.05cm 0.1cm rgba(0, 0, 0, 0.5);
+    background: linear-gradient(to bottom, rgba(200, 200, 200, 1) 0%, rgba(240, 240, 240) 80%, white 100%);
+    border: solid black 0.01cm;
+    height: 0.55cm;
+    vertical-align: middle;
+}
+
+button:after {
+    content: "";
+    display: block;
+    position: relative !important;
+    margin: 0;
+    z-index: 100;
+    width: calc(100%);
+    height: 0.15cm;
+    top: -0.425cm;
+    border-radius: 0.25cm 0.25cm 0.1cm 0.1cm / 0.1cm 0.1cm 0.1cm 0.1cm;
+    background: rgba(255, 255, 255, 0.5);
+    filter: blur(0.02cm);
+    box-shadow: 0 0.3cm 0.25cm rgba(255, 255, 255, 0.25);
 }
 
 img, audio, video, embed, ruffle-embed {
