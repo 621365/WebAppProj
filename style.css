@@ -78,7 +78,7 @@ button:after {
     display: block;
     position: relative !important;
     margin: 0;
-    z-index: 0;
+    z-index: -1;
     width: calc(100% + 0.2cm);
     height: 0.15cm;
     left: -0.1cm;
