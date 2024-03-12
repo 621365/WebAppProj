@@ -119,6 +119,12 @@ img, video {
     object-fit: cover;
 }
 
+
+footer a {
+    color: black;
+    text-decoration: none;
+}
+
 /* Ruffle is a pain to work with. */
 ruffle-embed {
     z-index: -1;
@@ -295,7 +301,7 @@ media (prefers-contrast: more) or (-ms-high-contrast: active) {
     }
 
     footer a {
-        color: white !important;
+        color: white;
     }
 
     header {
@@ -461,11 +467,6 @@ media (prefers-contrast: more) or (-ms-high-contrast: active) {
 footer {
     padding: 1cm 0.5cm;
     font-size: 0.75rem;
-}
-
-footer a {
-    color: black;
-    text-decoration: none;
 }
 
 #foot-desc {
