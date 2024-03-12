@@ -161,12 +161,12 @@ select, input[type="submit"] {
     background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(240, 240, 240, 1) 50%, rgba(230, 230, 230, 1) 50%, rgba(250, 250, 250, 1) 100%);
 }
 
-select:focus, select:focus-within, select:hover, input:focus, input:focus-within, input:hover {
+select:focus, select:focus-within, select:hover, input[type="submit"]:focus, input[type="submit"]:focus-within, input[type="submit"]:hover {
     outline: none;
     background: linear-gradient(to bottom, rgba(200, 230, 255, 1) 0%, rgba(190, 210, 240, 1) 50%, rgba(180, 200, 230, 1) 50%, rgba(200, 200, 250, 1) 100%);
 }
 
-select:focus, select:focus-within, input:focus, input:focus-within {
+select:focus, select:focus-within, input[type="submit"]:focus, input[type="submit"]:focus-within {
     animation: focus 0.5s infinite ease-out;
 }
 
