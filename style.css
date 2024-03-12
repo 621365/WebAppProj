@@ -295,7 +295,7 @@ media (prefers-contrast: more) or (-ms-high-contrast: active) {
     }
 
     footer a {
-        color: white;
+        color: white !important;
     }
 
     header {
@@ -309,6 +309,14 @@ media (prefers-contrast: more) or (-ms-high-contrast: active) {
 
     .headlow {
         color: white;
+    }
+
+    .headlow:active {
+        background: rgba(70, 110, 235, 1);
+    }
+
+    .headlow:hover, .headlow:focus, .headlow:focus-within {
+        background: rgba(100, 150, 255, 1);
     }
 }
 
