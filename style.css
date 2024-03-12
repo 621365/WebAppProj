@@ -289,11 +289,14 @@ media (prefers-contrast: more) or (-ms-high-contrast: active) {
 
 /* Dark Theme Here */
 @media (prefers-color-scheme: dark) { 
-
+    html, body {
+        background: black;
+        color: white;
+    }
 }
 
 /* Light Theme Here */
-@media (prefers-color-scheme: dark) { 
+@media (prefers-color-scheme: light) { 
 
 }
 #headlow {
