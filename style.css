@@ -293,6 +293,14 @@ media (prefers-contrast: more) or (-ms-high-contrast: active) {
         background: black;
         color: white;
     }
+
+    footer a {
+        color: white;
+    }
+
+    header {
+        background: repeating-linear-gradient(to bottom, rgba(0, 0, 0, 1) 0cm, rgba(0, 0, 0, 1) 0.15cm, rgba(50, 50, 50, 1) 0.15cm, rgba(55, 55, 55, 1) 0.2cm);
+    }
 }
 
 /* Light Theme Here */
