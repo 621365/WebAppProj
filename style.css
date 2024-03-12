@@ -184,6 +184,10 @@ option {
     cursor: pointer;
 }
 
+nav form input {
+    width: -webkit-fill-available;
+}
+
 input {
     padding: 0.09cm 0.1cm;
     margin: 0;
