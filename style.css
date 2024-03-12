@@ -277,68 +277,6 @@ label {
     }
 }
 
-
-/* TODO: ADD DARK THEME + HIGH CONTRAST THEME */
-/* Again, I know that I'm not supposed to do this, but I'm copying my accessibility framework from Placehorsey; I am proud of how reliable it is and how cool it looks. */
-@media (prefers-reduced-motion) {
-    html, body, button, a, nav, footer {
-        transition-duration: 0s !important;
-        animation-duration: 0s !important;
-        scroll-behavior: unset !important; 
-    }
-}
-
-/* High Contrast Theme Here */
-media (prefers-contrast: more) or (-ms-high-contrast: active) { 
-
-}
-
-/* Dark Theme Here */
-@media (prefers-color-scheme: dark) { 
-    html, body {
-        background: black;
-        color: white;
-    }
-
-    footer a {
-        color: white;
-    }
-
-    header {
-        background: repeating-linear-gradient(to bottom, rgba(0, 0, 0, 1) 0cm, rgba(0, 0, 0, 1) 0.15cm, rgba(50, 50, 50, 1) 0.15cm, rgba(55, 55, 55, 1) 0.2cm);
-    }
-
-    #headlow {
-        border-bottom: solid rgba(250, 250, 250, 1) 0.05cm;
-        background: linear-gradient(to bottom, rgba(100, 100, 100, 1) 0%, rgba(120, 120, 120, 1) 50%, rgba(90, 90, 90, 1) 50%, rgba(50, 50, 50, 1) 100%);
-    }
-
-    .headlow {
-        color: white;
-    }
-
-    .headlow:active {
-        background: rgba(70, 110, 235, 1);
-    }
-
-    .headlow:hover, .headlow:focus, .headlow:focus-within {
-        background: rgba(100, 150, 255, 1);
-    }
-
-    .headtop {
-        background: linear-gradient(to bottom, rgba(50, 50, 50, 1) 55%, rgba(0, 0, 0, 1) 90%);
-        color: white;
-    }
-    
-    .headtop::after {
-        background: rgba(75, 75, 75, 0.5);
-    }
-}
-
-/* Light Theme Here */
-@media (prefers-color-scheme: light) { 
-
-}
 #headlow {
     border-bottom: solid rgba(150, 150, 150, 1) 0.05cm;
     background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(240, 240, 240, 1) 50%, rgba(230, 230, 230, 1) 50%, rgba(250, 250, 250, 1) 100%);
@@ -670,4 +608,67 @@ footer {
     opacity: 1;
     left: 0;
     top:0;
+}
+
+/* Part of the Accessibility Framework Based off of Placehorsey Accessibility Framework */
+/* TODO: ADD DARK THEME + HIGH CONTRAST THEME */
+/* Again, I know that I'm not supposed to do this, but I'm copying my accessibility framework from Placehorsey; I am proud of how reliable it is and how cool it looks. */
+@media (prefers-reduced-motion) {
+    html, body, button, a, nav, footer {
+        transition-duration: 0s !important;
+        animation-duration: 0s !important;
+        scroll-behavior: unset !important; 
+    }
+}
+
+/* High Contrast Theme Here */
+media (prefers-contrast: more) or (-ms-high-contrast: active) { 
+
+}
+
+/* Dark Theme Here */
+@media (prefers-color-scheme: dark) { 
+    html, body {
+        background: black;
+        color: white;
+    }
+
+    footer a {
+        color: white;
+    }
+
+    header {
+        background: repeating-linear-gradient(to bottom, rgba(0, 0, 0, 1) 0cm, rgba(0, 0, 0, 1) 0.15cm, rgba(50, 50, 50, 1) 0.15cm, rgba(55, 55, 55, 1) 0.2cm);
+    }
+
+    #headlow {
+        border-bottom: solid rgba(250, 250, 250, 1) 0.05cm;
+        background: linear-gradient(to bottom, rgba(100, 100, 100, 1) 0%, rgba(120, 120, 120, 1) 50%, rgba(90, 90, 90, 1) 50%, rgba(50, 50, 50, 1) 100%);
+    }
+
+    .headlow {
+        color: white;
+    }
+
+    .headlow:active {
+        background: rgba(70, 110, 235, 1);
+    }
+
+    .headlow:hover, .headlow:focus, .headlow:focus-within {
+        background: rgba(100, 150, 255, 1);
+    }
+
+    .headtop {
+        background: linear-gradient(to bottom, rgba(50, 50, 50, 1) 55%, rgba(0, 0, 0, 1) 90%);
+        color: white;
+    }
+    
+    .headtop::after {
+        background: rgba(75, 75, 75, 0.5);
+    }
+}
+
+/* Light Theme Here */
+@media (prefers-color-scheme: light) { 
+
 }
