@@ -318,6 +318,15 @@ media (prefers-contrast: more) or (-ms-high-contrast: active) {
     .headlow:hover, .headlow:focus, .headlow:focus-within {
         background: rgba(100, 150, 255, 1);
     }
+
+    .headtop {
+        background: linear-gradient(to bottom, rgba(50, 50, 50, 1) 55%, rgba(0, 0, 0, 1) 90%);
+        color: white;
+    }
+    
+    .headtop::after {
+        background: rgba(75, 75, 75, 0.5);
+    }
 }
 
 /* Light Theme Here */
