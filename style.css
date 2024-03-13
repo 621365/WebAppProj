@@ -153,6 +153,17 @@ h1 {
     margin-right: auto;
 }
 
+input {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, system-ui, sans-serif;
+    padding: 0.09cm 0.1cm;
+    margin: 0;
+    vertical-align: inherit;
+    font-size: 0.8rem;
+    border: none;
+    box-shadow: -0.01cm 0.01cm 0.05cm rgba(0, 0, 0, 0.75) inset;
+    color: black;
+}
+
 select, form, option, label {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, system-ui, sans-serif;
 }
@@ -192,16 +203,6 @@ option {
 
 nav form input {
     width: -webkit-fill-available;
-}
-
-input {
-    padding: 0.09cm 0.1cm;
-    margin: 0;
-    vertical-align: inherit;
-    font-size: 0.8rem;
-    border: none;
-    box-shadow: -0.01cm 0.01cm 0.05cm rgba(0, 0, 0, 0.75) inset;
-    color: black;
 }
 
 label {
