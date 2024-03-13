@@ -99,6 +99,56 @@ var archive = [
           "UTC": -8
         }
     }
+  }, 
+  {
+    "title": "Tate Drama",
+    "content": `<a href="https://www.bbc.com/news/uk-68547871">By Thomas Mackintosh</a><br><br>Controversial influencer Andrew Tate and his brother Tristan can be extradited to the UK, a Romanian court has ruled. Andrew Tate, 37, and Tristan, 35, were detained on Monday in Bucharest after Bedfordshire Police said it had obtained an arrest warrant. The brothers can be extradited only after the conclusion of their separate trial in Romania on human trafficking charges, a judge ruled. They have been released from custody. Speaking outside court Andrew Tate said: "We are very innocent men and in time everybody is going to see that. We are excited to finish this judicial process and clear our names." The brothers, who "categorically reject all charges", will remain under judicial controls in Romania which prevent them travelling outside the country. Before the extradition was granted by the Court of Appeal in Bucharest, Bedfordshire Police confirmed it had obtained the arrest warrant for two men in their 30s as part of an investigation into allegations of rape and human trafficking. "We understand this is a distressing subject, and people may be impacted by what they are seeing in the news," the force said in a statement. This content doesn't seem to be working. According to the brothers' legal representatives the allegations date back to 2012-2015. Speaking after they were released one of their lawyers, Eugen Vidineac, said: "We appreciate the Bucharest Court of Appeal's decision to postpone the extradition of Andrew and Tristan Tate. "This ruling provides an opportunity for the brothers to participate fully in their defence and for the legal process to proceed in a transparent manner." Romanian authorities are investigating separate allegations of rape, human trafficking and forming a criminal gang - charges the brothers deny. In December 2022, the brothers were arrested by Romanian authorities and eventually placed under house arrest in the town of Voluntari, on the outskirts of Bucharest. The house arrest was lifted in August last year but they were prevented from leaving Romania. They are accused of exploiting women via an adult content business, which prosecutors allege operated as a criminal group. Mr Tate has repeatedly claimed Romanian prosecutors have no evidence against him and there is a conspiracy to silence him. Speaking on Monday Mr Vidineac added: "Our clients are fully committed to actively participating in the legal process and defending their reputation. "We believe this rumour has originated from a popular online influencer who misconstrued a text message from our clients while streaming live. "There is simply no truth to it."`,
+    "meta": {
+      "error": false,
+      "description": "Tate drama that the person (or journalist by today's standards) placing into the JSON archive does not care about.",
+      "author": "Thomas Mackintosh",
+      "uuid": "BD9F7202-82B3-3DB0-656B-260812C75052",
+      "tags": ["Tate", "Drama", "Stolen"],
+      "image": {
+        "source": "https://www.bbc.com/news/uk-68547871",
+        "alt": "URL To the Source of the Article.",
+        "type": ["IMG", "RAW"]
+      },
+      "timestamp": {
+          "year": 2024,
+          "month": 3,
+          "day": 12,
+          "hour": 0,
+          "minute": 0,
+          "second": 3.14159,
+          "UTC": 0
+        }
+    }
+  }, 
+  {
+    "title": "US Spy Chief 'Cannot Rule Out' That China Would Use TikTok to Influence US Elections",
+    "content": `<a href="https://www.usnews.com/news/top-news/articles/2024-03-12/us-spy-chief-cannot-rule-out-that-china-would-use-tiktok-to-influence-us-elections">By Michael Martina and Patricia Zengerle</a><br><br>WASHINGTON (Reuters) -China could use social media app TikTok to influence the 2024 U.S. elections, U.S. Director of National Intelligence Avril Haines told a House of Representatives intelligence committee hearing on Tuesday. Asked by Democratic Representative Raja Krishnamoorthi if China's ruling Communist Party (CCP) would use TikTok to influence the elections, Haines said: "We cannot rule out that the CCP would use it." Krishnamoorthi is also the ranking Democrat on the House select committee on China. He and that panel's Republican chair Mike Gallagher last week introduced a bill that would give TikTok's Chinese owner ByteDance about six months to divest the short video app used by 170 million Americans. The House is due to vote on Wednesday under fast-track rules that require two-thirds of members to vote "yes" for the measure to win passage. President Joe Biden said last week he would sign the bill, but the app is popular and getting legislation approved by both the House and Senate in an election year may be difficult. The 2024 Annual Threat Assessment of the U.S. Intelligence Community released on Monday said TikTok accounts run by a Chinese government propaganda arm reportedly targeted candidates from both political parties during the U.S. midterm election cycle in 2022. Lawmakers have long voiced concerns that the Chinese government could access user data or influence what people see on the app, including pushing content to stoke U.S. political divisions. TikTok, which says it has not and would not share U.S. user data with the Chinese government, argues the House bill amounts to a ban. It was unclear if China would approve any sale or if TikTok could be divested in six months. Also speaking at the House hearing, FBI Director Christopher Wray repeated his assessment that TikTok posed national security threats. "Americans need to ask themselves whether they want to give the Chinese government the ability to control access to their data," Wray said, adding that it could ultimately "compromise their devices."`,
+    "meta": {
+      "error": false,
+      "description": "All my homies hate TikTok, especially since this is a stolen article.",
+      "author": "Michael Martina and Patricia Zengerle",
+      "uuid": "6BA3F248-7191-66C4-D3AB-CDF2E244DE81",
+      "tags": ["TikTok", "Drama", "Stolen", "United States", "Legislative Drama"],
+      "image": {
+        "source": "https://www.usnews.com/news/top-news/articles/2024-03-12/us-spy-chief-cannot-rule-out-that-china-would-use-tiktok-to-influence-us-elections",
+        "alt": "URL To the Source of the Article.",
+        "type": ["IMG", "RAW"]
+      },
+      "timestamp": {
+          "year": 2024,
+          "month": 3,
+          "day": 13,
+          "hour": 0,
+          "minute": 0,
+          "second": 3.14159,
+          "UTC": 0
+        }
+    }
   } 
 ]
 
