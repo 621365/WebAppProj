@@ -42,6 +42,7 @@ header {
 }
 
 nav {
+    padding: 0.25cm;
     grid-area: nav;
     position: sticky;
     display: block;
