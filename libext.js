@@ -125,7 +125,7 @@ setInterval(function(){clock = new Date();}, 1);
 function userUTC(){return clock.getTimezoneOffset()/-60;}
 
 // Convert Any Date to UTC
-function utcTime(year=1987, mon=3, day=14, hour=15, UTC=0, min=9, sec=0) {
+function utcTime(year=1987, mon=1, day=1, hour=0, UTC=0, min=0, sec=0) {
     return parseInt(new Date(year.toString() + " " + monthGet(mon).toString() + " " + day.toString() + " " + hour.toString() + ":" + min.toString() + ":" + sec.toString() + " UTC" + UTC.toString()).getTime());
 }
 
