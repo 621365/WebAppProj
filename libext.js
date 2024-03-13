@@ -123,3 +123,14 @@ var clock;
 // Turn Clock Into Live Clock
 setInterval(function(){clock = new Date();}, 1);
 function userUTC(){return clock.getTimezoneOffset()/-60;}
+
+// Convert Any Date to UTC
+function utcTime(year=1987, mon=3, day=14, hour=15, UTC=0, min=9, sec=0) {
+    return parseInt(new Date(year.toString() + " " + monthGet(mon).toString() + " " + day.toString() + " " + hour.toString() + ":" + min.toString() + ":" + sec.toString() + " UTC" + UTC.toString()).getTime());
+}
+
+// Convert Month Number to String (Tiny Controls if Shortened Form or Not)
+function monthGet(m, tiny=false) {
+    let data = (tiny)?["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"]:["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    return data[m + 1];
+}
