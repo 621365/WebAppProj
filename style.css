@@ -199,6 +199,9 @@ input {
     margin: 0;
     vertical-align: inherit;
     font-size: 0.8rem;
+    border: none;
+    box-shadow: -0.01cm 0.01cm 0.05cm rgba(0, 0, 0, 0.75) inset;
+    color: black;
 }
 
 label {
@@ -678,6 +681,11 @@ media (prefers-contrast: more) or (-ms-high-contrast: active) {
     
     .headtop::after {
         background: rgba(75, 75, 75, 0.5);
+    }
+
+    input {
+        background: #333;
+        color: white;
     }
 }
 
