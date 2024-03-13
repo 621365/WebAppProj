@@ -132,5 +132,5 @@ function utcTime(year=1987, mon=1, day=1, hour=0, UTC=0, min=0, sec=0) {
 // Convert Month Number to String (Tiny Controls if Shortened Form or Not)
 function monthGet(m, tiny=false) {
     let data = (tiny)?["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"]:["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    return data[m + 1];
+    return data[m - 1];
 }
