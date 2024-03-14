@@ -23,12 +23,12 @@ main, footer, nav {
 
 /* Invert Bar */
 .right-bar {
-    grid-template-columns: auto 10cm !important;
+    grid-template-columns: minmax(auto, 30cm) 10cm !important;
 }
 
 /* Bar */
 .bar {
-    grid-template-columns: 10cm auto !important;
+    grid-template-columns: 10cm minmax(auto, 30cm) !important;
 }
 
 header {
