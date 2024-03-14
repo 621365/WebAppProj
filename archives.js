@@ -5,7 +5,13 @@ function timewarp(time) {
     console.error("Uncaught RangeError: " + time.toString() + " is not within the acceptable time range");
     return -1;
   } else {
-
+    // Prepare for closeTo Function
+    let mwah = [];
+    for (let i = 0; i < datedArchive.length; i++) {
+      mwah[i] = utcTime(datedArchive[i].meta.timestamp.year, datedArchive[i].meta.timestamp.month, datedArchive[i].meta.timestamp.day, datedArchive[i].meta.timestamp.hour, datedArchive[i].meta.timestamp.UTC, datedArchive[i].meta.timestamp.minute, datedArchive[i].meta.timestamp.second);
+    }
+    let kissie = closeTo(time, mwah, true);
+    return kissie; // in reality, make this redirect to article with this index
   }
 }
 
