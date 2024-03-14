@@ -157,9 +157,10 @@ var datedArchive = archive.sort(function(a, b) {return parseFloat((a.meta.timest
 
 // Search Retrieval Framework
 
-// Get Timestamp Float
-function stamp(year, month, day, UTC, hour, min) {
-  return parseFloat((year*100000) + (month*10000) + (day*1000) + (hour*100) - (UTC*100) + min);
+// TODO: GET RID OF THIS AND JUST USE UTCTIME FUNCTION YOU ARE BEING SUCH A MICROSOFT RIGHT NOW
+// An Alias to utcTime; Timestamp is Depreciated, but I am unsure which functions use it
+function stamp(year=1987, month=1, day=1, UTC=0, hour=0, min=0, sec=0) {
+  return utcTime(year, month, day, hour, UTC, min, sec);
 }
 
 // Aquires the Hard-Coded ID of the 
