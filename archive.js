@@ -153,7 +153,7 @@ var archive = [
 ]
 
 // Date-Ordered (By the Hour)
-var datedArchive = archive.sort(function(a, b) {return parseFloat((a.meta.timestamp.year*12000) + (a.meta.timestamp.month*1000) + a.meta.timestamp.day*24) + (a.meta.timestamp.hour - a.meta.timestamp.UTC) -  parseFloat((b.meta.timestamp.year*1000) + (b.meta.timestamp.month*100) + b.meta.timestamp.day*10) + (b.meta.timestamp.hour - b.meta.timestamp.UTC)});
+var datedArchive = archive.sort(function(a, b) {return parseFloat(utcTime(a.meta.timestamp.year, a.meta.timestamp.month, a.meta.timestamp.day, a.meta.timestamp.hour, a.meta.timestamp.UTC, a.meta.timestamp.minute, a.meta.timestamp.second) -  parseFloat(utcTime(b.meta.timestamp.year, b.meta.timestamp.month, b.meta.timestamp.day, b.meta.timestamp.hour, b.meta.timestamp.UTC, b.meta.timestamp.minute, b.meta.timestamp.second)});
 
 // Search Retrieval Framework
 
