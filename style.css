@@ -652,7 +652,13 @@ media (prefers-contrast: more) or (-ms-high-contrast: active) {
     }
 
     #headlow {
+        border-bottom: solid rgba(50, 50, 50, 1) 0.05cm;
+        border-top: solid rgba(50, 50, 50, 1) 0.05cm;
         background: linear-gradient(to bottom, rgba(70, 70, 70, 1) 0%, rgba(90, 90, 90, 1) 50%, rgba(60, 60, 60, 1) 50%, rgba(20, 20, 20, 1) 100%);
+    }
+
+    .headtop {
+        border: solid rgba(50, 50, 50, 1) 0.05cm;
     }
 
     .headlow {
