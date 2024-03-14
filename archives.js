@@ -2,7 +2,7 @@
 function timewarp(time) {
   //limit: 2038293, 1905350
   if (((time < 0) ? (time * -1) : time) > 2147483647) {
-    console.error("Uncaught RangeError: " + time.toString() + "is not within the acceptable time range");
+    console.error("Uncaught RangeError: " + time.toString() + " is not within the acceptable time range");
     return -1;
   } else {
 
