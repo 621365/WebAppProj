@@ -51,7 +51,7 @@
         Enter the approximate date of the articles that you are searching for, press enter, and watch as it automatically scrolls you to the article closest to your requested date. 
       </div>
       <hr>
-      <form onsubmit="timewarp(); return false;">
+      <form onsubmit="timewarp(utcTime(document.getElementsByName('year')[0].value, document.getElementsByName('month')[0].value, document.getElementsByName('day')[0].value, document.getElementsByName('hour')[0].value, document.getElementsByName('min')[0].value), document.getElementsByName('sec')[0].value); return false;">
         <div class="form-entry">
           <label for="year">Enter the Year: </label>
           <input name="year" title="Variable per year, but average of 365.2425 days." type="number" min="1901" max="2038" placeholder="Enter Year Here: " required>
@@ -78,8 +78,13 @@
         </div>
         <br>
         <div class="form-entry">
+          <label for="sec">Enter the Second: </label>
+          <input name="sec" title="International Unit of Time" type="number" min="0" max="59" placeholder="Enter Second Here: " required>
+        </div>
+        <br>
+        <div class="form-entry">
           <label for="UTC" >Enter your UTC Dialation: </label>
-          <input name="utc" title="Officially set dialtion of time relative to Britain." type="number" min="-12" max="14" placeholder="Enter UTC Dialation Here: " required>
+          <input name="utc" title="Officially set dialtion of time relative to Britain." type="number" min="-12" max="14" placeholder="Enter UTC Dialation Here: ">
         <br>
         <hr>
         <button title="Uses browser-set UTC dialation." onclick="determineUTC();" ontouchstart="determineUTC();">Determine my UTC Dialation</button>
