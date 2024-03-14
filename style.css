@@ -11,6 +11,9 @@ body {
     z-index: 0;
     position: relative;
     right: 0;
+    max-width: max-content;
+    margin-left: auto;
+    marign-right: auto;
     left: 0;
     display: grid;
     gap: 1cm;
@@ -29,6 +32,14 @@ main, footer, nav {
 /* Bar */
 .bar {
     grid-template-columns: 10cm minmax(auto, 30cm) !important;
+}
+
+.bar nav {
+    margin-left: auto;
+}
+
+.right-bar nav {
+    margin-right: auto;
 }
 
 header {
@@ -54,6 +65,7 @@ nav {
 footer {
     position: relative;
     grid-area: footer;
+    width: calc(100vw - 2cm);
 }
 
 button {
