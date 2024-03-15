@@ -758,11 +758,11 @@ media (prefers-contrast: more) or (-ms-high-contrast: active) {
         color: white;
     }
 
-    a:hover, a:focus, a:focus-within {
+    main a:hover, main a:focus, main a:focus-within {
         color: yellow;
     }
 
-    a:active {
+    main a:active {
         color: pink;
     }
 }
