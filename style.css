@@ -509,6 +509,11 @@ footer {
     
 }
 
+.card-title {
+    font-weight: bold;
+    font-size: 15pt;
+}
+
 @keyframes focus {
     0% { box-shadow: 0 0 0 skyblue; }
     50% { box-shadow: 0 0 0.1cm blue; }
