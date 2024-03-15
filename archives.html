@@ -87,10 +87,11 @@
           <input name="utc" title="Officially set dialtion of time relative to Britain." type="number" min="-12" max="14" placeholder="Enter UTC Dialation Here: ">
         <br>
         <hr>
-        <button title="Uses browser-set UTC dialation." onclick="determineUTC();" ontouchstart="determineUTC();">Determine my UTC Dialation</button>
+        <button title="Uses browser-set UTC dialation." type="button" onclick="determineUTC();" ontouchstart="determineUTC();">Determine my UTC Dialation</button>
         <br>
-        <button title="Uses browser-set date." onclick="fillDate();" ontouchstart="fillDate();">Auto-Place Current Date</button>
+        <button title="Uses browser-set date." type="button" onclick="fillDate();" ontouchstart="fillDate();">Auto-Place Current Date</button>
         <br>
+        <button title="Uses browser-set date." type="button" onclick="timewarp(utcTime(document.getElementsByName('year')[0].value, document.getElementsByName('month')[0].value, document.getElementsByName('day')[0].value, document.getElementsByName('hour')[0].value, document.getElementsByName('min')[0].value), document.getElementsByName('sec')[0].value); return false;" ontouchstart="timewarp(utcTime(document.getElementsByName('year')[0].value, document.getElementsByName('month')[0].value, document.getElementsByName('day')[0].value, document.getElementsByName('hour')[0].value, document.getElementsByName('min')[0].value), document.getElementsByName('sec')[0].value); return false;">Go To Date</button>
       </form>
         
     </nav>
