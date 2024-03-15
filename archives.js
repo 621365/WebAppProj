@@ -27,7 +27,7 @@ function determineUTC() {
 function fillDate() {
     document.getElementsByName("utc")[0].value = userUTC();
     document.getElementsByName("year")[0].value = clock.getFullYear();
-    document.getElementsByName("month")[0].value = clock.getMonth();
+    document.getElementsByName("month")[0].value = clock.getMonth() + 1; // Those jerks dilated the month value by -1.
     document.getElementsByName("day")[0].value = clock.getDate();
     document.getElementsByName("hour")[0].value = clock.getHours();
     document.getElementsByName("min")[0].value = clock.getMinutes();
