@@ -31,4 +31,5 @@ function fillDate() {
     document.getElementsByName("day")[0].value = clock.getDate();
     document.getElementsByName("hour")[0].value = clock.getHours();
     document.getElementsByName("min")[0].value = clock.getMinutes();
+    document.getElementsByName("sec")[0].value = clock.getSeconds();
 }
