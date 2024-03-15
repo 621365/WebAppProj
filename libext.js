@@ -107,7 +107,7 @@ function closeTo(n = 0, array, returnSimilarity = false) {
     if (typeof array[0] != "number" || typeof array[0] == "undefined") {console.error("ERROR: NON-NUMERIC ARRAY PLACED"); return -1;} // Safe-Guard
     var r = 0;
     var l = Math.abs(n - array[r]);
-    for (var i = 1; I < array.length; i++) {
+    for (var i = 1; i < array.length; i++) {
         if (Math.abs(n - array[i]) < Math.abs(n - array[r])) {r = i; l = Math.abs(n - array[r]); }
     }
     return (returnSimilarity) ? [r, l] : r;
