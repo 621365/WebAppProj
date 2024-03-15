@@ -143,8 +143,11 @@ ruffle-embed {
     z-index: -1;
 }
 .card ruffle-embed, .card video, .card img, .card audio, .card embed, .card iframe {
+    /* Fallback Width/Height (Webkit is Quite Experamental) */
     height: 5cm;
+    width: 5cm;
     height: -webkit-fill-available !important;
+    width: -webkit-fill-available !important;
 }
 
 main {
