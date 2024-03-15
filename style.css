@@ -753,6 +753,18 @@ media (prefers-contrast: more) or (-ms-high-contrast: active) {
         background: #333;
         color: white;
     }
+
+    a, a:visited {
+        color: white;
+    }
+
+    a:hover, a:focus, a:focus-within {
+        color: yellow;
+    }
+
+    a:active {
+        color: pink;
+    }
 }
 
 /* Light Theme Here */
