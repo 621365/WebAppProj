@@ -211,12 +211,12 @@
         var hold = document.createElement("div"); domes.appendChild(hold);
         hold.className = "card";
         //debug
-        hold.id = blonde[card];
+        hold.id = datedArchive[card].meta.uuid;
         var pic = document.createElement("div"); pic.className = "card-pic"; hold.appendChild(pic);
         var txt = document.createElement("div"); txt.className = "card-text"; hold.appendChild(txt);
         var tit = document.createElement("div"); tit.className = "card-title"; txt.appendChild(tit);
         var cont = document.createElement("div"); cont.className = "card-content"; txt.appendChild(cont);
-        punch(blonde[card], tit, pic, cont, null); // This code is so out of context.
+        punch(datedArchive[card].meta.uuid tit, pic, cont, null); // This code is so out of context.
       }
     </script>
   </body>
