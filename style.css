@@ -272,6 +272,12 @@ label {
     .headlow {
         margin: 0cm 0cm;
     }
+
+    .storymode {
+        display: block;
+        top: 2cm;
+        overflow-y: auto;
+    }
 }
 
 @media (min-width: 15cm) {
@@ -298,6 +304,17 @@ label {
 
     .headlow {
         margin: 0cm 0.5cm;
+    }
+
+    .storymode {
+        display: block;
+        top: 2cm;
+        height: calc(100vh - 11cm);
+        overflow-y: scroll;
+    }
+
+    .storymode nav {
+        overflow-y: auto;
     }
 }
 
@@ -508,6 +525,7 @@ footer {
     height: -webkit-fill-available;
     
 }
+
 
 .card-title {
     font-weight: bold;
