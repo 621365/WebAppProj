@@ -278,6 +278,10 @@ label {
         top: 2cm;
         overflow-y: auto;
     }
+
+    .storymode nav {
+        overflow-y: auto;
+    }
 }
 
 @media (min-width: 15cm) {
@@ -308,13 +312,8 @@ label {
 
     .storymode {
         display: block;
-        top: 2cm;
         height: calc(100vh - 11cm);
         overflow-y: scroll;
-    }
-
-    .storymode nav {
-        overflow-y: auto;
     }
 }
 
