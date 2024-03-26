@@ -27,7 +27,7 @@ function media(type = null, subtype = null, source = null, alt = "Unknown or und
             encode =  `<video class="mediaFile vid" src="` + source + `" title="` + alt + `" muted controls> The following description was provided for the video in the case that the video would fail: ` + alt + `</video>`;
             break;
           case "SHOK":
-            encode = `<embed class="mediaFile shok" title="` + alt + `" src="` + source + `" quality="high">Because Shockwave has been killed by Adobe, this file may not work. In the case the file fails, the following description is provided: ` + alt + ` If you truly want to view this file, please use the Ruffle emulator to play this file.</embed>`;
+            encode = `<embed class="mediaFile shok" title="` + alt + `" src="` + source + `" quality="high"></embed>`;
             break;
           case "AIDS":
             encode = "This was a filetype intended for the embedding of web-viruses, but was never made because due to being considered unprofessional.";
