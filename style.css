@@ -279,7 +279,7 @@ label {
         overflow-y: auto;
     }
 
-    .storymode nav {
+    nav[class="storymode"] {
         overflow-y: auto;
     }
 }
@@ -314,6 +314,10 @@ label {
         display: block;
         height: calc(100vh - 11cm);
         overflow-y: scroll;
+    }
+
+    nav[class="storymode"] {
+        overflow-y: auto;
     }
 }
 
