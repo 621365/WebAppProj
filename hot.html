@@ -4,12 +4,45 @@
     <title>
       Hot News
     </title>
-    <meta property="og:description description" content="Check out the hottest news, handpicked by the editors.">
+    <meta property="og:description description" content="Interesting news picked by the editors!">
     <script src="./libext.js"></script>
+    <script src="./libret.js"></script>
+    <script src="./articles.js"></script>
+    <script src="./archive.js"></script>
     <link rel="stylesheet" type="text/css" href="./style.css">
   </head>
   <body>
-    <header>
+    <header id="header">
+      <div class="skipper">
+        <div class="skipper-container-border">
+            <div class="skipper-container">
+                <div class="skipper-title">
+                    Skip to Main Content
+                </div>
+                <div class="skipper-text">
+                    Press Enter or press OK to enter the main content. Press Tab or press another part of the screen to cancel and close this window.
+                </div>
+                <a class="skipper-button noshowlink" href="#main" tabindex="0" title="Skip to Main Content">
+                    OK
+                </a>
+            </div>
+        </div>
+    </div>
+      <div class="skipper">
+        <div class="skipper-container-border">
+            <div class="skipper-container">
+                <div class="skipper-title">
+                    Skip to Footer
+                </div>
+                <div class="skipper-text">
+                    Press Enter or press OK to enter the bottom navigation screen. Press Tab or press another part of the screen to cancel and close this window.
+                </div>
+                <a class="skipper-button noshowlink" href="#footer" tabindex="0" title="Skip to Main Content">
+                    OK
+                </a>
+            </div>
+        </div>
+    </div>
       <div id="headtop">
         <a href="./index.html" title="Main Page" desc="Page that is shown when first entering the site." class="headtop">
           Home
@@ -39,12 +72,31 @@
         </a>
       </div>
     </header>
-    <main>
-      
+    <main id="main">
+      <h1>Main Page</h1>
+      <div id="highlight">
+        <div id="highlight-media"></div>
+        <div id="highlight-text">
+          <div id="highlight-title"></div>
+          <div id="highlight-content" >Test here</div>
+        </div>
+      </div>
+      <br><br>
+      <div id="main-grid">
+      </div>
     </main>
-    <footer>
+    <footer id="footer">
       <div id="foot-desc">
-        This is the trending news page, where we show you the hottest andn most interesting news that is handpicked by the editors. 
+        <div>Interesting news picked by the editors!</div>
+        <!-- <form method="get"> <!-- Scrapped Theming System (JS Cannot Control Media Queries) -\-> 
+            <label for="lang">Select your theme: </label>
+            <select name="lang">
+              <option value="normal">Light</option>
+              <option value="dark">Dark</option>
+            </select>
+            <input type="submit" value="Apply">
+        </form> -->
+      </div>
       </div>
       <hr>
       <div id="foot-nav">
@@ -69,11 +121,11 @@
               </a>
             </li>
           </ul>
-        </div>
+      </div>
         <div>
-          <h2>
-            Articles
-          </h2>
+        <h2>
+          Articles
+        </h2>
           <ul>
             <li>
               <a href="./archives.html"  title="Article Archive" desc="Listing of all articles made and where to access them." >
@@ -96,11 +148,11 @@
               </a>
             </li>
           </ul>
-        </div>
-        <div>
-          <h2>
-            Information
-          </h2>
+      </div>
+      <div>
+        <h2>
+          Information
+        </h2>
           <ul>
             <li>
               <a href="./info.html" title="Information" desc="Information regarding the purpose of this site." >
@@ -139,11 +191,36 @@
             </li>
           </ul>
         </div>
+        </div>
       </div>
       <hr>
       <div id="foot-cop">
         Copyright © 2024 Unnamed Entity
       </div>
     </footer>
+    <!--This script loads at the end of the page because it modifies HTML elements.-->
+    <script>
+      // TO DESIGNER: Place the UUIDs of the articles that you want to be shown in order of how you want the articles to appear.
+      // Variable blonder used for highlighted article. 
+      var blonde = ["72B2447C-E922-E08C-9A23-D5505E81A7B7", "51CEFE74-2A7A-2210-20BA-3FCC270F68F3", "5FC9FE74-2A7A-2210-20BA-3FCC270F68F3", "5FC9FE74-2A7A-2810-20BA-3FCC270F68F3"], blonder = "5FC9FE74-2A7A-2810-20BA-3FCC270F68F3";
+
+      // Uneeded Part From Main Page -> Hot News Combiner
+      // punch(blonder, document.getElementById("highlight-title"), document.getElementById("highlight-media"), document.getElementById("highlight-content"), null);
+
+      // Load Blondes
+      for (var card = 0; card < blonde.length; card++) {
+        var domes = document.getElementById("main-grid");
+        var hold = document.createElement("div"); domes.appendChild(hold);
+        hold.className = "card";
+        //debug
+        hold.id = blonde[card];
+        var pic = document.createElement("div"); pic.className = "card-pic"; hold.appendChild(pic);
+        var txt = document.createElement("div"); txt.className = "card-text"; hold.appendChild(txt);
+        var tit = document.createElement("a"); tit.className = "card-title"; tit.href = "./viewer.html?id=" + blonde[card]; txt.appendChild(tit);
+        var cont = document.createElement("div"); cont.className = "card-content"; txt.appendChild(cont);
+        punch(blonde[card], tit, pic, cont, null); // This code is so out of context.
+      }
+      
+    </script>
   </body>
 </html>
