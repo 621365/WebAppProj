@@ -83,34 +83,6 @@
       </div>
       <br><br>
       <div id="main-grid">
-        <div class="card">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/d/d4/Nokota_Horses.jpg">
-          <div>Test here</div>
-        </div>
-        <div class="card">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/d/d4/Nokota_Horses.jpg">
-          <div>Test here</div>
-        </div>
-        <div class="card">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/d/d4/Nokota_Horses.jpg">
-          <div>Test here</div>
-        </div>
-        <div class="card">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/d/d4/Nokota_Horses.jpg">
-          <div>Test here</div>
-        </div>
-        <div class="card">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/d/d4/Nokota_Horses.jpg">
-          <div>Test here</div>
-        </div>
-        <div class="card">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/d/d4/Nokota_Horses.jpg">
-          <div>Test here</div>
-        </div>
-        <div class="card">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/d/d4/Nokota_Horses.jpg">
-          <div>Test here</div>
-        </div>
       </div>
     </main>
     <footer id="footer">
@@ -244,7 +216,7 @@
         hold.id = blonde[card];
         var pic = document.createElement("div"); pic.className = "card-pic"; hold.appendChild(pic);
         var txt = document.createElement("div"); txt.className = "card-text"; hold.appendChild(txt);
-        var tit = document.createElement("div"); tit.className = "card-title"; txt.appendChild(tit);
+        var tit = document.createElement("a"); tit.className = "card-title"; tit.href = "./viewer.html?id=" + blonde[card]; txt.appendChild(tit);
         var cont = document.createElement("div"); cont.className = "card-content"; txt.appendChild(cont);
         punch(blonde[card], tit, pic, cont, null); // This code is so out of context.
       }
