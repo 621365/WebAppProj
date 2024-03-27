@@ -1,0 +1,205 @@
+
+<!doctype html>
+<html>
+  <head>
+    <title>
+      Submit Articles to Us
+    </title>
+    <meta property="og:description description" content="Send articles to our editors using this form! (You will have to send this through email due to no back-end server existing.)">
+    <script src="./libext.js"></script>
+    <script src="./viewer.js"></script>
+    <script src="./archive"></script>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+  </head>
+  <body>
+    <header id="header">
+      <div class="skipper">
+        <div class="skipper-container-border">
+            <div class="skipper-container">
+                <div class="skipper-title">
+                    Skip to Main Content
+                </div>
+                <div class="skipper-text">
+                    Press Enter or press OK to enter the main content. Press Tab or press another part of the screen to cancel and close this window.
+                </div>
+                <a class="skipper-button noshowlink" href="#main" tabindex="0" title="Skip to Main Content">
+                    OK
+                </a>
+            </div>
+        </div>
+    </div>
+      <div class="skipper">
+        <div class="skipper-container-border">
+            <div class="skipper-container">
+                <div class="skipper-title">
+                    Skip to Footer
+                </div>
+                <div class="skipper-text">
+                    Press Enter or press OK to enter the bottom navigation screen. Press Tab or press another part of the screen to cancel and close this window.
+                </div>
+                <a class="skipper-button noshowlink" href="#footer" tabindex="0" title="Skip to Main Content">
+                    OK
+                </a>
+            </div>
+        </div>
+    </div>
+      <div id="headtop">
+        <a href="./index.html" title="Main Page" desc="Page that is shown when first entering the site." class="headtop">
+          Home
+        </a>
+        <a href="./archives.html" title="Article Archive" desc="Listing of all articles made and where to access them." class="headtop">
+          Articles
+        </a>
+        <a href="./info.html" title="Information" desc="Information regarding the purpose of this site." class="headtop" id="headtop-chosen">
+          Information
+        </a>
+        <a href="./search.html" title="Search" desc="Specifically search for whatever you want on this site." class="headtop">
+          Search
+        </a>
+      </div>
+      <div id="headlow">
+        <a href="./hot.html" title="Hot News" desc="Trending news handpicked by the editors." class="headlow">
+          Hot News
+        </a>
+        <a href="./submit.html" title="Submit Articles" desc="Submit articles to the editors to be published to this site." class="headlow">
+          Submit Articles
+        </a>
+        <a href="./archives.html" title="Article Archives" desc="Listing of all articles made and where to access them." class="headlow">
+          Archives
+        </a>
+        <a href="./contact.html" title="Contact Page" desc="Information on how to contact the editors." class="headlow">
+          Contact Information
+        </a>
+      </div>
+    </header>
+    <main id="main">
+      <h1>Submit Articles!</h1>
+      <form onsubmit="return false;">
+        <label for="title"></label>
+        <input name="title" placeholder="Enter Article Title:" type="text" required>
+        <label for="content"></label>
+        <textarea name="content" placeholder="Enter Information:" type="text" required></textarea>
+        <label for="description"></label>
+        <input name="description" placeholder="Enter Article Description:" type="text" required>
+        <label for="author"></label>
+        <input name="author" placeholder="Enter Article Author:" type="text" required>
+        <label for="tags"></label>
+        <input name="tags" placeholder="Enter Tags, Seperated With a Comma (Used to Help Identify Article):" type="text">
+        <label for="image"></label>
+        <input name="image" placeholder="Image?" type="checkbox">
+<!--    
+        source,
+        alt, 
+        type?
+
+        to editor: MERGE ARTICLE LIST FORM WITH THIS (useful for this part)
+        -->
+      </form>
+    </main>
+    <footer id="footer">
+      <div id="foot-desc">
+        <div>Send articles to our editors using this form! (You will have to send this through email due to no back-end server existing.)</div>
+      </div>
+      </div>
+      <hr>
+      <div id="foot-nav">
+        <div>
+          <h2>
+            Fresh Stuff
+          </h2>
+          <ul>
+            <li>
+              <a href="./index.html" title="Main Page" desc="Page that is shown when first entering the site." >
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="./hot.html" title="Hot News" desc="Trending news handpicked by the editors." >
+                Hot News
+              </a>
+            </li>
+            <li>
+              <a href="./submit.html" title="Submit Articles" desc="Submit articles to the editors to be published to this site." >
+                Submit Articles
+              </a>
+            </li>
+          </ul>
+      </div>
+        <div>
+        <h2>
+          Articles
+        </h2>
+          <ul>
+            <li>
+              <a href="./archives.html"  title="Article Archive" desc="Listing of all articles made and where to access them." >
+                Archives
+              </a>
+            </li>
+            <li>
+              <a href="./search.html" title="Search" desc="Specifically search for whatever you want on this site." >
+                Search
+              </a>
+            </li>
+            <li>
+              <a href="./submit.html" title="Submit Articles" desc="Submit articles to the editors to be published to this site." >
+                Submit Articles
+              </a>
+            </li>
+            <li>
+              <a href="./info.html" title="Information" desc="Information regarding the purpose of this site." >
+                Information
+              </a>
+            </li>
+          </ul>
+      </div>
+      <div>
+        <h2>
+          Information
+        </h2>
+          <ul>
+            <li>
+              <a href="./info.html" title="Information" desc="Information regarding the purpose of this site." >
+                General Information
+              </a>
+            </li>
+            <li>
+              <a href="./contact.html"  title="Contact Page" desc="Information on how to contact the editors." >
+                Contact Information
+              </a>
+            </li>
+            <li>
+              <a href="./archives.html" title="Article Archive" desc="Listing of all articles made and where to access them." >
+                Archives
+              </a>
+            </li>
+            <li>
+              <a href="./search.html" title="Search" desc="Specifically search for whatever you want on this site." >
+                Search
+              </a>
+            </li>
+            <li>
+              <a href="./terms.html" title="Terms of Service" desc="Learn how we expect users to behave on this site." >
+                Terms of Service
+              </a>
+            </li>
+            <li>
+              <a href="./legal.html" title="Legal Information" desc="Page declaring protection for our intellectual property." >
+                Copyright & Licenses
+              </a>
+            </li>
+            <li>
+              <a href="./privacy.html" title="Privacy Policy" desc="Learn what we do with any data that we collect from you." >
+                Privacy Policy
+              </a>
+            </li>
+          </ul>
+        </div>
+        </div>
+      </div>
+      <hr>
+      <div id="foot-cop">
+        Copyright © 2024 Unnamed Entity
+      </div>
+    </footer>
+  </body>
+</html>
