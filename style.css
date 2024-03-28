@@ -169,7 +169,7 @@ h1 {
     margin-right: auto;
 }
 
-input {
+input, textarea {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, system-ui, sans-serif;
     padding: 0.09cm 0.1cm;
     margin: 0;
@@ -778,7 +778,7 @@ media (prefers-contrast: more) or (-ms-high-contrast: active) {
         background: linear-gradient(to bottom, rgba(140, 115, 20, 1) 55%, rgba(155, 125, 65, 1) 90%);
     }
 
-    input {
+    input, textarea {
         background: #333;
         color: white;
     }
