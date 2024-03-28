@@ -35,9 +35,9 @@ var archive = [
       "uuid": "5FC9FE74-2A7A-2210-20BA-3FCC270F68F3",
       "tags": ["Test", "Placeholder"],
       "image": {
-        "source": null,
-        "alt": "No Image Shown",
-        "type": [null]
+        "source": "https://upload.wikimedia.org/wikipedia/commons/a/a5/2020_Audi_Q3_S_Line_35_TFSi_MHEV_S-A_1.5_Front_%281%29.jpg",
+        "alt": "Random car that is white",
+        "type": ["IMG", "RTR"]
       },
       "timestamp": {
           "year": 2024,
