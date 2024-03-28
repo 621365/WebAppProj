@@ -307,7 +307,7 @@ label {
     }
 
     .card .card-pic, .card .card-text {
-        max-width: 50%;
+        max-width: calc(50% - 0.25cm);
     }
 
     .card .card-pic {
