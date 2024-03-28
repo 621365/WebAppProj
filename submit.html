@@ -75,18 +75,71 @@
     <main id="main">
       <h1>Submit Articles!</h1>
       <form onsubmit="return false;">
-        <label for="title"></label>
+        <label for="title">Article Title:</label>
         <input name="title" placeholder="Enter Article Title:" type="text" required>
-        <label for="content"></label>
+        <label for="content">Article Content:</label>
         <textarea name="content" placeholder="Enter Information:" type="text" required></textarea>
-        <label for="description"></label>
+        <label for="description">Article Description</label>
         <input name="description" placeholder="Enter Article Description:" type="text" required>
-        <label for="author"></label>
+        <label for="author">Article Author</label>
         <input name="author" placeholder="Enter Article Author:" type="text" required>
-        <label for="tags"></label>
+        <div class="form-entry">
+          <label for="year">Enter the Year: </label>
+          <input name="year" title="Variable per year, but average of 365.2425 days." type="number" min="1901" max="2038" placeholder="Enter Year Here: " required="">
+        </div>
+        <br>
+        <div class="form-entry">
+          <label for="month">Enter the Month: </label>
+          <input name="month" title="Amount of days ranging from 28-31; average of 30.4375 days." type="number" min="1" max="12" placeholder="Enter Month Here: ">
+        </div>
+        <br>
+        <div class="form-entry">
+          <label for="day">Enter the Day: </label>
+          <input name="day" title="24 Hours" type="number" min="1" max="31" placeholder="Enter Day Here: ">
+        </div>
+        <br>
+        <div class="form-entry">
+          <label for="hour">Enter the Hour: </label>
+          <input name="hour" title="60 Minutes" type="number" min="0" max="23" placeholder="Enter Hour Here: ">
+        </div>
+        <br>
+        <div class="form-entry">
+          <label for="min">Enter the Minute: </label>
+          <input name="min" title="60 Seconds" type="number" min="0" max="59" placeholder="Enter Minute Here: ">
+        </div>
+        <br>
+        <div class="form-entry">
+          <label for="sec">Enter the Second: </label>
+          <input name="sec" title="International Unit of Time" type="number" min="0" max="59" placeholder="Enter Second Here: ">
+        </div>
+        <br>
+        <div class="form-entry">
+          <label for="UTC">Enter your UTC Dialation: </label>
+          <input name="utc" title="Officially set dialtion of time relative to Britain." type="number" min="-12" max="14" placeholder="Enter UTC Dialation Here: ">
+        <br>
+        <hr>
+        <button title="Uses browser-set UTC dialation." type="button" onclick="determineUTC();" ontouchstart="determineUTC();">Determine my UTC Dialation</button>
+        <br>
+        <button title="Uses browser-set date." type="button" onclick="fillDate();" ontouchstart="fillDate();">Auto-Place Current Date</button>
+        <br>
+        <button title="Send to Clipboard" type="button" onclick="" ontouchstart="">Copy to Clipboard</button>
+        <button title="Send to Editors" type="button" onclick="" ontouchstart="">Email to Editors</button>
+      </div>
+        <label for="tags">Article Tags (Separated By Comma):</label>
         <input name="tags" placeholder="Enter Tags, Seperated With a Comma (Used to Help Identify Article):" type="text">
-        <label for="image"></label>
-        <input name="image" placeholder="Image?" type="checkbox">
+        <label for="image">An image does accompany this article: </label>
+        <input name="image" placeholder="Image?" type="checkbox" onclick="imageThing();" ontouchstart="imageThing();"onselect="imageThing();">
+        <div id="imageReq" style="display:none;">
+        <label for="source">Article Tags (Separated By Comma):</label>
+        <input name="source" placeholder="Enter Tags, Seperated With a Comma (Used to Help Identify Article):" type="text">
+        <label for="alt">Article Tags (Separated By Comma):</label>
+        <input name="alt" placeholder="Enter Tags, Seperated With a Comma (Used to Help Identify Article):" type="text">
+        <label for="type">Article Tags (Separated By Comma):</label>
+        <input name="type" placeholder="Enter Tags, Seperated With a Comma (Used to Help Identify Article):" type="text">
+        <label for="subtype">Article Tags (Separated By Comma):</label>
+        <input name="subtype" placeholder="Enter Tags, Seperated With a Comma (Used to Help Identify Article):" type="text">
+          
+        </div>
 <!--    
         source,
         alt, 
