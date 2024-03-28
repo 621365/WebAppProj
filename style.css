@@ -269,6 +269,10 @@ label {
         max-width: 100%;
     }
 
+    .card-pic {
+        width: -webkit-fill-availible;
+    }
+
     .headlow {
         margin: 0cm 0cm;
     }
@@ -539,6 +543,10 @@ footer {
     0% { box-shadow: 0 0 0 skyblue; }
     50% { box-shadow: 0 0 0.1cm blue; }
     100% { box-shadow: 0 0 0 skyblue; }
+}
+
+#media-container ruffle-embed { /* Flash Styleing Patch UGG */
+    width: -webkit-fill-availible;
 }
 
 /* I know this is not supposed to be done, but the following accessibility code was imported from my former assignment. */
