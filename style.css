@@ -310,6 +310,10 @@ label {
         max-width: 50%;
     }
 
+    .card .card-pic {
+        margin-right: 0.25cm;
+    }
+
     .headlow {
         margin: 0cm 0.5cm;
     }
