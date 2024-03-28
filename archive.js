@@ -51,8 +51,8 @@ var archive = [
     }
   },
   {
-    "title": "Test Article 2",
-    "content": "This is a test article. This holds the template for which all articles will be made.",
+    "title": "TODOLIST",
+    "content": "Fix article search algo (in closeTo), add author + date to article and author to home + hot page. Fix article formatting. Make forms work",
     "meta": {
       "error": false,
       "description": "This is a test article.",
