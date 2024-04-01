@@ -259,7 +259,55 @@
       function imageThing() {
         document.getElementById("imageReq").style.display = (document.getElementsByName("image")[0].checked) ? "block" : "none";
       }
-      
+
+      // porCorrero determines if sent through mail or not
+      // specific for this portion
+      function sub(porCorreo=false) {
+        // Init
+        let result = {"meta":{"timestamp":{}}};
+
+        // Basic GET
+        result.title = document.getElementsByName("title")[0].value;
+        result.content = document.getElementsByName("title")[0].value;
+        result.meta.description = document.getElementsByName("description")[0].value;
+        result.meta.author = document.getElementsByName("author")[0].value;
+        result.meta.uuid = uuid(1, true);
+        result.meta.tags = document.getElementsByName("tags")[0].value.split(",");
+        result.author = document.getElementsByName("author")[0].value;
+
+        // Image GET(?)
+        if (document.getElementsByName("image")[0].checked) {
+          result.meta.image = {
+            "source":  document.getElementsByName("source")[0].value,
+            "alt":  document.getElementsByName("alt")[0].value,
+            "type": [document.getElementsByName("type")[0].value, document.getElementsByName("subtype").value]
+          };
+        } else {
+          result.meta.image = {
+            "source": null,
+            "alt": "No Image Shown",
+            "type": [null]
+          };
+        }
+    
+        // Time GET
+        result.meta.timestamp = {
+          "year": document.getElementsByName("year")[0].value,
+          "month": document.getElementsByName("month")[0].value,
+          "day": document.getElementsByName("day")[0].value,
+          "hour": document.getElementsByName("hour")[0].value,
+          "minute": document.getElementsByName("min")[0].value,
+          "second": document.getElementsByName("sec")[0].value,
+          "UTC": document.getElementsByName("utc")[0].value
+        }
+        
+        if (porCorreo) {
+          window.location.replace("mailto:621365@monet.k12.ca.us?subject=Automated%20Mail%Submission&body=" + encodeURIComponent(result));
+        }  else {
+          copy(result, 64);
+        }
+        return result;
+      }
     </script>
   </body>
 </html>
