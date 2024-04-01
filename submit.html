@@ -316,9 +316,9 @@
         }
         
         if (porCorreo) {
-          window.location.replace("mailto:621365@monet.k12.ca.us?subject=Automated%20Mail%Submission&body=" + encodeURIComponent(result));
+          window.location.replace("mailto:621365@monet.k12.ca.us?subject=Automated%20Mail%Submission&body=" + encodeURIComponent(JSON.stringify(result)));
         }  else {
-          copy(result, 64);
+          copy(JSON.stringify(result), 64);
         }
         return result;
       }
