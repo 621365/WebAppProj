@@ -300,7 +300,7 @@
         result.meta.uuid = uuid(1, true);
         result.meta.tags = document.getElementsByName("tags")[0].value.split(",");
         result.author = document.getElementsByName("author")[0].value;
-
+        result.meta.error = true; // Originally meant for error-type articles, now intended for determining verified articles.
         // Image GET(?)
         if (document.getElementsByName("image")[0].checked) {
           result.meta.image = {
