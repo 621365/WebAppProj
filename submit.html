@@ -76,17 +76,26 @@
     <main id="main">
       <h1>Submit Articles!</h1>
       <form onsubmit="return false;">
-                <h2>Baqsic Article Information</h2>
+        <h2>Basic Article Information</h2>
+        
         <label for="title">Article Title:</label><br>
         <input name="title" placeholder="Enter Article Title:" type="text" required><br>
         <br>
+        
         <label for="content">Article Content:</label><br>
-        <textarea name="content" placeholder="Enter Information:" type="text" required></textarea><br><br>
+        <textarea name="content" placeholder="Enter Information:" type="text" required></textarea><br>
+        <br>
+        
         <label for="description">Article Description</label><br>
-        <input name="description" placeholder="Enter Article Description:" type="text" required><br><br>
+        <input name="description" placeholder="Enter Article Description:" type="text" required><br>
+        <br>
+        
         <label for="author">Article Author</label><br>
-        <input name="author" placeholder="Enter Article Author:" type="text" required><br><br>
+        <input name="author" placeholder="Enter Article Author:" type="text" required><br>
+        <br>
+        
         <hr>
+        
         <h2>Time of Article Creation</h2>
         <div class="form-entry">
           <label for="year">Enter the Year: </label>
@@ -127,11 +136,8 @@
         <br>
         <button title="Uses browser-set date." type="button" onclick="fillDate();" ontouchstart="fillDate();">Auto-Place Current Date</button>
         <br>
-        <button title="Send to Clipboard" type="button" onclick="sub(false);" ontouchstart="sub(false);">Copy to Clipboard</button>
-        <br>
-        <button title="Send to Editors" type="button" onclick="sub(true);" ontouchstart="sub(true);">Email to Editors</button>
       </div>
-                  <h2>Optional Information</h2>
+        <h2>Optional Information</h2>
         <label for="tags">Article Tags:</label>
         <input name="tags" placeholder="Enter Tags, Seperated With a Comma (Used to Help Identify Article):" type="text">
         <label for="image">A visual or auditory medium does accompany this article: </label>
@@ -151,16 +157,14 @@
           
           <label for="subtype">Sub-Type of Medium</label><br>
           <input name="subtype" placeholder="Enter Subtype:" type="text" required>
-          <br><br>
-            
+          <br>
         </div>
-<!--    
-        source,
-        alt, 
-        type?
-
-        to editor: MERGE ARTICLE LIST FORM WITH THIS (useful for this part)
-        -->
+        
+        <hr>
+        
+        <button title="Send to Clipboard" type="button" onclick="sub(false);" ontouchstart="sub(false);">Copy to Clipboard</button>
+        <br>
+        <button title="Send to Editors" type="button" onclick="sub(true);" ontouchstart="sub(true);">Email to Editors</button>
       </form>
     </main>
     <footer id="footer">
