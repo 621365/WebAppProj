@@ -89,15 +89,16 @@
             <option value="EBD">Embed</option>
             <option value="AUD">Audio</option>
             <option value="IDE">Code</option>
-            <option value="NUL">Unknown</option>
+            <option value="NUL">Unknown and/or None</option>
           </select>
           <br><br>
           
-          <label>DUPLICATE NUMBER</label><br>
-          <input type="text" name="duplicate"><br>
+          <label>DUPLICATE NUMBER (KEYWORD ONLY)</label><br>
+          <input type="number" min="0" name="duplicate"><br>
           <br>
           
-          <button>PREFORM OPERATION</button>
+          <button onclick="operate(document.getElementsByName("type")[0].value != "NUL", document.getElementsByName("type")[0].value);" ontouchstart="operate(document.getElementsByName("type")[0].value != "NUL", document.getElementsByName("type")[0].value);">PREFORM OPERATION</button>
+          
         </form>
         <h1>RESULT</h1>
         
