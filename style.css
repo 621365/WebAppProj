@@ -154,6 +154,10 @@ ruffle-embed {
     width: -webkit-fill-available !important;
 }
 
+.card-pic {
+    width: -webkit-fill-availible;
+}
+
 main {
     position: relative;
     grid-area: main;
