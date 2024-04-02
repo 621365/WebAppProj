@@ -155,7 +155,7 @@ ruffle-embed {
 }
 
 .card-pic {
-    width: -webkit-fill-availible;
+    width: -webkit-fill-available;
 }
 
 main {
@@ -572,7 +572,7 @@ footer {
 }
 
 #media-container ruffle-embed { /* Flash Styleing Patch UGG */
-    width: -webkit-fill-availible;
+    width: -webkit-fill-available;
 }
 
 /* I know this is not supposed to be done, but the following accessibility code was imported from my former assignment. */
