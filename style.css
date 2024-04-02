@@ -62,6 +62,18 @@ nav {
     overflow-y: auto;
 }
 
+main form {
+    max-width: 30cm; 
+}
+
+main form input {
+    width: -webkit-fill-available;
+}
+
+main form input[type="checkbox"] {
+    width: auto;
+}
+
 footer {
     position: relative;
     grid-area: footer;
