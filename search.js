@@ -20,7 +20,7 @@ function operate(mediaFilter=false, type="NUL", keyword) {
  let results = [];
  for (i in archive) {
   // Efficiency++
-  if (archive[i].title == keyword && (!mediaFilter || archive[i].meta.image.type[0] == type)) {
+  if ((archive[i].title == keyword || typeof keyword == "undefined") && (!mediaFilter || archive[i].meta.image.type[0] == type)) {
    results[results.length] = archive[i];
   }
  }
