@@ -68,6 +68,10 @@ footer {
     width: calc(100vw - 2cm);
 }
 
+a:visited {
+    color: blue;
+}
+
 button {
     cursor: pointer;
     display: block;
@@ -839,5 +843,7 @@ media (prefers-contrast: more) or (-ms-high-contrast: active) {
 
 /* Light Theme Here */
 @media (prefers-color-scheme: light) { 
-
+    a:visited {
+        color: blue;
+    }
 }
