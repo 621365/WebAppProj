@@ -140,8 +140,11 @@
         <h2>Optional Information</h2>
         <label for="tags">Article Tags:</label>
         <input name="tags" placeholder="Enter Tags, Seperated With a Comma (Used to Help Identify Article):" type="text">
+        <br><br>
+        
         <label for="image">A visual or auditory medium does accompany this article: </label>
-        <input name="image" type="checkbox" onclick="imageThing();" ontouchstart="imageThing();"onselect="imageThing();">
+        <input name="image" type="checkbox" onclick="imageThing();" ontouchstart="imageThing();"onselect="imageThing();"><br><br>
+        
         <div id="imageReq" style="display:none;">
           <label for="source">Medium Source (as URL):</label><br>
           <input name="source" placeholder="Enter URL to Medium:" type="text" required>
