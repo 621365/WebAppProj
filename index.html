@@ -214,7 +214,7 @@
         hold.className = "card";
         //debug
         hold.id = blonde[card];
-        var pic = document.createElement("div"); pic.className = "card-pic"; hold.appendChild(pic);
+        if (archive[blonde[card]].meta.image.source != null) { var pic = document.createElement("div"); pic.className = "card-pic"; hold.appendChild(pic); } else var pic = null;
         var txt = document.createElement("div"); txt.className = "card-text"; hold.appendChild(txt);
         var tit = document.createElement("a"); tit.className = "card-title"; tit.href = "./viewer.html?id=" + blonde[card]; txt.appendChild(tit);
         var cont = document.createElement("div"); cont.className = "card-content"; txt.appendChild(cont);
