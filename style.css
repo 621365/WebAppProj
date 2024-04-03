@@ -869,6 +869,10 @@ media (prefers-contrast: more) or (-ms-high-contrast: active) {
         background-color: black;
     }
 
+    .card-title, .card-title:visited, .card-title a:visited {
+        color: white;
+    }
+
     html {
         scrollbar-color: grey black;
     }
