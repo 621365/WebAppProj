@@ -868,6 +868,10 @@ media (prefers-contrast: more) or (-ms-high-contrast: active) {
     ::-webkit-scrollbar-track {
         background-color: black;
     }
+
+    html {
+        scrollbar-color: grey black;
+    }
 }
 
 /* Light Theme Here */
