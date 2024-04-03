@@ -80,7 +80,7 @@ footer {
     width: calc(100vw - 2cm);
 }
 
-a:visited {
+main a:visited {
     color: blue;
 }
 
