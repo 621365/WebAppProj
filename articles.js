@@ -12,7 +12,9 @@ function punch(id, title, med, content, meta) {
     title.innerHTML = data.title;
     med.innerHTML = (data.meta.image.source != null) ? media(data.meta.image.type[0], data.meta.image.type[1], data.meta.image.source, data.meta.image.alt, ((typeof data.meta.image.raw != "undefined") ? data.meta.image.raw : false)) : "";
     if (typeof meta != "undefined" && meta != null) meta.innerHTML = JSON.stringify(data.meta); // Placeholder Until I Add Format Function in Viewer Library
-    content.innerHTML = data.content;
+    content.innerHTML = "By: " + data.meta.author + "<br><br>";
+    content.innerHTML += data.content;
+    
     return 0;
   }
 }
