@@ -64,10 +64,17 @@ nav {
 
 main form {
     max-width: 30cm; 
+    margin-left: auto;
+    margin-right: auto;
 }
 
 main form input {
     width: -webkit-fill-available;
+}
+
+main form textarea {
+    width: -webkit-fill-available;
+    resize: vertical;
 }
 
 main form input[type="checkbox"] {
