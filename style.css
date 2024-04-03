@@ -859,7 +859,7 @@ media (prefers-contrast: more) or (-ms-high-contrast: active) {
 
 /* Light Theme Here */
 @media (prefers-color-scheme: light) { 
-    a:visited {
+    main a:visited {
         color: blue;
     }
 }
