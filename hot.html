@@ -219,7 +219,7 @@
         var tit = document.createElement("a"); tit.className = "card-title"; tit.href = "./viewer.html?id=" + blonde[card]; txt.appendChild(tit);
         var cont = document.createElement("div"); cont.className = "card-content"; txt.appendChild(cont);
         punch(blonde[card], tit, pic, cont, null); // This code is so out of context.
-        if (pic.innerHTML == "") {pic.remove(); cont.style = "max-width: 100%;"}
+        if (pic.innerHTML == "") {pic.remove(); cont.style = "max-width: 100%;"; txt.style = "max-width: 100%;";}
       }
       
     </script>
