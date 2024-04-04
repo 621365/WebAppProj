@@ -167,7 +167,8 @@
           <br><br>
           
           <label for="subtype">Sub-Type of Medium</label><br>
-          <input name="subtype" placeholder="Enter Subtype:" type="text" required>
+          <select title="Choose a Type to Select a Sub-Type" name="subtype" placeholder="Enter Subtype:" type="text" onchange="subType();" required>
+          </select>
           <br>
         </div>
         
@@ -336,6 +337,19 @@
           copy(JSON.stringify(result), 64);
         }
         return result;
+      }
+
+      // Changes Subtype Based on libret info
+      function subType() {
+          var sel = document.getElementsByName("subtype")[0];
+          sel.title = "Sub-Types for " + libRet[sel.value][1];
+          sel.innerHTML = "";
+          for (let i = 0; i < libRet[sel.value].length; i++) {
+            let temp = document.createElement("option");
+            temp.value = libRet[sel.value][0];
+            temp.innerHTML = libRet[sel.value][1];
+            temp.append(sel);
+          }
       }
     </script>
   </body>
