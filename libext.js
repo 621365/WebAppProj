@@ -124,6 +124,15 @@ var clock;
 setInterval(function(){clock = new Date();}, 1);
 function userUTC(){return clock.getTimezoneOffset()/-60;}
 
+// Generates Random Array (First Param Length, Second If String or Number), Returns Random Array
+function genArray(length = 10, isNum = true) {
+    let a = [];
+    for (let i = 0; i < length; i++) {
+        a[i] = (isNum) ? parseInt(Math.random() * 1915) : uuid(1, true);
+    }
+    return a;
+}
+
 // Convert Any Date to UTC
 function utcTime(year=1987, mon=1, day=1, hour=0, UTC=0, min=0, sec=0) {
     return parseInt(Math.round((new Date(year.toString() + " " + ((mon.length)?monthGet(mon):1).toString() + " " + day.toString() + " " + hour.toString() + ":" + min.toString() + ":" + sec.toString() + " UTC" + UTC.toString()).getTime())/1000));
