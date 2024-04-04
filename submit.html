@@ -321,13 +321,13 @@
     
         // Time GET
         result.meta.timestamp = {
-          "year": document.getElementsByName("year")[0].value,
-          "month": document.getElementsByName("month")[0].value,
-          "day": document.getElementsByName("day")[0].value,
-          "hour": document.getElementsByName("hour")[0].value,
-          "minute": document.getElementsByName("min")[0].value,
-          "second": document.getElementsByName("sec")[0].value,
-          "UTC": document.getElementsByName("utc")[0].value
+          "year": parseInt(document.getElementsByName("year")[0].value),
+          "month": parseInt(document.getElementsByName("month")[0].value),
+          "day": parseInt(document.getElementsByName("day")[0].value),
+          "hour": parseInt(document.getElementsByName("hour")[0].value),
+          "minute": parseInt(document.getElementsByName("min")[0].value),
+          "second": parseFloat(document.getElementsByName("sec")[0].value),
+          "UTC": parseInt(document.getElementsByName("utc")[0].value)
         }
         
         if (porCorreo) {
