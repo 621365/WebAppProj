@@ -155,6 +155,7 @@
           
           <label for="type">Type of Medium</label><br>
           <select name="type" placeholder="Enter Type:" type="text" onchange="subType();" required>
+            <option value="NUL" disabled selected>Please Select a Type</option>
             <option value="VID">Video</option>
             <option value="IMG">Image</option>
             <option value="YTV">YouTube Embed</option>
@@ -167,6 +168,7 @@
           
           <label for="subtype">Sub-Type of Medium</label><br>
           <select title="Choose a Type to Select a Sub-Type" name="subtype" placeholder="Enter Subtype:" type="text" required>
+            <option value="NUL" disabled selected>Please Select a Type Before Selecting a Sub-Type</option>
           </select>
           <br>
         </div>
@@ -345,6 +347,14 @@
           var sub = libRet[val.options[val.selectedIndex].value]
           sel.title = "Sub-Types for " + val.options[val.selectedIndex].value;
           sel.innerHTML = "";
+
+          // Placeholder Title
+          let tempTit = document.createElement("option");
+          tempTit.value = "NUL";
+          tempTit.setAttribute("disabled", "");
+          tempTit.setAttribute("selected", "");
+          sel.appendChild(tempTit);
+              
           for (let i = 0; i < libRet[val.value].length; i++) {
             let temp = document.createElement("option");
             temp.value = sub[i][0];
