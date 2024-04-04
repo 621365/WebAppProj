@@ -331,6 +331,7 @@ label {
 
     .card-pic {
         width: -webkit-fill-availible;
+        height: 100%;
     }
 
     .headlow {
