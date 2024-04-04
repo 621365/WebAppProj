@@ -14,7 +14,7 @@
 // Subtype Library
 var libRet = {
   "VID":[["WEBM", "Worst Media Format"], ["LOOP", "Looping Video"], ["MUTE", "Muted Video"], ["SHOK", "Shockwave File"]],
-  "IMG":[["GIF", "Graphics Interchange Format"], ["VEK", "Vector Image"], ["RTR", "Raster Image"]], ["RAW", "Uncompressed Image"], ["WBP", "Worst Broken Photos"]],
+  "IMG":[["GIF", "Graphics Interchange Format"], ["VEK", "Vector Image"], ["RTR", "Raster Image"], ["RAW", "Uncompressed Image"], ["WBP", "Worst Broken Photos"]],
   "YTV":[["NORM", "Normal YouTube Embed"]],
   "EBD":[["FRAME", "iFrame Embed"], ["CUSTM", "Custom Embed"]],
   "AUD":[["NORM", "Normal Audio"], ["LOOP", "Looping Audio"]],
