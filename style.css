@@ -905,4 +905,8 @@ media (prefers-contrast: more) or (-ms-high-contrast: active) {
     main a:visited {
         color: blue;
     }
+
+    main a:hover, main a:focus {
+        color: red;
+    }
 }
