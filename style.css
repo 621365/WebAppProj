@@ -849,7 +849,7 @@ media (prefers-contrast: more) or (-ms-high-contrast: active) {
         color: white;
     }
 
-    a, a:visited {
+    a, a:visited, main a, main a:visited {
         color: white;
     }
 
