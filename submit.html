@@ -304,6 +304,9 @@
         result.meta.author = document.getElementsByName("author")[0].value;
         result.meta.uuid = uuid(1, true);
         result.meta.tags = document.getElementsByName("tags")[0].value.split(",");
+        // White-Space Safeguard
+        for (t in result.meta.tags) result.meta.tags[t] = result.meta.tags[t].trim();
+          
         result.author = document.getElementsByName("author")[0].value;
         result.meta.error = true; // Originally meant for error-type articles, now intended for determining verified articles.
         // Image GET(?)
