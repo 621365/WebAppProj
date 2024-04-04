@@ -155,7 +155,7 @@
           <br><br>
           
           <label for="type">Type of Medium</label><br>
-          <select name="type" placeholder="Enter Type:" type="text" required>
+          <select name="type" placeholder="Enter Type:" type="text" onchange="subType();" required>
             <option value="VID">Video</option>
             <option value="IMG">Image</option>
             <option value="YTV">YouTube Embed</option>
@@ -342,12 +342,14 @@
       // Changes Subtype Based on libret info
       function subType() {
           var sel = document.getElementsByName("subtype")[0];
-          sel.title = "Sub-Types for " + libRet[sel.value][1];
+          var val = document.getElementsByName("type")[0];
+          var sub = libRet[sel.value]
+          sel.title = "Sub-Types for " + sub[1];
           sel.innerHTML = "";
-          for (let i = 0; i < libRet[sel.value].length; i++) {
+          for (let i = 0; i < libRet[val.value].length; i++) {
             let temp = document.createElement("option");
-            temp.value = libRet[sel.value][0];
-            temp.innerHTML = libRet[sel.value][1];
+            temp.value = sub[0];
+            temp.innerHTML = sub[1];
             temp.append(sel);
           }
       }
