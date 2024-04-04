@@ -343,7 +343,7 @@
       function subType() {
           var sel = document.getElementsByName("subtype")[0];
           var val = document.getElementsByName("type")[0];
-          var sub = libRet[sel.value]
+          var sub = libRet[val.options[val.selectedIndex].value]
           sel.title = "Sub-Types for " + sub[1];
           sel.innerHTML = "";
           for (let i = 0; i < libRet[val.value].length; i++) {
