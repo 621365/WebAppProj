@@ -69,6 +69,20 @@ nav {
     overflow-y: auto;
 }
 
+input, textarea, button {
+    outline-color: transparent;
+    outline-offset: 0.1cm;
+    transition: all 0.5s ease-in;
+    outline-width: 0.1cm;
+}
+
+input:focus, textarea:focus, button:focus {
+    outline-offset: 0;
+    outline-color: rgba(24, 25, 78, 1);
+    outline-width: 0.05cm;
+    transition: all 0.5s ease-out;
+}
+
 main form {
     max-width: 30cm; 
     margin-left: auto;
