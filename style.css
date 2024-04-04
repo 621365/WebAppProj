@@ -309,6 +309,7 @@ label {
 
     .card-pic {
         width: -webkit-fill-availible;
+        height: -webkit-fill-availible;
     }
 
     .headlow {
@@ -346,6 +347,10 @@ label {
 
     .card .card-pic, .card .card-text {
         max-width: calc(50% - 0.25cm);
+    }
+
+    .card-pic {
+        height: auto;
     }
 
     .card .card-pic {
