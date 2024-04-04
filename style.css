@@ -915,4 +915,8 @@ media (prefers-contrast: more) or (-ms-high-contrast: active) {
     main a:hover, main a:focus {
         color: red;
     }
+
+    main a:active {
+        color: gold;
+    }
 }
