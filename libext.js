@@ -135,7 +135,7 @@ function genArray(length = 10, isNum = true) {
 
 // Convert Any Date to UTC
 function utcTime(year=1987, mon=1, day=1, hour=0, UTC=0, min=0, sec=0) {
-    return parseInt(Math.round((new Date(year.toString() + " " + ((mon.length)?monthGet(mon):1).toString() + " " + day.toString() + " " + hour.toString() + ":" + min.toString() + ":" + sec.toString() + " UTC" + UTC.toString()).getTime())/1000));
+    return parseInt(Math.round((new Date(year.toString() + " " + ((mon.toString().length)?monthGet(mon):1).toString() + " " + day.toString() + " " + hour.toString() + ":" + min.toString() + ":" + sec.toString() + " UTC" + UTC.toString()).getTime())/1000));
 }
 
 // Convert Month Number to String (Tiny Controls if Shortened Form or Not)
