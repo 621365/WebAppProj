@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html>
   <head>
@@ -298,7 +297,7 @@
 
         // Basic GET
         result.title = document.getElementsByName("title")[0].value;
-        result.content = document.getElementsByName("title")[0].value.replace(/\n/g, "<br>").replace(/\t/g, "&emsp;");
+        result.content = document.getElementsByName("content")[0].value.replace(/\n/g, "<br>").replace(/\t/g, "&emsp;");
         result.meta.description = document.getElementsByName("description")[0].value;
         result.meta.author = document.getElementsByName("author")[0].value;
         result.meta.uuid = uuid(1, true);
