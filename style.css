@@ -74,14 +74,16 @@ nav {
 }
 
 input, textarea, button {
+    outline-style: solid;
     outline-color: transparent;
-    outline-offset: 0.1cm;
+    outline-offset: 0.15cm;
     transition: all 0.5s ease-in;
     outline-width: 0.1cm;
+    outline-offset: 0.1cm;
 }
 
 input:focus, textarea:focus, button:focus {
-    outline-offset: 0;
+    outline-offset: 0cm;
     outline-color: rgba(55, 90, 205, 1);
     outline-width: 0.05cm;
     transition: all 0.5s ease-out;
