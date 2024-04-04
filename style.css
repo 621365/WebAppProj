@@ -59,6 +59,10 @@ header {
     background: repeating-linear-gradient(to bottom, rgba(255, 255, 255, 1) 0cm, rgba(255, 255, 255, 1) 0.15cm, rgba(225, 225, 225, 1) 0.15cm, rgba(230, 230, 230, 1) 0.2cm);
 }
 
+a:focus {
+    outline: none;
+}
+
 nav {
     padding: 0.25cm;
     grid-area: nav;
