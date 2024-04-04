@@ -244,6 +244,10 @@ footer a {
     grid-template-columns: auto;
 }
 
+.card {
+    margin-bottom: 3cm;
+}
+
 footer a:focus, footer a:focus-within, footer a:hover {
     outline: none;
     color: blue;
