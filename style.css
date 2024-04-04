@@ -169,7 +169,6 @@ button:active::after {
 
 img, audio, video, embed, ruffle-embed {
     max-width: 100%;
-    max-height: 100%;
 }
 
 img, video {
@@ -304,6 +303,10 @@ label {
         grid-template-areas: "nav nav" "main main" "footer footer";
     }
 
+    img, audio, video, embed, ruffle-embed, .card img {
+        max-height: 100%;
+    }
+
     nav {
         position: relative;
         height: auto;
@@ -343,6 +346,10 @@ label {
 
     .bar nav, .right-bar nav{
         position: sticky;
+    }
+
+    img, audio, video, embed, ruffle-embed, .card img {
+        max-height: none;
     }
     
     .bar {
@@ -588,7 +595,6 @@ footer {
 .card-pic {
     display: inline-block;
     /* Ruffle and JSCanvas are a pain to deal with. */
-    height: -webkit-fill-available;
     
 }
 
