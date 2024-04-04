@@ -26,6 +26,7 @@ main, footer, nav {
 
 .page-view {
     max-width: 30cm;
+    padding: 0.25cm;
     margin-left: auto;
     margin-right: auto;
 }
