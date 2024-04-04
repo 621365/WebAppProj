@@ -344,12 +344,12 @@
           var sel = document.getElementsByName("subtype")[0];
           var val = document.getElementsByName("type")[0];
           var sub = libRet[val.options[val.selectedIndex].value]
-          sel.title = "Sub-Types for " + sub[1];
+          sel.title = "Sub-Types for " + val.options[val.selectedIndex].value;
           sel.innerHTML = "";
           for (let i = 0; i < libRet[val.value].length; i++) {
             let temp = document.createElement("option");
-            temp.value = sub[0];
-            temp.innerHTML = sub[1];
+            temp.value = sub[i][0];
+            temp.innerHTML = sub[i][1];
             temp.append(sel);
           }
       }
