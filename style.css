@@ -32,12 +32,12 @@ main, footer, nav {
 
 /* Invert Bar */
 .right-bar {
-    grid-template-columns: minmax(auto, 30cm) 50% !important;
+    grid-template-columns: auto 7cm !important;
 }
 
 /* Bar */
 .bar {
-    grid-template-columns: 50% minmax(auto, 30cm) !important;
+    grid-template-columns: 7cm auto !important;
 }
 
 .bar nav {
