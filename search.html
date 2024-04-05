@@ -98,7 +98,7 @@
           <input type="number" min="0" name="duplicate"><br>
           <br>
           
-          <button onclick="operate(document.getElementsByName('type')[0].value != 'NUL', document.getElementsByName('type')[0].value, document.getElementsByName('keyword')[0].value);" ontouchstart="operate(document.getElementsByName('type')[0].value != 'NUL', document.getElementsByName('type')[0].value, document.getElementsByName('keyword')[0].value);">PREFORM OPERATION</button>
+          <button onclick="placer(operate(document.getElementsByName('type')[0].value != 'NUL', document.getElementsByName('type')[0].value, document.getElementsByName('keyword')[0].value), parseInt(document.getElementByName('duplicate')[0].value));" ontouchstart="operate(document.getElementsByName('type')[0].value != 'NUL', document.getElementsByName('type')[0].value, document.getElementsByName('keyword')[0].value);">PREFORM OPERATION</button>
           
         </form>
         <h1>RESULT</h1>
