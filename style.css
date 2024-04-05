@@ -888,6 +888,10 @@ media (prefers-contrast: more) or (-ms-high-contrast: active) {
         color: white;
     }
 
+    .card-title, .card-title:visited, .card-title a:visited {
+        color: white;
+    }
+
     main a:hover, main a:focus, main a:focus-within {
         color: yellow;
     }
@@ -902,10 +906,6 @@ media (prefers-contrast: more) or (-ms-high-contrast: active) {
     
     ::-webkit-scrollbar-track {
         background-color: black;
-    }
-
-    .card-title, .card-title:visited, .card-title a:visited {
-        color: white;
     }
 
     html {
