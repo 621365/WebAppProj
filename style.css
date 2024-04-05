@@ -276,6 +276,12 @@ footer a {
     margin-bottom: 3cm;
 }
 
+.card-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
 footer a:focus, footer a:focus-within, footer a:hover {
     outline: none;
     color: blue;
