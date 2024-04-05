@@ -218,6 +218,7 @@
         var tit = document.createElement("a"); tit.className = "card-title"; txt.appendChild(tit); tit.href = "./viewer.html?id=" + datedArchive[card].meta.uuid;
         var cont = document.createElement("div"); cont.className = "card-content"; txt.appendChild(cont);
         punch(datedArchive[card].meta.uuid, tit, pic, cont, null); // This code is so out of context.
+        if (pic.innerHTML == "") { pic.remove(); txt.style = "max-width: none; width: 100%;";}
       }
     </script>
   </body>
