@@ -112,8 +112,8 @@ function media(type = null, subtype = null, source = null, alt = "Unknown or und
         break;
       default: case "NUL":
         switch (subtype) {
-          case "TEST":
-            encode = "";
+          case "LINK":
+            encode = `<a title="` + alt + `" target="`_blank`" href="` + source + `">This is an external URL to another page.</a>`;
             break;
           case "NULL": default:
             encode = "";
