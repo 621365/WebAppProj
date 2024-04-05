@@ -893,20 +893,20 @@ media (prefers-contrast: more) or (-ms-high-contrast: active) {
         color: white;
     }
 
-    main a:hover, main a:focus, main a:focus-within {
-        color: yellow;
-    }
-
-    main a:active {
-        color: pink;
-    }
-
     a, a:visited, main a, main a:visited {
         color: white;
     }
 
     .card-title, .card-title:visited, .card-title a:visited {
         color: white;
+    }
+
+    main a:hover, main a:focus, main a:focus-within {
+        color: yellow;
+    }
+
+    main a:active {
+        color: pink;
     }
     
     html::-webkit-scrollbar-track {
