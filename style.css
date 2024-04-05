@@ -74,6 +74,7 @@ nav {
 }
 
 input, textarea, button {
+    margin-top: 0.05cm;
     outline-style: solid;
     outline-color: transparent;
     outline-offset: 0.15cm;
