@@ -29,11 +29,12 @@ function operate(mediaFilter=false, type="NUL", keyword) {
 }
 
 function placer(results, d=0) {
- for (let i = 0; i <= ((d < results.length) ? d : results.length); i++) {
-  console.log(listCard(results[i].title, results[i].meta.description, results[i].meta, results[i].meta.uuid));
- }
  // place result number
  if (results.length == 0) {
-console.warn("oh no no search results");// place ui message soon please
+  console.warn("oh no no search results"); alert("I was an ideal; looked so alive, turns out I'm not real. Just something you've searched for. ");// place ui message soon please
+ } else {
+  for (let i = 0; i <= ((d < results.length) ? d : (results.length - 1)); i++) {
+   console.log(listCard(results[i].title, results[i].meta.description, results[i].meta, results[i].meta.uuid));
+  }
  }
 }
