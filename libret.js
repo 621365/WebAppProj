@@ -9,7 +9,7 @@
   EBD.FRAME (iFrame Embed), EBD.CUSTM (Custom Embed)
   AUD.NORM (Normal Audio), AUD.LOOP (Looping Audio)
   IDE.C (C-Based Code), IDE.A (Assembly-Based Code)
-  NUL.NULL (Absolutely Nothing), NUL.TEST (Placeholder)
+  NUL.NULL (Absolutely Nothing), NUL.LINK (URL)
 */
 // Subtype Library
 var libRet = {
@@ -19,7 +19,7 @@ var libRet = {
   "EBD":[["FRAME", "iFrame Embed"], ["CUSTM", "Custom Embed"]],
   "AUD":[["NORM", "Normal Audio"], ["LOOP", "Looping Audio"]],
   "IDE":[["C", "C-Based Code"], ["A", "Assembly-Based Code"]],
-  "NUL":[["NULL", "Unknown"]]
+  "NUL":[["NULL", "External HyperLink"]]
 }
 
 function media(type = null, subtype = null, source = null, alt = "Unknown or undeclared type of media.", isRaw = false) {
