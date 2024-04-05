@@ -19,7 +19,7 @@ var libRet = {
   "EBD":[["FRAME", "iFrame Embed"], ["CUSTM", "Custom Embed"]],
   "AUD":[["NORM", "Normal Audio"], ["LOOP", "Looping Audio"]],
   "IDE":[["C", "C-Based Code"], ["A", "Assembly-Based Code"]],
-  "NUL":[["NULL", "External HyperLink"]]
+  "NUL":[["LINK", "External HyperLink"], ["NULL", "Unknown/Undefined"]]
 }
 
 function media(type = null, subtype = null, source = null, alt = "Unknown or undeclared type of media.", isRaw = false) {
