@@ -650,6 +650,17 @@ footer {
     width: -webkit-fill-available;
 }
 
+#results {
+    list-style: none;
+}
+
+#results li {
+    margin-top: 1cm;
+}
+
+#results li::firstr-line {
+    text-decoration: underline;
+}
 /* I know this is not supposed to be done, but the following accessibility code was imported from my former assignment. */
 
 .skipper {
