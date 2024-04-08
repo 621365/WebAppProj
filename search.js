@@ -16,7 +16,7 @@ function listCard(title, description, meta, id) {
 // Speficically FOR Search Page, but Could be used outside
 // depends on archive.js
 // I may import the search algorythm from placehorsey if need be
-function operate(mediaFilter=false, type="NUL", keyword) {
+function operate(mediaFilter=false, type="NUL", keyword, tags) {
  let results = [];
  for (i in archive) {
   // Efficiency++
