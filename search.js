@@ -40,7 +40,7 @@ function placer(results, d=0) {
    document.getElementById("results").innerHTML += listCard(results[i].title, results[i].meta.description, results[i].meta, results[i].meta.uuid);
    count++;
   }
-  document.getElementById("logger").innerHTML = "SHOWING " + count.toString() + " RESULT" + (count == 1) ? ": " : "S: ";
+  document.getElementById("logger").innerHTML = ("SHOWING " + (count.toString()) + " RESULT") + ((count == 1) ? ": " : "S: ");
   if (document.getElementById("results").innerHTML.length == 0) document.getElementById("results").innerHTML = "Your search result yielded no results."; 
  }
 }
