@@ -31,11 +31,11 @@ function operate(mediaFilter=false, type="NUL", keyword, tags) {
 function placer(results, d=0) {
  // place result number
  
+  let count = 0;
  if (results.length == 0) {
-  console.warn("oh no no search results"); alert("I was an ideal; looked so alive, turns out I'm not real. Just something you've searched for. ");// place ui message soon please
+  document.getElementById("results").innerHTML = "NO RESULTS EXIST FOR YOUR QUERY.";
  } else {
    document.getElementById("results").innerHTML = "";
-  let count = 0;
   for (let i = 0; i <= ((d < results.length) ? d : (results.length - 1)); i++) {
    document.getElementById("results").innerHTML += listCard(results[i].title, results[i].meta.description, results[i].meta, results[i].meta.uuid);
    count++;
