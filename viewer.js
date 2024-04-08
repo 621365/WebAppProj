@@ -26,7 +26,7 @@ if (error.real) {
   if ((typeof data.length != "undefined") ? ((data.length == 1) ? true : false) : true ) {
     document.getElementById("title").innerHTML = data.title;
     document.title = data.title + " - " + data.meta.author;
-    document.getElementById("words").innerHTML = data.content;
+    document.getElementById("words").innerHTML = "By: " + data.meta.author + "<br><br>" + data.content;
     document.getElementById("foot-desc").innerHTML = data.meta.description;
     document.getElementById("media-container").innerHTML = media(data.meta.image.type[0], data.meta.image.type[1], data.meta.image.source, data.meta.image.alt, ((typeof data.meta.image.raw != "undefined") ? data.meta.image.raw : false));
     
