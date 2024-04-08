@@ -79,11 +79,16 @@
       <div>
         <form onsubmit="return false;">
           <label>KEYWORD</label><br>
-          <input type="text" name="keyword" required><br>
+          <input type="text" name="keyword" title="Enter the title of an article." required><br>
+          <br>
+          
+          <label>TAG</label><br>
+          <input type="text" name="keyword" title="Enter a tag of an article. (Optional)"><br>
           <br>
           
           <label>TYPE</label><br>
-          <select name="type" placeholder="Enter Type:" type="text" required>
+          <select name="type" placeholder="Enter Type:" title="Please select a type." type="text" required>
+            <option value="NUL" selected disabled>Please enter a type:</option>
             <option value="VID">Video</option>
             <option value="IMG">Image</option>
             <option value="YTV">YouTube Embed</option>
