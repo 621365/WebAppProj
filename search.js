@@ -4,10 +4,11 @@
 function listCard(title, description, meta, id) {
  return `
  <li>
+  <hr>
    <a href="./viewer.html?id=`+id+`">
-    <div class="card-title">`+title+`</div>
-    <div class="card-descr">`+description+`</div>
-    <div class="card-metas">`+JSON.stringify(meta)+`</div>
+    <div class="card-title">TITLE: `+title+`</div><br>
+    <div class="card-descr">DESCRIPTION: `+description+`</div><br>
+    <div class="card-metas">METADATA: `+JSON.stringify(meta)+`</div>
    </a>
  </li>
  `;
@@ -16,7 +17,7 @@ function listCard(title, description, meta, id) {
 // Speficically FOR Search Page, but Could be used outside
 // depends on archive.js
 // I may import the search algorythm from placehorsey if need be
-function operate(mediaFilter=false, type="NUL", keyword, tags) {
+function operate(mediaFilter=false, type="NUL", keyword, tags=null) {
  let results = [];
  for (i in archive) {
   // Efficiency++
@@ -24,7 +25,27 @@ function operate(mediaFilter=false, type="NUL", keyword, tags) {
    results[results.length] = archive[i];
   }
  }
-
+ let tagsList = [];
+ if (typeof tags != "undefined" || typeof tags == "null") {
+  if (tags.length > 0) {
+   tagsList = tags.split(",");
+   // White-Space Safeguard
+   for (t in tagsList) tagsList[t] = tagsList[t].trim();
+  }
+ }
+ let resultTags = [];
+ if (tagsList.length) {
+  for (thing in results) {
+  for (stuff in tags) {
+   if (results[thing].meta.tags.includes(stuff)) {
+     resultTags.push(results[thing]);
+   }
+  }
+  }
+ } else {
+ resultTags = results;
+}
+results = resultTags;
  return results; // if will implement search algorithm, create extra parameter please
 }
 
