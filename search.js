@@ -26,7 +26,7 @@ function operate(mediaFilter=false, type="NUL", keyword, tags=null) {
   }
  }
  let tagsList = [];
- if (typeof tags != "undefined" || typeof tags != "null" || tags != null) {
+ if (typeof tags != "undefined" && typeof tags != "null" && tags != null) {
   if (tags.length > 0) {
    tagsList = tags.split(",");
    // White-Space Safeguard
