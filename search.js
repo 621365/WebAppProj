@@ -51,6 +51,9 @@ function operate(mediaFilter=false, type="NUL", keyword="", tags=null) {
 results = resultTags;
  let medResults = [];
 if (type != "NUL") {
+   if (keyword.length < 1) {
+   results = archive;
+  }
  for (thing in results) {
   if (results[parseFloat(thing)].meta.image.type[0] == type) {
    medResults.push(results[parseFloat(thing)]);
