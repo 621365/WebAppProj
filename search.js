@@ -40,7 +40,7 @@ function operate(mediaFilter=false, type="NUL", keyword="", tags=null) {
   }
   for (thing in results) {
   for (stuff of tagsList) {
-   if (results[parseFloat(thing)].meta.tags.includes(stuff)) {
+   if (results[parseFloat(thing)].meta.image.includes(stuff)) {
      resultTags.push(results[parseFloat(thing)]);
    }
   }
@@ -49,6 +49,17 @@ function operate(mediaFilter=false, type="NUL", keyword="", tags=null) {
  resultTags = results;
 }
 results = resultTags;
+ let medResults = [];
+if (type != "NUL") {
+ for (thing in results) {
+  if (results[parseFloat(thing)].meta.image.type[0] == type) {
+   medResults.push(results[parseFloat(thing)];
+  }
+ }
+} else {
+ medResults = results;
+}
+ results = medResults;
  return results; // if will implement search algorithm, create extra parameter please
 }
 
