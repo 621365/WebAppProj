@@ -53,7 +53,7 @@ results = resultTags;
 if (type != "NUL") {
  for (thing in results) {
   if (results[parseFloat(thing)].meta.image.type[0] == type) {
-   medResults.push(results[parseFloat(thing)];
+   medResults.push(results[parseFloat(thing)]);
   }
  }
 } else {
