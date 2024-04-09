@@ -35,6 +35,9 @@ function operate(mediaFilter=false, type="NUL", keyword, tags=null) {
  }
  let resultTags = [];
  if (tagsList.length) {
+  if (keywords.length < 1) {
+   results = archive;
+  }
   for (thing in results) {
   for (stuff in tags) {
    if (results[thing].meta.tags.includes(stuff)) {
