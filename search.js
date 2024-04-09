@@ -39,7 +39,7 @@ function operate(mediaFilter=false, type="NUL", keyword="", tags=null) {
    results = archive;
   }
   for (thing in results) {
-  for (stuff in tags) {
+  for (stuff of tags) {
    if (results[thing].meta.tags.includes(stuff)) {
      resultTags.push(results[thing]);
    }
