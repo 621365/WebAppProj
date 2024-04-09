@@ -40,8 +40,8 @@ function operate(mediaFilter=false, type="NUL", keyword="", tags=null) {
   }
   for (thing in results) {
   for (stuff of tags) {
-   if (results[thing].meta.tags.includes(stuff)) {
-     resultTags.push(results[thing]);
+   if (results[parseFloat(thing)].meta.tags.includes(stuff)) {
+     resultTags.push(results[parseFloat(thing)]);
    }
   }
   }
