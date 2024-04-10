@@ -71,6 +71,7 @@ function placer(results, d=0) {
  
   let count = 0;
  if (results.length == 0) {
+  document.getElementById("logger").innerHTML = "SHOWING NO RESULTS: ";
   document.getElementById("results").innerHTML = "NO RESULTS EXIST FOR YOUR QUERY.";
  } else {
    document.getElementById("results").innerHTML = "";
