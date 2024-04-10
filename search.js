@@ -51,7 +51,7 @@ function operate(mediaFilter=false, type="NUL", keyword="", tags=null) {
 results = resultTags;
  let medResults = [];
 if (type != "NUL") {
-   if (keyword.length < 1) {
+   if (keyword.length < 1 && (tags == null || !tags.toString().length)) {
    results = archive;
   }
  for (thing in results) {
