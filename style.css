@@ -842,11 +842,27 @@ footer {
         animation: none !important;
     }
 
+    a::after {
+        display: none !important;
+    }
+
 }
 
 /* High Contrast Theme Dark Mode Here */
 @media (prefers-color-scheme: dark) and ((prefers-contrast: more) or (-ms-high-contrast: active)) { 
+    .headtop {
+        background: black !important;
+        border-color: cyan !important;
+    }
 
+    #headtop {
+        background: purple !important;
+    }
+
+    #headlow {
+        border-color: cyan !important;
+        background: black !important;
+    }
 }
 
 /* Dark Theme Here */
