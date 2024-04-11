@@ -11,6 +11,7 @@ body {
     z-index: 0;
     position: relative;
     right: 0;
+    color: black;
     max-width: max-content;
     margin-left: auto;
     margin-right: auto;
@@ -951,24 +952,24 @@ footer {
     }
 
     button {
-        text-shadow: 0 0.05cm 0.05cm rgba(0, 0, 0, 0.25);
-        box-shadow: 0 0.15cm 0.25cm -0.05cm rgba(0, 0, 0, 0.5) inset, 0cm 0.05cm 0.1cm -0.01cm rgba(0, 0, 0, 0.5) inset, 0 0.05cm 0.1cm rgba(0, 0, 0, 0.5);
-        background: linear-gradient(to bottom, rgba(200, 200, 200, 1) 0%, rgba(240, 240, 240) 80%, white 100%);
+        text-shadow: 0 0.05cm 0.05cm rgba(0, 0, 0, 1);
+        box-shadow: 0 0.15cm 0.25cm -0.05cm rgba(255, 255, 255, 0.1) inset, 0cm 0.05cm 0.1cm -0.01cm rgba(255, 255, 255, 0.1) inset, 0 0.05cm 0.1cm rgba(255, 255, 255, 0.1);
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(20, 20, 20) 80%, rgba(50, 50, 50) 100%);
+        color: white;
     }
 
     button::after {
-        background: rgba(255, 255, 255, 0.75);
-        box-shadow: 0 0.3cm 0.1cm rgba(255, 255, 255, 1);
+        background: rgba(255, 255, 255, 0.15);
+        box-shadow: 0 0.3cm 0.1cm rgba(255, 255, 255, 0.1);
     }
 
     button:hover, button:focus {
-        background: linear-gradient(to bottom, rgba(50, 100, 255, 1) 0%, rgba(140, 200, 255) 80%, rgba(100, 200, 255) 100%);
+        background: linear-gradient(to bottom, rgba(50, 70, 105, 1) 0%, rgba(20, 70, 105) 80%, rgba(50, 100, 255) 100%);
     }
     
     button:hover::after, button:focus::after {
-        background: rgba(205, 235, 255, 0.75);
-        filter: blur(0.02cm);
-        box-shadow: 0 0.35cm 0.1cm rgba(225, 255, 255, 1);
+        background: rgba(105, 125, 195, 0.75);
+        box-shadow: 0 0.35cm 0.1cm rgba(90, 100, 205, 0.5);
     }
     
     button:active {
