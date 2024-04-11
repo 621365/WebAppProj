@@ -859,9 +859,24 @@ footer {
         background: purple !important;
     }
 
+    .headtop:hover, .headtop:focus, .headtop:focus-within {
+        background-color: red !important;
+        border-color: blue !important;
+    }
+
+    .headtop:active {
+        color: black !important;
+        background-color: cyan !important;
+        border-color: yellow !important;
+    }
+
     #headlow {
         border-color: cyan !important;
         background: black !important;
+    }
+
+    #headlow-chosen:hover, #headlow-chosen:focus, #headlow-chosen:focus-within {
+        background: purple !important;
     }
 }
 
