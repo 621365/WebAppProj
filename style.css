@@ -880,8 +880,8 @@ footer {
         background: purple !important;
     }
 
-    button, input, textarea {
-        border: solid cyan 0.05cm !important;
+    button, input, textarea, select {
+        border: solid pink 0.05cm !important;
         background: black !important;
     }
 
