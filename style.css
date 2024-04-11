@@ -65,7 +65,7 @@ a:focus {
 }
 
 main a {
-    transition: all 0.1s ease-in;
+    transition: all 0.25s ease-out;
 }
 
 nav {
