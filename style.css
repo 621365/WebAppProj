@@ -131,6 +131,18 @@ main a:visited {
     color: blue;
 }
 
+main a:visited {
+    color: blue;
+}
+
+main a:hover, main a:focus {
+    color: red;
+}
+
+main a:active {
+    color: gold;
+}
+
 button {
     cursor: pointer;
     display: block;
@@ -794,7 +806,7 @@ footer {
 /* TODO: ADD DARK THEME + HIGH CONTRAST THEME */
 /* Again, I know that I'm not supposed to do this, but I'm copying my accessibility framework from Placehorsey; I am proud of how reliable it is and how cool it looks. */
 @media (prefers-reduced-motion) {
-    html, body, button, a, nav, footer {
+    html, body, button, a, nav, footer, *, :hover, :focus, :active, *:hover, *:focus, *:active {
         transition-duration: 0s !important;
         animation-duration: 0s !important;
         scroll-behavior: unset !important; 
@@ -940,20 +952,5 @@ media (prefers-contrast: more) or (-ms-high-contrast: active) {
 
     html {
         scrollbar-color: grey black;
-    }
-}
-
-/* Light Theme Here */
-@media (prefers-color-scheme: light) { 
-    main a:visited {
-        color: blue;
-    }
-
-    main a:hover, main a:focus {
-        color: red;
-    }
-
-    main a:active {
-        color: gold;
     }
 }
