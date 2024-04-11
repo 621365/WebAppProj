@@ -810,11 +810,19 @@ footer {
         transition-duration: 0s !important;
         animation-duration: 0s !important;
         scroll-behavior: unset !important; 
+        scroll-behavior: auto;
     }
 }
 
-/* High Contrast Theme Here */
-media (prefers-contrast: more) or (-ms-high-contrast: active) { 
+/* High Contrast ThemeHere */
+@media (prefers-contrast: more) or (-ms-high-contrast: active) { 
+    img, video, audio, embed, ruffle-embed, svg {
+        filter: contrast(1000);
+    }
+}
+
+/* High Contrast Theme Dark Mode Here */
+@media (prefers-color-scheme: dark) and ((prefers-contrast: more) or (-ms-high-contrast: active)) { 
 
 }
 
