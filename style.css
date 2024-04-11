@@ -820,6 +820,28 @@ footer {
     img, video, audio, embed, ruffle-embed, svg {
         filter: contrast(1000);
     }
+
+    .headtop {
+        box-shadow: none !important;
+    }
+
+    button {
+        text-shadow: none !important;
+        box-shadow: none !important;
+    }
+
+    button::after {
+        display: none !important;
+    }
+
+    input, textarea {
+        text-shadow: none !important;
+    }
+
+    select:focus, select:focus-within, input[type="submit"]:focus, input[type="submit"]:focus-within {
+        animation: none !important;
+    }
+
 }
 
 /* High Contrast Theme Dark Mode Here */
