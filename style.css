@@ -63,6 +63,10 @@ a:focus {
     outline: none;
 }
 
+main a {
+    transition: all 0.1s ease-in;
+}
+
 nav {
     padding: 0.25cm;
     grid-area: nav;
