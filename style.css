@@ -836,6 +836,7 @@ footer {
 
     input, textarea {
         text-shadow: none !important;
+        box-shadow: none !important;
     }
 
     select:focus, select:focus-within, input[type="submit"]:focus, input[type="submit"]:focus-within {
@@ -877,6 +878,32 @@ footer {
 
     #headlow-chosen:hover, #headlow-chosen:focus, #headlow-chosen:focus-within {
         background: purple !important;
+    }
+
+    button, input, textarea {
+        border: solid cyan 0.05cm !important;
+        background: black !important;
+    }
+
+    button:hover {
+        background: purple !important;
+    }
+
+    button:active {
+        background: yellow !important;
+        color: black !important;
+    }    
+
+    input:focus, textarea:focus, button:focus {
+        outline-color: cyan !important;
+    }
+
+    select, input[type="submit"] {
+        background: black !important;
+    }
+
+    select:hover, input[type="submit"]:hover, select:focus, input[type="submit"]:focus, select:focus-within, input[type="submit"]:focus-within {
+        background: blue !important;
     }
 }
 
