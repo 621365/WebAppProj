@@ -992,6 +992,10 @@ footer {
     html {
         scrollbar-color: white black !important;
     }
+
+    footer a:active {
+        color: cyan !important;
+    }
 }
 
 /* High Contrast Theme Light Mode Here */
