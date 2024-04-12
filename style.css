@@ -1009,11 +1009,15 @@ footer {
     }
     
     .headtop {
-        background: black !important;
-        border-color: cyan !important;
+        background: white !important;
+        border-color: blue !important;
     }
 
     #headtop {
+        background: cyan !important;
+    }
+
+    .headlow:active, #headlow-chosen {
         background: purple !important;
     }
 
@@ -1034,7 +1038,7 @@ footer {
 
     #headtop-chosen:hover, #headtop-chosen:focus, #headtop-chosen:focus-within {
         background: cyan !important;
-        color: white !important;
+        color: black !important;
     }
 
     main a:hover, main a:focus, main a:focus-within {
@@ -1045,12 +1049,8 @@ footer {
         color: cyan !important;
     }
 
-    .headlow:active {
-        background: blue !important;
-    }
-
     #headtop-chosen:active {
-        color: white !important;
+        color: black !important;
         background: yellow !important;
     }
 
@@ -1064,7 +1064,6 @@ footer {
     }
     
     #headlow-chosen:active {
-        color: black !important;
         background: yellow !important;
     }
 
@@ -1094,6 +1093,66 @@ footer {
         background: blue !important;
     }
 
+    html {
+        scrollbar-color: white black !important;
+    }
+
+    .skipper {
+        background: black !important;
+    }
+    
+    .skipper-title, .skipper a {
+        opacity: 1 !important;
+    }
+    
+    .skipper a{
+        background: purple !important;
+        border: solid white !important;
+        color: white !important;
+        box-shadow: none !important;
+    }
+    
+    .skipper a:focus {
+        outline: none !important;
+    }
+    
+    .skipper a:hover {
+        background: purple !important;
+        color: yellow !important;
+    }
+    
+    .skipper a:active {
+        background: cyan  !important;
+        color: purple  !important;
+    }
+    
+    .skipper-text {
+        opacity: 1 !important;
+    }
+    
+    .skipper-container-border {
+        text-shadow: 0 -0.05rem black !important;
+        color: white !important;
+        border-color: white !important;
+        background: black !important;
+        opacity: 0 !important;
+    }
+    
+    .skipper-container-border:focus-within {
+        opacity: 1 !important;
+    }
+    
+    .skipper-container-border::after {
+        display: none !important;
+    }
+
+    html {
+        scrollbar-color: white black !important;
+    }
+
+    footer a:active {
+        color: cyan !important;
+    }
 }
 
 /* Dark Theme Here */
