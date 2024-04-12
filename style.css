@@ -863,6 +863,10 @@ footer {
         background: purple !important;
     }
 
+    .headlow:active, #headlow-chosen {
+        background: purple !important;
+    }
+
     .headtop:hover, .headtop:focus, .headtop:focus-within {
         background-color: red !important;
         border-color: blue !important;
