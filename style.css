@@ -940,7 +940,6 @@ footer {
     }
 
     .skipper {
-        opacity: 0 !important;
         background: black !important;
     }
     
@@ -961,7 +960,7 @@ footer {
     
     .skipper a:hover {
         background: purple !important;
-        color: cyan !important;
+        color: yellow !important;
     }
     
     .skipper a:active {
