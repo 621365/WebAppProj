@@ -1041,7 +1041,7 @@ footer {
     }
 
     #headtop-chosen:hover, #headtop-chosen:focus, #headtop-chosen:focus-within {
-        background: cyan !important;
+        background: lime !important;
         color: black !important;
     }
 
