@@ -880,7 +880,7 @@ footer {
 
     #headtop-chosen:hover, #headtop-chosen:focus, #headtop-chosen:focus-within {
         background: cyan !important;
-        color: white !important;
+        color: black !important;
     }
 
     main a:hover, main a:focus, main a:focus-within {
@@ -892,7 +892,7 @@ footer {
     }
 
     #headtop-chosen:active {
-        color: white !important;
+        color: black !important;
         background: yellow !important;
     }
 
@@ -936,7 +936,7 @@ footer {
     }
 
     html {
-        scrollbar-color: white black;
+        scrollbar-color: white black !important;
     }
 
     .skipper {
