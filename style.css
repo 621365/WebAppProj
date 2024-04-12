@@ -938,6 +938,56 @@ footer {
     html {
         scrollbar-color: white black;
     }
+
+    .skipper {
+        opacity: 0 !important;
+        background: black !important;
+    }
+    
+    .skipper-title, .skipper a {
+        opacity: 1 !important;
+    }
+    
+    .skipper a{
+        background: purple !important;
+        border: solid white !important;
+        color: white !important;
+        box-shadow: none !important;
+    }
+    
+    .skipper a:focus {
+        outline: none !important;
+    }
+    
+    .skipper a:hover {
+        background: purple !important;
+        color: cyan !important;
+    }
+    
+    .skipper a:active {
+        background: cyan  !important;
+        color: purple  !important;
+    }
+    
+    .skipper-text {
+        opacity: 1 !important;
+    }
+    
+    .skipper-container-border {
+        text-shadow: 0 -0.05rem black !important;
+        color: white !important;
+        border-color: white !important;
+        background: black !important;
+        opacity: 0 !important;
+    }
+    
+    .skipper-container-border:focus-within {
+        opacity: 1 !important;
+    }
+    
+    .skipper-container-border::after {
+        display: none !important;
+    }
 }
 
 /* High Contrast Theme Light Mode Here */
