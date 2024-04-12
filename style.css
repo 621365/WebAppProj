@@ -1034,6 +1034,10 @@ footer {
         color: cyan !important;
     }
 
+    .headlow:active {
+        background: blue !important;
+    }
+
     #headtop-chosen:active {
         color: white !important;
         background: yellow !important;
@@ -1049,6 +1053,7 @@ footer {
     }
     
     #headlow-chosen:active {
+        color: black !important;
         background: yellow !important;
     }
 
