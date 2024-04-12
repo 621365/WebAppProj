@@ -1055,16 +1055,16 @@ footer {
     }
 
     #headlow {
-        border-color: cyan !important;
-        background: black !important;
+        border-color: purple !important;
+        background: white !important;
     }
 
     #headlow-chosen:hover, #headlow-chosen:focus, #headlow-chosen:focus-within {
-        background: purple !important;
+        background: yellow !important;
     }
     
     #headlow-chosen:active {
-        background: yellow !important;
+        background: cyan !important;
     }
 
     button, input, textarea, select {
@@ -1093,12 +1093,8 @@ footer {
         background: blue !important;
     }
 
-    html {
-        scrollbar-color: white black !important;
-    }
-
     .skipper {
-        background: black !important;
+        background: white !important;
     }
     
     .skipper-title, .skipper a {
@@ -1106,9 +1102,9 @@ footer {
     }
     
     .skipper a{
-        background: purple !important;
-        border: solid white !important;
-        color: white !important;
+        background: cyan !important;
+        border: solid black !important;
+        color: black !important;
         box-shadow: none !important;
     }
     
@@ -1122,8 +1118,8 @@ footer {
     }
     
     .skipper a:active {
-        background: cyan  !important;
-        color: purple  !important;
+        background: black  !important;
+        color: white  !important;
     }
     
     .skipper-text {
@@ -1131,10 +1127,10 @@ footer {
     }
     
     .skipper-container-border {
-        text-shadow: 0 -0.05rem black !important;
+        text-shadow: 0 -0.05rem white !important;
         color: white !important;
-        border-color: white !important;
-        background: black !important;
+        border-color: black !important;
+        background: white !important;
         opacity: 0 !important;
     }
     
@@ -1147,7 +1143,7 @@ footer {
     }
 
     html {
-        scrollbar-color: white black !important;
+        scrollbar-color: black white !important;
     }
 
     footer a:active {
