@@ -847,6 +847,9 @@ footer {
         display: none !important;
     }
 
+    #headlow {
+         box-shadow: none !important;   
+    }
 }
 
 /* High Contrast Theme Dark Mode Here */
