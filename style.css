@@ -1018,12 +1018,12 @@ footer {
     }
 
     .headlow:active, #headlow-chosen {
-        background: purple !important;
+        background: lime !important;
     }
 
     .headtop:hover, .headtop:focus, .headtop:focus-within {
-        background-color: red !important;
-        border-color: blue !important;
+        background-color: pink !important;
+        border-color: yellow !important;
     }
 
     .headtop:active {
@@ -1068,29 +1068,29 @@ footer {
     }
 
     button, input, textarea, select {
-        border: solid pink 0.05cm !important;
-        background: black !important;
+        border: solid black 0.05cm !important;
+        background: white !important;
     }
 
     button:hover {
-        background: purple !important;
+        background: yellow !important;
     }
 
     button:active {
-        background: yellow !important;
+        background: cyan !important;
         color: black !important;
     }    
 
     input:focus, textarea:focus, button:focus {
-        outline-color: cyan !important;
+        outline-color: blue !important;
     }
 
     select, input[type="submit"] {
-        background: black !important;
+        background: white !important;
     }
 
     select:hover, input[type="submit"]:hover, select:focus, input[type="submit"]:focus, select:focus-within, input[type="submit"]:focus-within {
-        background: blue !important;
+        background: cyan !important;
     }
 
     .skipper {
