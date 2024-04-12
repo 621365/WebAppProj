@@ -988,6 +988,10 @@ footer {
     .skipper-container-border::after {
         display: none !important;
     }
+
+    html {
+        scrollbar-color: white black !important;
+    }
 }
 
 /* High Contrast Theme Light Mode Here */
@@ -1083,9 +1087,6 @@ footer {
         background: blue !important;
     }
 
-    html {
-        scrollbar-color: white black;
-    }
 }
 
 /* Dark Theme Here */
