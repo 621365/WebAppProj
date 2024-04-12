@@ -870,6 +870,28 @@ footer {
         background-color: cyan !important;
         border-color: yellow !important;
     }
+    
+    #headtop-chosen {
+        background: blue !important;
+    }
+
+    #headtop-chosen:hover, #headtop-chosen:focus, #headtop-chosen:focus-within {
+        background: cyan !important;
+        color: white !important;
+    }
+
+    main a:hover, main a:focus, main a:focus-within {
+        color: yellow !important;
+    }
+
+    main a:active {
+        color: cyan !important;
+    }
+
+    #headtop-chosen:active {
+        color: white !important;
+        background: yellow !important;
+    }
 
     #headlow {
         border-color: cyan !important;
@@ -878,6 +900,10 @@ footer {
 
     #headlow-chosen:hover, #headlow-chosen:focus, #headlow-chosen:focus-within {
         background: purple !important;
+    }
+    
+    #headlow-chosen:active {
+        background: yellow !important;
     }
 
     button, input, textarea, select {
@@ -904,6 +930,103 @@ footer {
 
     select:hover, input[type="submit"]:hover, select:focus, input[type="submit"]:focus, select:focus-within, input[type="submit"]:focus-within {
         background: blue !important;
+    }
+
+    html {
+        scrollbar-color: white black;
+    }
+}
+
+/* High Contrast Theme Light Mode Here */
+@media (prefers-color-scheme: light) and ((prefers-contrast: more) or (-ms-high-contrast: active)) { 
+    *, html, body, main {
+        background: white !important;
+        color: black !important;
+    }
+    
+    .headtop {
+        background: black !important;
+        border-color: cyan !important;
+    }
+
+    #headtop {
+        background: purple !important;
+    }
+
+    .headtop:hover, .headtop:focus, .headtop:focus-within {
+        background-color: red !important;
+        border-color: blue !important;
+    }
+
+    .headtop:active {
+        color: black !important;
+        background-color: cyan !important;
+        border-color: yellow !important;
+    }
+    
+    #headtop-chosen {
+        background: blue !important;
+    }
+
+    #headtop-chosen:hover, #headtop-chosen:focus, #headtop-chosen:focus-within {
+        background: cyan !important;
+        color: white !important;
+    }
+
+    main a:hover, main a:focus, main a:focus-within {
+        color: yellow !important;
+    }
+
+    main a:active {
+        color: cyan !important;
+    }
+
+    #headtop-chosen:active {
+        color: white !important;
+        background: yellow !important;
+    }
+
+    #headlow {
+        border-color: cyan !important;
+        background: black !important;
+    }
+
+    #headlow-chosen:hover, #headlow-chosen:focus, #headlow-chosen:focus-within {
+        background: purple !important;
+    }
+    
+    #headlow-chosen:active {
+        background: yellow !important;
+    }
+
+    button, input, textarea, select {
+        border: solid pink 0.05cm !important;
+        background: black !important;
+    }
+
+    button:hover {
+        background: purple !important;
+    }
+
+    button:active {
+        background: yellow !important;
+        color: black !important;
+    }    
+
+    input:focus, textarea:focus, button:focus {
+        outline-color: cyan !important;
+    }
+
+    select, input[type="submit"] {
+        background: black !important;
+    }
+
+    select:hover, input[type="submit"]:hover, select:focus, input[type="submit"]:focus, select:focus-within, input[type="submit"]:focus-within {
+        background: blue !important;
+    }
+
+    html {
+        scrollbar-color: white black;
     }
 }
 
