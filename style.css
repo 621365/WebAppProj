@@ -1017,6 +1017,10 @@ footer {
         background: cyan !important;
     }
 
+    .headlow:hover,  {
+        background: pink;
+    }
+
     .headlow:active, #headlow-chosen {
         background: lime !important;
     }
@@ -1033,7 +1037,7 @@ footer {
     }
     
     #headtop-chosen {
-        background: blue !important;
+        background: pink !important;
     }
 
     #headtop-chosen:hover, #headtop-chosen:focus, #headtop-chosen:focus-within {
