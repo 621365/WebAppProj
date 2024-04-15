@@ -74,7 +74,7 @@
     </header>
     <main id="main">
       <h1>Submit Articles!</h1>
-      <form onsubmit="return false;">
+      <form onsubmit="return false;" autocomplete="off">
         <h2>Basic Article Information</h2>
         
         <label for="title">Article Title:</label><br>
@@ -146,7 +146,7 @@
         
         <div id="imageReq" style="display:none;">
           <label for="source" title="Where the medium is located as a URL">Medium Source (as URL):</label><br>
-          <input name="source" title="Where the medium is located as a URL" placeholder="Enter URL to Medium:" type="text" required>
+          <input name="source" title="Where the medium is located as a URL" placeholder="Enter URL to Medium:" type="url" required>
           <br><br>
           
           <label for="alt" title="Enter a descriptive description of the medium in question; this description will be used if the browser fails to load the medium.">Medium Description:</label><br>
