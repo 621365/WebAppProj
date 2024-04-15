@@ -25,6 +25,10 @@ main, footer, nav {
     max-width: calc(100vw - 2cm);
 }
 
+.storymode h1 {
+    width: fit-content;
+}
+
 .page-view {
     max-width: 30cm;
     padding: 0.5cm;
@@ -286,7 +290,7 @@ footer a {
 }
 #search-grid {
     display: grid !important;
-    grid-template-columns: auto;
+    grid-template-columns: 140%;
 }
 
 .card {
