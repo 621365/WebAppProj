@@ -1022,7 +1022,7 @@ footer {
     }
 
     .headlow:hover, .headlow:focus, .headlow:focus-within {
-        background: pink;
+        background: pink !important;
     }
 
     .headlow:active, #headlow-chosen {
