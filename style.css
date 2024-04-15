@@ -1017,7 +1017,7 @@ footer {
         background: cyan !important;
     }
 
-    .headlow:hover,  {
+    .headlow:hover, .headlow:focus, .headlow:focus-within {
         background: pink;
     }
 
@@ -1026,8 +1026,9 @@ footer {
     }
 
     .headtop:hover, .headtop:focus, .headtop:focus-within {
-        background-color: pink !important;
+        background-color: orangered !important;
         border-color: yellow !important;
+        color: white !important;
     }
 
     .headtop:active {
@@ -1046,11 +1047,11 @@ footer {
     }
 
     main a:hover, main a:focus, main a:focus-within {
-        color: yellow !important;
+        color: blue !important;
     }
 
     main a:active {
-        color: cyan !important;
+        color: red !important;
     }
 
     #headtop-chosen:active {
@@ -1061,6 +1062,10 @@ footer {
     #headlow {
         border-color: purple !important;
         background: white !important;
+    }
+
+    footer a:hover, footer a:focus, footer a:focus-within {
+        color: blue !important;
     }
 
     #headlow-chosen:hover, #headlow-chosen:focus, #headlow-chosen:focus-within {
