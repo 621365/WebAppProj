@@ -112,7 +112,7 @@ var archive = [
       "image": {
         "source": "https://www.bbc.com/news/uk-68547871",
         "alt": "URL To the Source of the Article.",
-        "type": ["IMG", "RAW"]
+        "type": ["NUL", "URL"]
       },
       "timestamp": {
           "year": 2024,
@@ -137,7 +137,7 @@ var archive = [
       "image": {
         "source": "https://www.usnews.com/news/top-news/articles/2024-03-12/us-spy-chief-cannot-rule-out-that-china-would-use-tiktok-to-influence-us-elections",
         "alt": "URL To the Source of the Article.",
-        "type": ["IMG", "RAW"]
+        "type": ["NUL", "URL"]
       },
       "timestamp": {
           "year": 2024,
