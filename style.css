@@ -290,7 +290,7 @@ footer a {
 }
 #search-grid {
     display: grid !important;
-    grid-template-columns: 140%;
+    grid-template-columns: 100%;
 }
 
 .card {
