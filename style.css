@@ -141,7 +141,7 @@ main a:visited {
 }
 
 main a:hover, main a:focus {
-    color: violet;
+    color: purple;
 }
 
 main a:active {
