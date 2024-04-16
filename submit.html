@@ -321,9 +321,9 @@
         }
         
         if (porCorreo) {
-          window.location.replace("mailto:621365@monet.k12.ca.us?subject=Automated%20Mail%Submission&body=" + encodeURIComponent(JSON.stringify(result)));
+          window.location.replace("mailto:621365@monet.k12.ca.us?subject=Automated%20Mail%Submission&body=" + "," + encodeURIComponent(JSON.stringify(result)));
         }  else {
-          copy(JSON.stringify(result), 64);
+          copy("," + JSON.stringify(result), 64);
         }
         return result;
       }
@@ -351,6 +351,12 @@
             sel.appendChild(temp);
           }
       }
+
+      // Confirm Leave
+      window.addEventListener("beforeunload", function(e){
+        e.preventDefault();
+        e.returnValue = true;
+      })
     </script>
   </body>
 </html>
