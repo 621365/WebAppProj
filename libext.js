@@ -2,6 +2,7 @@
 // Title: Main Library
 // Description: Multiple JS functions that are intended to make development for [UNTITLED PROJECT] easier.
 // Note: An attempt to document the functions will be made.
+const noMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 // Generates a statistically unique identifier
 // Contains two parameters for amount of UUIDs and if to have proper spacing
