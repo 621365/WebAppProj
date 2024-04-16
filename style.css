@@ -309,6 +309,10 @@ footer a:focus, footer a:focus-within, footer a:hover {
     text-shadow: 0.01cm 0.01cm 0.01cm black;
 }
 
+footer a:active {
+    color: red;
+}
+
 option {
     cursor: pointer;
 }
