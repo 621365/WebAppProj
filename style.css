@@ -273,6 +273,8 @@ select, input[type="submit"] {
     padding: 0.05cm 0.1cm;
     border: solid black 0.001cm;
     cursor: pointer;
+    outline-width: 0cm;
+    box-shadow: 0 0.025cm 0.05cm rgba(0, 0, 0, 0.5);
     background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(240, 240, 240, 1) 50%, rgba(230, 230, 230, 1) 50%, rgba(250, 250, 250, 1) 100%);
 }
 
@@ -666,9 +668,9 @@ footer {
 }
 
 @keyframes focus {
-    0% { box-shadow: 0 0 0 skyblue; }
-    50% { box-shadow: 0 0 0.1cm blue; }
-    100% { box-shadow: 0 0 0 skyblue; }
+    0% { outline-width: 0cm; outline-color: blue; }
+    50% { outline-width: 0.05cm; outline-color: skyblue; }
+    100% { outline-width: 0cm; outline-color: blue; }
 }
 
 #media-container ruffle-embed { /* Flash Styleing Patch UGG */
