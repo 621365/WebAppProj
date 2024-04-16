@@ -11,7 +11,7 @@ function timewarp(time) {
       mwah[i] = utcTime(datedArchive[i].meta.timestamp.year, datedArchive[i].meta.timestamp.month, datedArchive[i].meta.timestamp.day, datedArchive[i].meta.timestamp.hour, datedArchive[i].meta.timestamp.UTC, datedArchive[i].meta.timestamp.minute, datedArchive[i].meta.timestamp.second); // the person i have a crush on shares this letter lol
     }
     let kissie = closeTo(time, mwah);
-    document.getElementById(datedArchive[kissie].meta.uuid).scrollIntoView();
+    document.getElementById(datedArchive[kissie].meta.uuid).scrollIntoView({behavior: 'smooth', block: 'center', inline: 'nearest'});
     return closeTo(time, mwah, true); // Debug Tool
   }
 }
