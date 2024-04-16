@@ -1280,11 +1280,11 @@ footer {
         color: white;
     }
 
-    main a:hover, main a:focus, main a:focus-within {
+    main a:hover, main a:focus, main a:focus-within, .card-title:hover, .card-title:focus, card-title:focus-within, .card-title a:hover, .card-title a:focus, .card-title a:focus-within {
         color: yellow;
     }
 
-    main a:active {
+    main a:active .card-title:active, .card-title a:active{
         color: pink;
     }
 
