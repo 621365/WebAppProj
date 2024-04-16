@@ -141,11 +141,11 @@ main a:visited {
 }
 
 main a:hover, main a:focus {
-    color: red;
+    color: violet;
 }
 
 main a:active {
-    color: gold;
+    color: red;
 }
 
 button {
