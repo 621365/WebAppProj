@@ -674,7 +674,7 @@ footer {
 
 @keyframes focus {
     0% { outline-width: 0cm; outline-color: blue; }
-    50% { outline-width: 0.1cm; outline-color: skyblue; }
+    50% { outline-width: 0.05cm; outline-color: skyblue; }
     100% { outline-width: 0cm; outline-color: blue; }
 }
 
