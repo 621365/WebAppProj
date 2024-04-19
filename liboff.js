@@ -13,7 +13,6 @@ const bar = [
   "archives.js",
   "contact.html",
   "hot.html",
-  "index.html",
   "info.html",
   "legal.html",
   "privacy.html",
