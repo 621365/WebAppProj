@@ -582,9 +582,10 @@ footer {
 }
 
 #foot-desc {
-    display: flex;
+/*     display: flex;
     align-content: space-between;
-    justify-content: space-between;
+    justify-content: space-between; */
+    display: block;
     font-size: 1rem;
 }
 
