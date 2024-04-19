@@ -118,12 +118,31 @@ function closeTo(n = 0, array, returnSimilarity = false) {
 function GET(q,s){s=(s)?s:window.location.search;let r=new RegExp("&"+q+"=([^&]*)","i");return (s=s.replace(/^\?/,"&").match(r))?s=s[1]:s="";}
 
 // Attempt at making offline mode
+var detection;
+var online = true;
 window.onload = () => {
   "use strict";
   if ("serviceWorker" in navigator && document.URL.split(":")[0] !== "file") {
     navigator.serviceWorker.register("liboff.js");
   }
 }
+
+document.onload = () => {
+    // Add Offline Listener
+    // Message
+    online = true;
+    detection = document.createElement("div");
+    detection.innerHTML = "<br>Alert: You are in offline mode; some images may not load and external sites will not work as well.";
+    detection.style.display = "none";
+    document.getElementById("foot-desc").appendChild(detection);
+    
+    // Detector
+    window.addEventListener("online", () => { detection.style.display = "none"; online = true; });
+    window.addEventListener("offline", () => { detection.style.display = "block"; online = false; });
+}
+
+
+// Offline/Online Alerter
 
 // Funny lazy stuff
 var dId = document.getElementById;
