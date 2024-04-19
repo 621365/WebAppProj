@@ -1,0 +1,7 @@
+{
+  "name": "GCN",
+  "long-name": "Gabriel-Chyler News",
+  "lang": "en-US",
+  "start_url": "index.html",
+  "display": "standalone"
+}
