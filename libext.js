@@ -124,10 +124,7 @@ window.onload = () => {
   "use strict";
   if ("serviceWorker" in navigator && document.URL.split(":")[0] !== "file") {
     navigator.serviceWorker.register("liboff.js");
-  }
-}
-
-document.onload = () => {
+    }
     // Add Offline Listener
     // Message
     online = true;
@@ -138,7 +135,7 @@ document.onload = () => {
     
     // Detector
     window.addEventListener("online", () => { detection.style.display = "none"; online = true; });
-    window.addEventListener("offline", () => { detection.style.display = "block"; online = false; });
+window.addEventListener("offline", () => { detection.style.display = "block"; online = false; });
 }
 
 
