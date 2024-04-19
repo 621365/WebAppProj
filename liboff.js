@@ -41,15 +41,3 @@ self.addEventListener("fetch", function(e) {
   )
 })
 
-// Offline/Online Alerter
-// Message
-var online = true;
-var detection = document.createElement("div");
-detection.innerHTML = "<br>Alert: You are in offline mode; some images may not load and external sites will not work as well.";
-detection.style.display = "none";
-document.getElementById("foot-desc").appendChild(detection);
-
-// Detector
-window.addEventListener("online", () => { detection.style.display = "none"; online = true; });
-window.addEventListener("offline", () => { detection.style.display = "block"; online = false; });
-
