@@ -29,16 +29,16 @@ function media(type = null, subtype = null, source = null, alt = "Unknown or und
       case "VID":
         switch (subtype) {
           case "WEBM":
-            encode = `<video class="mediaFile vid" src="` + source + `" title="` + alt + `" controls>There was a high likelihood that the video would fail in playback. The following description was provided for the video: ` + alt + `</video>`;
+            encode = `<video class="mediaFile vid" src="` + source + `" title="` + alt + `" alt="` + alt + `" controls>There was a high likelihood that the video would fail in playback. The following description was provided for the video: ` + alt + `</video>`;
             break;
           case "LOOP":
-            encode =  `<video class="mediaFile vid" src="` + source + `" title="` + alt + `" muted autoplay loop> The following description was provided for the video in the case that the video would fail: ` + alt + `</video>`;
+            encode =  `<video class="mediaFile vid" src="` + source + `" title="` + alt + `" alt="` + alt + `" muted autoplay loop> The following description was provided for the video in the case that the video would fail: ` + alt + `</video>`;
             break;
           case "MUTE":
-            encode =  `<video class="mediaFile vid" src="` + source + `" title="` + alt + `" muted controls> The following description was provided for the video in the case that the video would fail: ` + alt + `</video>`;
+            encode =  `<video class="mediaFile vid" src="` + source + `" title="` + alt + `" alt="` + alt + `" muted controls> The following description was provided for the video in the case that the video would fail: ` + alt + `</video>`;
             break;
           case "SHOK":
-            encode = `<embed class="mediaFile shok" title="` + alt + `" src="` + source + `" quality="high"></embed>`;
+            encode = `<embed class="mediaFile shok" title="` + alt + `" src="` + source + `" alt="` + alt + `" quality="high"></embed>`;
             break;
           case "AIDS":
             encode = "This was a filetype intended for the embedding of web-viruses, but was never made because due to being considered unprofessional.";
@@ -93,10 +93,10 @@ function media(type = null, subtype = null, source = null, alt = "Unknown or und
       case "AUD":
         switch (subtype) {
           case "LOOP":
-            encode = `<audio class="aud" title="` + alt + `" src="` + source + `" controls loop>If you see this, it means that your browser cannot play audio. The following audio description is provided: ` + alt + `</audio>`;
+            encode = `<audio class="aud" alt="` + alt + `" title="` + alt + `" src="` + source + `" controls loop>If you see this, it means that your browser cannot play audio. The following audio description is provided: ` + alt + `</audio>`;
             break;
           case "NORM": default:
-            encode = `<audio class="aud" title="` + alt + `" src="` + source + `" controls>If you see this, it means that your browser cannot play audio. The following audio description is provided: ` + alt + `</audio>`;
+            encode = `<audio class="aud" alt="` + alt + `" title="` + alt + `" src="` + source + `" controls>If you see this, it means that your browser cannot play audio. The following audio description is provided: ` + alt + `</audio>`;
             break;
         }
         break;
