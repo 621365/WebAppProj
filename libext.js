@@ -117,6 +117,14 @@ function closeTo(n = 0, array, returnSimilarity = false) {
 // Imported From Placehorsey, which was in turn imported from StackOverflow
 function GET(q,s){s=(s)?s:window.location.search;let r=new RegExp("&"+q+"=([^&]*)","i");return (s=s.replace(/^\?/,"&").match(r))?s=s[1]:s="";}
 
+// Attempt at making offline mode
+window.onload = () => {
+  "use strict";
+  if ("serviceWorker" in navigator && document.URL.split(":")[0] !== "file") {
+    navigator.serviceWorker.register("liboff.js");
+  }
+}
+
 // Funny lazy stuff
 var dId = document.getElementById;
 var gLass = document.getElementsByClassName;
