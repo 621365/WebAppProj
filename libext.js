@@ -127,15 +127,15 @@ window.onload = () => {
     }
     // Add Offline Listener
     // Message
-    online = true;
+    online = (navigator.onLine);
     detection = document.createElement("div");
     detection.innerHTML = "<br>Alert: You are in offline mode; some images may not load and external sites will not work as well.";
-    detection.style.display = "none";
+    detection.style.display = (online) ? "block" : "none";
     document.getElementById("foot-desc").appendChild(detection);
     
     // Detector
     window.addEventListener("online", () => { detection.style.display = "none"; online = true; });
-window.addEventListener("offline", () => { detection.style.display = "block"; online = false; });
+    window.addEventListener("offline", () => { detection.style.display = "block"; online = false; });
 }
 
 
