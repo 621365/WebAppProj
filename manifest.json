@@ -3,5 +3,14 @@
   "long-name": "Gabriel-Chyler News",
   "lang": "en-US",
   "start_url": "index.html",
-  "display": "standalone"
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "alt": "GCN Logo",
+      "desc": "Favicon showing the text GCN over a piece of paper"
+    }
+  ]
 }
