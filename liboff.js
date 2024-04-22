@@ -22,6 +22,7 @@ const bar = [
   "submit.html",
   "terms.html",
   "viewer.html",
+  "viewer.html?*",
   "viewer.js",
   "favicon.svg"
 ];
@@ -37,7 +38,7 @@ self.addEventListener("install", function(e) {
 self.addEventListener("fetch", function(e) {
   e.respondWith(
     caches.match(e.request, {"ignoreSearch": true}).then(function(response) {
-      return response || fetch(e.request)
+      return response || (fetch(e.request) || fetch(response.url))
     })
   )
 })
