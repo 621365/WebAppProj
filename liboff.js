@@ -22,7 +22,8 @@ const bar = [
   "terms.html",
   "viewer.html",
   "viewer.js",
-  "favicon.svg"
+  "favicon.svg",
+  "viewer.html?*"
 ];
 
 self.addEventListener("install", function(e) {
