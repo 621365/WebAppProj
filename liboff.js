@@ -22,8 +22,7 @@ const bar = [
   "terms.html",
   "viewer.html",
   "viewer.js",
-  "favicon.svg",
-  "viewer.html?*"
+  "favicon.svg"
 ];
 
 self.addEventListener("install", function(e) {
@@ -36,7 +35,7 @@ self.addEventListener("install", function(e) {
 
 self.addEventListener("fetch", function(e) {
   e.respondWith(
-    caches.match(e.request).then(function(response) {
+    caches.match(e.request, {"ignoreSearch": "true"}).then(function(response) {
       return response || fetch(e.request)
     })
   )
