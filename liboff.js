@@ -7,6 +7,7 @@ const bar = [
   "style.css",
   "libext.js",
   "libret.js",
+  "liboff.js",
   "archive.js",
   "articles.js",
   "archives.html",
