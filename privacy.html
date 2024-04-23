@@ -8,6 +8,38 @@
     <link rel="stylesheet" type="text/css" href="./style.css">
     <link rel="icon" href="favicon.svg">
     <link rel="manifest" href="manifest.json">
+    <script src="libext.js"></script>
+    <script> // Miniscript
+      document.onload = () => { // Who thought it would be a good idea to execute DOM stuff without the DOM? I, Gabriel Lazaro, formerly did believe that without any prior knowledge of the DOM.
+        let mix = document.getElementById("cacheEditor");
+        let barred = (getCookie("superbar").length) ? true : false;
+        let button = document.createElement("button");
+        let butDesc = document.createElement("div");
+        button.innerHTML = (barred) ? "Disable Total Archive Mode & Reinitialize Cache" : "Enable Total Archive Mode & Reinitialize Cache";
+        butDesc.innerHTML = "You have Total Archive Mode " + ((barred) ? "enabled." : "disabled.");
+
+        let butFunc;
+        
+        if (barred) {
+          butFunc = () => {
+            cleanCacheBar();
+            setCookie("superbar", "YAH");
+            location.reload(true);
+          } // Variable Functions are Weird
+        } else {
+          butFunc = () => {
+            cleanCacheBar();
+            setCookie("superbar", ""); // Only way I know of killing cookies.
+            location.reload(true);
+          }
+        }
+        // They NEED to make this an automatic thing.
+        button.onclick = butFunc;
+        button.ontouchstart = button.onclick;
+        button.addEventListener("click", butFunc);
+        button.addEventListener("touchstart", butFunc);
+      }
+    </script>
   </head>
   <body>
     <header id="header">
@@ -78,6 +110,9 @@
       <h2>Total Archive Mode</h2>
       <div>
         This site is compatible with offline mode. However, due to the bandwidth that offline mode can cost, an extra layer of offline mode is automatically disabled by default. This version of offline mode not only makes the article text compatible but every media associated with the article will also attempt to be cached as well. This mode will be added later, but this is where the button to activate and deactivate it. The code will be on the button itself. 
+      </div>
+      <hr>
+      <div id="cacheEditor">
       </div>
     </main>
     <footer id="footer">
