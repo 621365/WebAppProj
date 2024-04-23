@@ -168,3 +168,27 @@ function monthGet(m, tiny=false) {
     let data = (tiny)?["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"]:["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     return data[m - 1];
 }
+
+// (Imported from ESSIAN) Cookie Editor
+function setCookie(cname, cvalue) {
+    var d = new Date();
+    //d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires="+"2147483647";//+ d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i <ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
