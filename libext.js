@@ -121,7 +121,7 @@ class alert extends object {
         this.end.title = title;
         this.end.innerHTML = "OK";
         this.endFunction = () => {
-            //let i = setInverval(function() {}, (noMotion))
+            let i = setTimeout(function() { this.skipper.remove(); removeTimeout(i); }, ((noMotion) ? 0 : 1000))
         }
         this.container.addEventListener("blur", this.endFunction);
         this.container.onblur = this.endFunction;
