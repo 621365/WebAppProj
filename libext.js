@@ -97,6 +97,41 @@ class winNT extends object {
     }
 }
 
+class alert extends object {
+    constructor(title, text) {
+        this.skipper = document.createElement("div");
+        this.skipper.class = "skipper";
+        this.container = document.createElement("div");
+        this.container.class = "skipper-container-border";
+        this.skipper.appendChild(this.container);
+        this.content = document.createElement("div");
+        this.content.class = "skipper-container";
+        this.container.appendChild(this.content);
+        this.title = document.createElement("div");
+        this.title.class = "skipper-title";
+        this.title.innerHTML = title;
+        this.content.appendChild(this.title);
+        this.text = document.createElement("div");
+        this.text.class = "skipper-text";
+        this.text = text;
+        this.content.appendChild(this.text);
+        this.end = document.createElement("a");
+        this.end.tabIndex = "0";
+        this.end.title = title;
+        this.endFunction = () => {
+            this.skipper.remove();
+        }
+        this.container.addEventListener("blur", this.endFunction);
+        this.container.onblur = this.endFunction;
+        this.end.href = "javascript:document.activeElement.blur();";
+        this.content.appendChild(this.end);
+
+        document.appendChild(this.skipper);
+        document.body.insertBefore(this.skipper, document.body.firstChild);
+        this.skipper.focus();
+    }
+}
+
 // Capitalize First N Letters (Defaults to 1)
 function muranize(string, n = 1) {
     return string.slice(0, n).toUpperCase() + string.slice(n);
