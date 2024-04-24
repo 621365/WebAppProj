@@ -132,7 +132,7 @@ class alert extends object {
 
         document.body.appendChild(this.skipper);
         document.body.insertBefore(this.skipper, document.body.firstChild);
-        this.skipper.focus();
+        this.end.focus();
     }
 }
 
