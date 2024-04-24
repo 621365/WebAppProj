@@ -99,6 +99,7 @@ class winNT extends object {
 
 class alert extends object {
     constructor(title, text) {
+        super();
         this.skipper = document.createElement("div");
         this.skipper.class = "skipper";
         this.container = document.createElement("div");
@@ -118,6 +119,7 @@ class alert extends object {
         this.end = document.createElement("a");
         this.end.tabIndex = "0";
         this.end.title = title;
+        this.end.innerHTML = "OK";
         this.endFunction = () => {
             this.skipper.remove();
         }
