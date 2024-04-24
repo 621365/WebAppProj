@@ -113,7 +113,7 @@ class alert extends object {
         this.content.appendChild(this.title);
         this.text = document.createElement("div");
         this.text.class = "skipper-text";
-        this.text = text;
+        this.text.innerHTML = text;
         this.content.appendChild(this.text);
         this.end = document.createElement("a");
         this.end.tabIndex = "0";
@@ -126,7 +126,7 @@ class alert extends object {
         this.end.href = "javascript:document.activeElement.blur();";
         this.content.appendChild(this.end);
 
-        document.appendChild(this.skipper);
+        document.body.appendChild(this.skipper);
         document.body.insertBefore(this.skipper, document.body.firstChild);
         this.skipper.focus();
     }
