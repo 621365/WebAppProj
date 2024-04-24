@@ -101,19 +101,19 @@ class alert extends object {
     constructor(title, text) {
         super();
         this.skipper = document.createElement("div");
-        this.skipper.class = "skipper";
+        this.skipper.className = "skipper";
         this.container = document.createElement("div");
-        this.container.class = "skipper-container-border";
+        this.container.className = "skipper-container-border";
         this.skipper.appendChild(this.container);
         this.content = document.createElement("div");
-        this.content.class = "skipper-container";
+        this.content.className = "skipper-container";
         this.container.appendChild(this.content);
         this.title = document.createElement("div");
-        this.title.class = "skipper-title";
+        this.title.className = "skipper-title";
         this.title.innerHTML = title;
         this.content.appendChild(this.title);
         this.text = document.createElement("div");
-        this.text.class = "skipper-text";
+        this.text.className = "skipper-text";
         this.text.innerHTML = text;
         this.content.appendChild(this.text);
         this.end = document.createElement("a");
