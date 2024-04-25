@@ -120,9 +120,10 @@ class alert extends object {
         this.end.tabIndex = "0";
         this.end.title = title;
         this.end.innerHTML = "OK";
+        this.end.className = "jsAlert";
         this.endFunction = () => {
             let el = this.skipper;
-            let i = setTimeout(function() { el.remove(); clearTimeout(i); }, ((noMotion) ? 0 : 250))
+            let i = setTimeout(function() { el.remove(); clearTimeout(i); }, ((noMotion) ? 0 : 250));
         }
         this.container.addEventListener("blur", this.endFunction);
         this.container.onblur = this.endFunction;
@@ -131,9 +132,21 @@ class alert extends object {
         this.end.href = "javascript:document.activeElement.blur();";
         this.content.appendChild(this.end);
 
+        // Determine if Other Alert
+        let o = false;
+        let lastAlert = ((document.activeElement.className == "jsAlert") ? document.activeElement : document.body.firstElementChild);
+        if (document.body.firstElementChild.className == "jsAlert" || document.activeElement.className == "jsAlert") {
+            o = (el) => { el.remove(); };
+        } else lastAlert = null;
+        
         document.body.appendChild(this.skipper);
         document.body.insertBefore(this.skipper, document.body.firstChild);
         this.end.focus();
+        
+        // DOM Optimization
+        if (typeof o == "function") {
+            let x = setInterval(function(){ o(lastAlert); clearInterval(x); }, ((noMotion) ? 0 : 250) );
+        }
     }
 }
 
