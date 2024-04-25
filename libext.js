@@ -121,7 +121,6 @@ class alert extends object {
         this.end.title = title;
         this.end.innerHTML = "OK";
         this.endFunction = () => {
-            super();
             let el = this.skipper;
             let i = setTimeout(function() { el.remove(); removeTimeout(i); }, ((noMotion) ? 0 : 250))
         }
