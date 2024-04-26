@@ -175,7 +175,9 @@ var detection;
 var online = true;
 window.onload = () => {
     if ("serviceWorker" in navigator && document.URL.split(":")[0] !== "file") {
-    if (navigator.serviceWorker.getRegistration("liboff.js").then(function(result){ return result != undefined; })) navigator.serviceWorker.register("liboff.js");
+        let workers;
+        navigator.serviceWorker.getRegistrations().then(registrations => { workers = registrations; });
+    if (!workers.length) navigator.serviceWorker.register("liboff.js");
     }
     // Add Offline Listener
     // Message
