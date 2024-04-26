@@ -174,9 +174,8 @@ function GET(q,s){s=(s)?s:window.location.search;let r=new RegExp("&"+q+"=([^&]*
 var detection;
 var online = true;
 window.onload = () => {
-    debugger;
-  if ("serviceWorker" in navigator && document.URL.split(":")[0] !== "file") {
-    if (await navigator.serviceWorker.getRegistration("liboff.js").then(function(result){ return result != undefined; })) navigator.serviceWorker.register("liboff.js");
+    if ("serviceWorker" in navigator && document.URL.split(":")[0] !== "file") {
+    if (navigator.serviceWorker.getRegistration("liboff.js").then(function(result){ return result != undefined; })) navigator.serviceWorker.register("liboff.js");
     }
     // Add Offline Listener
     // Message
