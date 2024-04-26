@@ -263,7 +263,8 @@ function cleanCacheBar(ui=false) {
         for (const registration of registrations) {
             registration.unregister();
         } 
-    });
 
-    location.reload(true);
+        // Reload Without Cache After Uninstalling Service Worker
+        location.reload(true);
+    });
 }
