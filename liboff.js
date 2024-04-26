@@ -31,7 +31,14 @@ const bar = [
 self.addEventListener("install", function(e) {
   e.waitUntil(
     caches.open(cacheBar).then(function(cache) {
-      return cache.addAll(bar)
+
+      // Clear Old CacheBar if Exists
+      for (stuff of bar) if (cache.match(stuff).then(function(is){reutrn is.ok;})) {
+        cache.delete(stuff);
+      }
+      
+      
+      return cache.addAll(bar);
     })
   )
 })
