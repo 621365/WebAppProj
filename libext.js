@@ -251,7 +251,7 @@ function cleanCacheBar(ui=false) {
     // If Offline
     if (!online) {
         new alert("Cannot Complete", "You are offline and therefore cannot clear CacheBar. Please connect to the internet to clear the CacheBar.");
-        return void;
+        return void null;
     }
 
     // UI Alert
