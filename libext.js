@@ -247,12 +247,23 @@ function getCookie(cname) {
 }
 
 // Reset Cache Bar
-function cleanCacheBar() {
-    if (window.navigator && navigator.serviceWorker) {
-        navigator.serviceWorker.getRegistrations().then(function(registrations) {
-            for(let registration of registrations) {
-              registration.unregister();
-            }
-        });
+function cleanCacheBar(ui=false) {
+    // If Offline
+    if (!online) {
+        new alert("Cannot Complete", "You are offline and therefore cannot clear CacheBar. Please connect to the internet to clear the CacheBar.");
+        return void;
     }
+
+    // UI Alert
+    if (ui) {
+        new alert("Clearing Cache", "The browser is clearing the CacheBar, please wait.");
+    }
+    
+    navigator.serviceWorker.getRegistrations().then(registrations => {
+        for (const registration of registrations) {
+            registration.unregister();
+        } 
+    });
+
+    location.reload(true);
 }
