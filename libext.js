@@ -145,7 +145,7 @@ class alert extends object {
         
         // DOM Optimization
         if (typeof o == "function") {
-            let x = setInterval(function(){ o(lastAlert); clearInterval(x); }, ((noMotion) ? 0 : 250) );
+            let x = setTimeout(function(){ o(lastAlert); clearTimeout(x); }, ((noMotion) ? 0 : 250) );
         }
     }
 }
