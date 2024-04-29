@@ -3,6 +3,33 @@
 // Description: Multiple JS functions that are intended to make development for [UNTITLED PROJECT] easier.
 // Note: An attempt to document the functions will be made.
 const noMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const cacheBar = "cacheBar";
+const bar = [
+  "/WebAppProj",
+  "index.html",
+  "style.css",
+  "libext.js",
+  "libret.js",
+  //"liboff.js",
+  "archive.js",
+  "articles.js",
+  "archives.html",
+  "archives.js",
+  "contact.html",
+  "hot.html",
+  "info.html",
+  "legal.html",
+  "privacy.html",
+  "search.html",
+  "search.js",
+  "submit.html",
+  "terms.html",
+  "viewer.html",
+  "viewer.html?*",
+  "viewer.js",
+  "favicon.svg",
+  "manifest.json"
+];
 
 // Generates a statistically unique identifier
 // Contains two parameters for amount of UUIDs and if to have proper spacing
@@ -263,6 +290,10 @@ function cleanCacheBar(ui=false) {
         for (const registration of registrations) {
             registration.unregister();
         } 
+        // Clear Old CacheBar if Exists
+          for (stuff of bar) if (cache.match(stuff).then(function(result) { try { return result.ok; } catch (e) { return false; } })) {
+            cache.delete(stuff);
+          }
             
         // Reload Without Cache After Uninstalling Service Worker
         navigator.serviceWorker.register("liboff.js");
