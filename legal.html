@@ -4,10 +4,11 @@
     <title>
       Legal Information
     </title>
-    <meta property="og:description description" content="Legal information about the content used at GCN.">
+    <meta property="og:description description" content="Legal information about the content used at GCN along with the Privacy Policy of GCN.">
     <link rel="stylesheet" type="text/css" href="./style.css">
     <link rel="icon" href="favicon.svg">
     <link rel="manifest" href="manifest.json">
+    <script src="libext.js"></script>
   </head>
   <body>
     <header id="header">
@@ -35,7 +36,7 @@
                 <div class="skipper-text">
                     Press Enter or press OK to enter the bottom navigation screen. Press Tab or press another part of the screen to cancel and close this window.
                 </div>
-                <a class="skipper-button noshowlink" href="#footer" tabindex="0" title="Skip to Main Content">
+                <a class="skipper-button noshowlink" href="#footer" tabindex="0" title="Skip to Footer">
                     OK
                 </a>
             </div>
@@ -90,6 +91,20 @@
         <br><br>
         You should have received a copy of the GNU General Public License along with this program.  If not, see <a href="https://www.gnu.org/licenses/" title="GNU License Information">https://www.gnu.org/licenses/</a>.
       </div>
+      <h1>Privacy Policy</h1>
+      <div>
+        This site uses no cookies and does not collect any user data except when the user explicitly requests editors to collect data through the  <a href="./submit.html">Article Submission page</a> functionality. All other data is processed on the user-end (or front-end) and is not sent back. This website has no back-end server and relies on a JavaScript file containing all article information as it is the only database of information collected.
+      </div>
+      <h2>Offline Mode</h2>
+      <div>
+         This site automatically caches all resources that are received. This consumes no extra internet bandwidth and lets you use the site partially even without an internet connection. If this feature is causing you problems, please click the below button to preform a cache clean.
+      </div>
+      <hr>
+      <div id="cacheEditor">
+        <button onclick="cleanCacheBar(true);" ontouchstart="cleanCacheBar(true);">
+          Clean CacheBar
+        </button>
+      </div>
     </main>
     <footer id="footer">
       <div id="foot-desc">
@@ -136,11 +151,6 @@
               </a>
             </li>
             <li>
-              <a href="./submit.html" title="Submit Articles" desc="Submit articles to the editors to be published to this site." >
-                Submit Articles
-              </a>
-            </li>
-            <li>
               <a href="./info.html" title="Site Information" desc="Information regarding the purpose of this site." >
                 Site Information
               </a>
@@ -165,11 +175,6 @@
             <li>
               <a href="./legal.html" title="Legal Information" desc="Page declaring protection for our intellectual property." >
                 Copyright & Licenses
-              </a>
-            </li>
-            <li>
-              <a href="./privacy.html" title="Privacy Policy" desc="Learn what we do with any data that we collect from you." >
-                Privacy Policy
               </a>
             </li>
           </ul>
