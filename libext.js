@@ -263,8 +263,9 @@ function cleanCacheBar(ui=false) {
         for (const registration of registrations) {
             registration.unregister();
         } 
-
+            
         // Reload Without Cache After Uninstalling Service Worker
+        navigator.serviceWorker.register("liboff.js");
         location.reload(true);
     });
 }
