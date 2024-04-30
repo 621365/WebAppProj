@@ -291,7 +291,7 @@ function cleanCacheBar(ui=false) {
             registration.unregister();
         } 
         // Clear Old CacheBar if Exists
-          for (stuff of bar) caches.open(cacheBar).then(function(cache) {cache.match(stuff).then(function(result) {
+          for (stuff of bar) await caches.open(cacheBar).then(function(cache) {cache.match(stuff).then(function(result) {
             let entry = false; try { entry = true; } catch (e) { entry = false; } 
             cache.delete(stuff);
           })}); 
