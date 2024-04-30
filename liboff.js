@@ -46,7 +46,17 @@ self.addEventListener("install", function(e) {
 self.addEventListener("fetch", function(e) {
   e.respondWith(
     caches.match(e.request, {"ignoreSearch": true}).then(function(response) {
-      return response || (fetch(e.request) || fetch(response.url))
+      // Caching 2.0
+      try {
+        return (fetch(e.request) || fetch(response.url));
+      } catch (e) {
+        console.log("It appears that this page is in offline mode.");
+        return response || (fetch(e.request) || fetch(response.url));
+      }
+
+
+      
+      //return response || (fetch(e.request) || fetch(response.url))
     })
   )
 })
