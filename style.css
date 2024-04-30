@@ -20,6 +20,11 @@ body {
     gap: 1cm;
 }
 
+iframe {
+    border: none;
+    width: -webkit-fill-available;
+}
+
 main, footer, nav {
     z-index: 0;
     max-width: calc(100vw - 2cm);
