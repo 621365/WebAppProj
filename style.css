@@ -109,11 +109,11 @@ input:focus, textarea:focus, button:focus {
 }
 
 textarea {
-    transition: all 0.25s ease-in, height 0.1s ease-in-out;
+    transition: all 0.25s ease-in, height 0s ease-in-out;
 }
 
 textarea:focus {
-    transition: all 0.25s ease-out, height 0.1s ease-in-out;
+    transition: all 0.25s ease-out, height 0s ease-in-out;
 }
 
 main form {
