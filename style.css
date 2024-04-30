@@ -97,6 +97,10 @@ input, textarea, button {
     outline-offset: 0.1cm;
 }
 
+textarea {
+    transition: all 0.25s ease-in, height 0s;
+}
+
 input:focus, textarea:focus, button:focus {
     outline-offset: 0cm;
     outline-color: rgba(55, 90, 205, 1);
