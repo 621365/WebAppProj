@@ -29,13 +29,13 @@ function media(type = null, subtype = null, source = null, alt = "Unknown or und
       case "VID":
         switch (subtype) {
           case "WEBM":
-            encode = `<video class="mediaFile vid" src="` + source + `" title="` + alt + `" alt="` + alt + `" controls>There was a high likelihood that the video would fail in playback. The following description was provided for the video: ` + alt + `</video>`;
+            encode = `<video class="mediaFile vid" src="` + source + `" title="` + alt + `" alt="` + alt + `" playsInline playsinline controls>There was a high likelihood that the video would fail in playback. The following description was provided for the video: ` + alt + `</video>`;
             break;
           case "LOOP":
-            encode =  `<video class="mediaFile vid" src="` + source + `" title="` + alt + `" alt="` + alt + `" muted autoplay loop> The following description was provided for the video in the case that the video would fail: ` + alt + `</video>`;
+            encode =  `<video class="mediaFile vid" src="` + source + `" title="` + alt + `" alt="` + alt + `" playsInline playsinline muted autoplay loop> The following description was provided for the video in the case that the video would fail: ` + alt + `</video>`;
             break;
           case "MUTE":
-            encode =  `<video class="mediaFile vid" src="` + source + `" title="` + alt + `" alt="` + alt + `" muted controls> The following description was provided for the video in the case that the video would fail: ` + alt + `</video>`;
+            encode =  `<video class="mediaFile vid" src="` + source + `" title="` + alt + `" alt="` + alt + `" playsInline playsinline muted controls> The following description was provided for the video in the case that the video would fail: ` + alt + `</video>`;
             break;
           case "SHOK":
             encode = `<embed class="mediaFile shok" title="` + alt + `" src="` + source + `" alt="` + alt + `" quality="high"></embed>`;
@@ -44,7 +44,7 @@ function media(type = null, subtype = null, source = null, alt = "Unknown or und
             encode = "This was a filetype intended for the embedding of web-viruses, but was never made because due to being considered unprofessional.";
             break;
           default:
-            encode =  `<video id="mediaFile" class="" src="` + source + `" title="` + alt + `" controls> The following description was provided for the video in the case that the video would fail: ` + alt + `</video>`;
+            encode =  `<video id="mediaFile" class="" src="` + source + `" title="` + alt + `" playsInline playsinline controls> The following description was provided for the video in the case that the video would fail: ` + alt + `</video>`;
             break;
         }
         break;
@@ -122,7 +122,7 @@ function media(type = null, subtype = null, source = null, alt = "Unknown or und
         break;
     }
   } else {
-    encode = `<a title="The following is raw data that may be downloaded. " href="` + source + `" download>` + alt + `</a>`;
+    encode = `<a title="The following is raw data that may be downloaded. " href="` + source + `" target="_blank" download>` + alt + `</a>`;
   }
   return encode;
 }
