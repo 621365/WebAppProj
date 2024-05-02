@@ -131,6 +131,12 @@ main form textarea {
     resize: vertical;
 }
 
+main.storymode {
+    height: 100%;
+    margin-bottom: 1.5cm;
+    overflow-y: auto;
+}
+
 main form input[type="checkbox"] {
     width: auto;
 }
