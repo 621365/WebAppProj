@@ -244,10 +244,12 @@ ruffle-embed {
 main {
     position: relative;
     grid-area: main;
-    margin-top: 2cm;
+/*     margin-top: 2cm; */
     margin-left: 0.5cm;
     margin-right: 0.5cm;
 }
+
+
 
 main, nav {
     z-index: -1;
