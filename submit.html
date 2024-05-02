@@ -146,7 +146,7 @@
         <label for="image" title="Click the checkbox if the article contains an image, video, or external link.">A visual, auditory, or interactive text medium does accompany this article: </label>
         <input name="image" type="checkbox" title="Click the checkbox if the article contains an image, video, or external link." onclick="imageThing();" ontouchstart="imageThing();"onselect="imageThing();"><br><br>
         
-        <div id="imageReq" style="display:none;">
+        <div id="imageReq">
           <label for="source" title="Where the medium is located as a URL">Medium Source (as URL):</label><br>
           <input name="source" title="Where the medium is located as a URL" placeholder="Enter URL to Medium:" type="url" required>
           <br><br>
@@ -170,7 +170,7 @@
           
           <label for="subtype">Sub-Type of Medium</label><br>
           <select title="Choose a Type to Select a Sub-Type" name="subtype" placeholder="Enter Subtype:" type="text" required>
-            <option value="NUL" disabled selected>Please Select a Type Before Selecting a Sub-Type</option>
+            <option value="NUL" disabled selected>Select Type Before Selecting Sub-Type</option>
           </select>
           <br>
         </div>
@@ -262,10 +262,27 @@
         Copyleft 2024 Gabriel Lazaro & Chyler Davies Cortez under <a href="./legal.html#gnu" title="Click here to view the GNU License">GNU License Version 3 or Earlier</a>
       </div>
     </footer>
+    <style> /* Style Exclusive to this part of the site. */
+      #imageReq {
+        display: none; 
+        overflow-y: auto; 
+        height: 0px;
+        transition: height 0.25s ease-in;
+      }
+
+      @media (prefers-reduced-motion) {
+        #imageReq, body, html, *, main {
+          transition: none !important;
+          transition-duration: 0s !important;
+        }
+      }
+    </style>
     <script>
       // Scripts Exclusive to this part of the site.
       function imageThing() {
-        document.getElementById("imageReq").style.display = (document.getElementsByName("image")[0].checked) ? "block" : "none";
+        if (document.getElementsByName("image")[0].checked) document.getElementById("imageReq").style.display = "block";
+        document.getElementById("imageReq").style.height = ((document.getElementsByName("image")[0].checked) ? "auto" : "0px");
+        let img = setTimeout(() => {document.getElementById("imageReq").style.display = (document.getElementsByName("image")[0].checked) ? "block" : "none"; clearTimeout(img); }, ((noMotion) ? 1 : 250));
       }
 
       // porCorrero determines if sent through mail or not
