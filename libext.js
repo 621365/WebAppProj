@@ -207,15 +207,28 @@ window.onload = () => {
     }
     // Add Offline Listener
     // Message
-    online = (navigator.onLine);
+    if ("onLine" in navigator) online = (navigator.onLine);
     detection = document.createElement("div");
     detection.innerHTML = "<br>Alert: You are in offline mode; some images may not load and external sites will not work as well.";
-    detection.style.display = (online) ? "none" : "block";
+    detection.style.display = (nagivator.onLine) ? "none" : "block";
     document.getElementById("foot-desc").appendChild(detection);
-    
+     if (online) {
+      caches.open(cacheBar).then(function(cache) {
+
+      // Clear Old CacheBar if Exists
+      for (stuff of bar) if (cache.match(stuff).then(function(result) { try { return result.ok; } catch (e) { return false; } })) {
+        cache.delete(stuff);
+      }
+      
+      
+      return cache.addAll(bar);
+    })
+     }
     // Detector
     window.addEventListener("online", () => { detection.style.display = "none"; online = true; });
     window.addEventListener("offline", () => { detection.style.display = "block"; online = false; });
+
+  
 }
 
 
