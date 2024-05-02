@@ -281,7 +281,7 @@
       // Scripts Exclusive to this part of the site.
       function imageThing() {
         if (document.getElementsByName("image")[0].checked) document.getElementById("imageReq").style.display = "block";
-        document.getElementById("imageReq").style.height = ((document.getElementsByName("image")[0].checked) ? "auto" : "0px");
+        document.getElementById("imageReq").style.height = ((document.getElementsByName("image")[0].checked) ? "6cm" : "0px");
         let img = setTimeout(() => {document.getElementById("imageReq").style.display = (document.getElementsByName("image")[0].checked) ? "block" : "none"; clearTimeout(img); }, ((noMotion) ? 1 : 250));
       }
 
