@@ -210,7 +210,7 @@ window.onload = () => {
     if ("onLine" in navigator) online = (navigator.onLine);
     detection = document.createElement("div");
     detection.innerHTML = "<br>Alert: You are in offline mode; some images may not load and external sites will not work as well.";
-    detection.style.display = (nagivator.onLine) ? "none" : "block";
+    detection.style.display = (navigator.onLine) ? "none" : "block";
     document.getElementById("foot-desc").appendChild(detection);
      if (online) {
       caches.open(cacheBar).then(function(cache) {
