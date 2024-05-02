@@ -48,7 +48,8 @@ self.addEventListener("fetch", function(e) {
     caches.match(e.request, {"ignoreSearch": true}).then(function(response) {
       // Caching 2.0
       try {
-        return (fetch(e.request) || fetch(response.url));
+        let result = (fetch(e.request) || fetch(response.url));
+        return result;
       } catch (e) {
         console.log("It appears that this page is in offline mode.");
         return response || (fetch(e.request) || fetch(response.url));
