@@ -390,6 +390,7 @@ label {
     }
 
     .card-pic {
+        margin-bottom: -1.75cm;
         width: -webkit-fill-availible;
         height: 100%;
     }
