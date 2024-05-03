@@ -368,6 +368,11 @@ label {
     main.storymode {
         margin-bottom: 5cm;
     }
+
+    .storymode .card-pic {
+        margin-bottom: -1.75cm;
+    }
+    
     .bar {
         grid-template-areas: "nav nav" "main main" "footer footer";
         display: block; /* Solves some overflow errors. */
