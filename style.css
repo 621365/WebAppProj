@@ -133,7 +133,8 @@ main form textarea {
 
 main.storymode {
     height: 100%;
-    margin-bottom: 1.5cm;
+    margin-bottom: 3cm;
+    margin-top: 2cm;
     overflow-y: auto;
 }
 
