@@ -314,7 +314,7 @@ footer a {
 }
 
 .card {
-    margin-bottom: 3cm;
+    margin-top: 2cm;
 }
 
 .card-title {
@@ -367,6 +367,7 @@ label {
 
     .bar {
         grid-template-areas: "nav nav" "main main" "footer footer";
+        display: block; /* Solves some overflow errors. */
     }
 
     img, audio, video, embed, ruffle-embed, .card img {
@@ -685,10 +686,7 @@ footer {
     font-size: 15pt;
     text-overflow: ellipsis;
     overflow: hidden;
-    display: -webkit-box !important;
-    -webkit-line-clamp: 2;
-    line-clamp: 2;
-    -webkit-box-orient: vertical;
+    display: block;
 }
 
 @keyframes focus {
