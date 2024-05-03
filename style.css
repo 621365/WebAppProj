@@ -135,7 +135,7 @@ main.storymode {
     height: 100%;
     margin-bottom: 3cm;
     margin-top: 2cm;
-    overflow-y: auto;
+    overflow-y: visible;
 }
 
 main form input[type="checkbox"] {
@@ -365,7 +365,9 @@ label {
 }
 
 @media (max-width: 15cm) {
-
+    main.storymode {
+        margin-bottom: 5cm;
+    }
     .bar {
         grid-template-areas: "nav nav" "main main" "footer footer";
         display: block; /* Solves some overflow errors. */
@@ -417,7 +419,10 @@ label {
 }
 
 @media (min-width: 15cm) {
-
+    main.storymode {
+        margin-bottom: 2cm;
+    }
+    
     .bar nav, .right-bar nav{
         position: sticky;
     }
