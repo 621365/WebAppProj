@@ -20,6 +20,14 @@ body {
     gap: 1cm;
 }
 
+:not(.storymode) > #main-grid {
+    grid-gap: 3cm 0.5cm;
+}
+
+:not(.storymode) > #main-grid > .card > .card-pic {
+    margin-top: -3cm;
+}
+
 iframe {
     border: none;
     width: -webkit-fill-available;
