@@ -267,7 +267,7 @@
         display: none; 
         overflow-y: hidden; 
         height: 0px;
-        transition: height 0.25s ease-in;
+        transition: height 0.25s cubic-bezier(0, 1, 0.5, 1);;
       }
 
       @media (prefers-reduced-motion) {
@@ -281,8 +281,8 @@
       // Scripts Exclusive to this part of the site.
       function imageThing() {
         if (document.getElementsByName("image")[0].checked) { document.getElementById("imageReq").style.display = "block"; document.getElementById("imageReq").style.height = "0cm"; }
-        document.getElementById("imageReq").style.height = ((document.getElementsByName("image")[0].checked) ? "6cm" : "0cm");
-        let img = setTimeout(() => {document.getElementById("imageReq").style.display = (document.getElementsByName("image")[0].checked) ? "block" : "none"; clearTimeout(img); }, ((noMotion) ? 1 : 250));
+        let glc = setTimeout(() => { document.getElementById("imageReq").style.height = ((document.getElementsByName("image")[0].checked) ? "6cm" : "0cm"); clearTimeout(glc); }, 1);
+        let img = setTimeout(() => { document.getElementById("imageReq").style.display = (document.getElementsByName("image")[0].checked) ? "block" : "none"; clearTimeout(img); }, ((noMotion) ? 1 : 250));
       }
 
       // porCorrero determines if sent through mail or not
