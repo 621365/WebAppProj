@@ -27,7 +27,7 @@ iframe {
 
 main, footer, nav {
     z-index: 0;
-    max-width: calc(100vw - 2cm);
+    max-width: calc(100vw - 1cm);
 }
 
 .storymode h1 {
@@ -421,6 +421,7 @@ label {
 @media (min-width: 15cm) {
     main.storymode {
         margin-bottom: 2cm;
+        max-width: calc(100vw - 10cm); 
     }
     
     .bar nav, .right-bar nav{
