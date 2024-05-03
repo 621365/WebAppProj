@@ -225,8 +225,8 @@ window.onload = () => {
     })
      }
     // Detector
-    window.addEventListener("online", () => { detection.style.display = "none"; online = true; });
-    window.addEventListener("offline", () => { detection.style.display = "block"; online = false; });
+    window.addEventListener("online", () => { detection.style.display = "none"; online = true; new alert("Connection Detected", "An internet detection has been detected and your experience has returned to normal."); });
+    window.addEventListener("offline", () => { detection.style.display = "block"; online = false; new alert("Connection Lost", "The device's internet connection is unavailable and this site will attempt to enter offline mode. Please note that Safari and Internet Explorer are incompatible with this and that external images will not load while in offline mode."); });
 
   
 }
