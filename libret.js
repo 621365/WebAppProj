@@ -44,7 +44,7 @@ function media(type = null, subtype = null, source = null, alt = "Unknown or und
             encode = "This was a filetype intended for the embedding of web-viruses, but was never made because due to being considered unprofessional.";
             break;
           default:
-            encode =  `<video id="mediaFile" class="" src="` + source + `" title="` + alt + `" playsInline playsinline controls> The following description was provided for the video in the case that the video would fail: ` + alt + `</video>`;
+            encode =  `<video id="mediaFile" class="" src="` + source + `" title="` + alt + `" alt="` + alt + `" playsInline playsinline controls> The following description was provided for the video in the case that the video would fail: ` + alt + `</video>`;
             break;
         }
         break;
@@ -76,7 +76,7 @@ function media(type = null, subtype = null, source = null, alt = "Unknown or und
             encode = `This is a placeholder for the rick-rolling code. `;
             break;
           case "NORM": default:
-            encode = `<iframe class="ebd" src="https://www.youtube.com/embed/` + source + `" title="` + alt + `" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>` + alt + `</iframe>`;
+            encode = `<iframe class="ebd" src="https://www.youtube.com/embed/` + source + `" alt="` + alt + `" title="` + alt + `" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>` + alt + `</iframe>`;
             break;
         }
         break;
