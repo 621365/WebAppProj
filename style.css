@@ -158,6 +158,7 @@ main a:visited {
 
 main a:hover, main a:focus {
     color: purple;
+    text-shadow: 0.025cm 0.025cm 0.01cm black;
 }
 
 main a:active {
