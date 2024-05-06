@@ -1069,6 +1069,16 @@ footer {
     #results li a {
         color: white;
     }
+
+    #results li a {
+        text-decoration: none;
+        color: white;
+    }
+
+    #results li a:hover, #results li a:focus, #results li a:focus-within {
+        color: cyan;
+        text-shadow: none;
+    }
 }
 
 /* High Contrast Theme Light Mode Here */
@@ -1227,6 +1237,16 @@ footer {
 
     footer a:active {
         color: cyan !important;
+    }
+
+    #results li a {
+        text-decoration: none;
+        color: black;
+    }
+    
+    #results li a:hover, #results li a:focus, #results li a:focus-within {
+        color: blue;
+        text-shadow: none;
     }
 }
 
@@ -1398,5 +1418,14 @@ footer {
 
     #results li a {
         color: white;
+    }
+
+    #results li a {
+        text-decoration: none;
+        color: white;
+    }
+    
+    #results li a:hover, #results li a:focus, #results li a:focus-within {
+        color: cyan;
     }
 }
