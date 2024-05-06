@@ -325,6 +325,11 @@ footer a {
     text-overflow: ellipsis; 
 }
 
+#results li a {
+    text-descoration: none;
+    color: black;
+}
+
 footer a:focus, footer a:focus-within, footer a:hover {
     outline: none;
     color: blue;
@@ -1056,6 +1061,10 @@ footer {
     footer a:active {
         color: cyan !important;
     }
+
+    #results li a {
+        color: white;
+    }
 }
 
 /* High Contrast Theme Light Mode Here */
@@ -1381,5 +1390,9 @@ footer {
 
     html {
         scrollbar-color: grey black;
+    }
+
+    #results li a {
+        color: white;
     }
 }
