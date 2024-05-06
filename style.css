@@ -330,6 +330,10 @@ footer a {
     color: black;
 }
 
+#results li a:hover, #results li a:focus, #results li a:focus-within {
+    color: blue;
+}
+
 footer a:focus, footer a:focus-within, footer a:hover {
     outline: none;
     color: blue;
