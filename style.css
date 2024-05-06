@@ -365,7 +365,10 @@ label {
 }
 
 @media (max-width: 15cm) {
-
+    .storymode .card img {
+        height: calc(100% - 2cm);
+    }
+    
     :not(.storymode) > #main-grid {
         grid-gap: 3cm 0.5cm;
     }
