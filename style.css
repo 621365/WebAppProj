@@ -145,7 +145,6 @@ main form input[type="checkbox"] {
 footer {
     position: relative;
     grid-area: footer;
-    width: calc(100vw - 2cm);
 }
 
 main a:visited {
@@ -739,6 +738,8 @@ footer {
 
 #results li {
     margin-top: 1cm;
+    word-wrap: break-all;
+    max-width: calc(100vw - 1cm);
 }
 
 #results li::firstr-line {
