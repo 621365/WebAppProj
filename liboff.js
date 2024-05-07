@@ -54,8 +54,9 @@ self.addEventListener("fetch", async function(e) {
       try { // Try and not use cachebar
         let result = (await fetch(e.request).then((r) => { if (r.ok) {return r;} throw new Error("Promise broken.");}) || fetch(response.url).then((r) => { if (r.ok) {return r;} throw new Error("Promise broken."); }));
         return result;
-      } catch (e) { // Catch the system in offline mode, then retrieve from cachebar
-        console.log("It appears that this page is in offline mode.");
+      } catch (err) { // Catch the system in offline mode, then retrieve from cachebar
+        console.log("offline resource");
+        console.log(e);
         return response;
       }
 
