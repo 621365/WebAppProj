@@ -52,19 +52,19 @@ self.addEventListener("fetch", async function(e) {
     caches.match(e.request, {"ignoreSearch": true}).then(async function(response) {
       // Caching 2.0 (Dynamic Cache Use)
       try { // Try and not use cachebar
-        let result = (await fetch(e.request).then((r) => { if (r.ok) {return r;}}) || fetch(response.url).then((r) => { if (r.ok) {return r;}}));
+        let result = (await fetch(e.request).then((r) => { if (r.ok) {return r;}}) || await fetch(response.url).then((r) => { if (r.ok) {return r;}}));
         if (result == undefined) throw new Error("Offline");
         return result;
       } catch (err) { // Catch the system in offline mode, then retrieve from cachebar
-        console.log("offline resource");
-        console.log(e);
         return response;
       }
 
 
-      // In the rare case that an async error occurs
-      return response || (fetch(e.request) || fetch(response.url));
+      // Simplified Version
+      // return response || (fetch(e.request) || fetch(response.url));
     })
+    // In the rare case that an async error occurs
+    return response || (fetch(e.request) || fetch(response.url));
   )
 })
 
