@@ -1,4 +1,5 @@
 // Because there is no backend, all articles must be hard-coded into this file. 
+// The test articles show the basic structure of the article JSON, with specific information about media structure found at libret.js
 var archive = [
   {
     "title": "Test Article",
@@ -168,13 +169,12 @@ var datedArchive = archive.sort(function(a, b) {return parseFloat(utcTime(a.meta
 
 // Search Retrieval Framework
 
-// TODO: GET RID OF THIS AND JUST USE UTCTIME FUNCTION YOU ARE BEING SUCH A MICROSOFT RIGHT NOW
-// An Alias to utcTime; Timestamp is Depreciated, but I am unsure which functions use it
+// Alias to utcTime
 function stamp(year=1987, month=1, day=1, UTC=0, hour=0, min=0, sec=0) {
   return utcTime(year, month, day, hour, UTC, min, sec);
 }
 
-// Aquires the Hard-Coded ID of the 
+// Aquires the Hard-Coded ID of the article
 function retrieve(title) {
   //Initialize
   let results = [{
