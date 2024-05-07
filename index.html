@@ -1,4 +1,4 @@
-<!doctype html> <!-- File  -->
+<!doctype html> <!-- File created by Gabriel Lazaro with parts made by Chyler. -->
 <html>
   <head>
     <title>
@@ -14,9 +14,9 @@
     <meta name="og:image" content="favicon.svg">
     <meta name="image" content="favicon.svg">
     <meta property="og:locale" content="en_US">
-	  <meta property="og:site_name" content="Gabriel-Chyler News">
-	  <meta property="og:type" content="website">
-    
+    <meta property="og:site_name" content="Gabriel-Chyler News">
+    <meta property="og:type" content="website">
+
     <script src="./libext.js"></script>
     <script src="./libret.js"></script>
     <script src="./articles.js"></script>
@@ -93,7 +93,7 @@
         <div id="highlight-media"></div>
         <div id="highlight-text">
           <a id="highlight-title"></a>
-          <div id="highlight-content" >Test here</div>
+          <div id="highlight-content" >Loading content...</div>
         </div>
       </div>
       <br><br>
@@ -183,10 +183,10 @@
     <!--This script loads at the end of the page because it modifies HTML elements.-->
     <script>
       // TO DESIGNER: Place the UUIDs of the articles that you want to be shown in order of how you want the articles to appear.
-      // Variable blonder used for highlighted article. 
+      // Variable blonder used for the highlighted articles. 
       var blonde = ["72B2447C-E922-E08C-9A23-D5505E81A7B7", "51CEFE74-2A7A-2210-20BA-3FCC270F68F3", "5FC9FE74-2A7A-2210-20BA-3FCC270F68F3", "5FC9FE74-2A7A-2810-20BA-3FCC270F68F3"], blonder = "5FC9FE74-2A7A-2810-20BA-3FCC270F68F3";
 
-      // Load Blonder
+      // Load Blonder (Highlighted title)
       var hitit = document.getElementById("highlight-title");
       punch(blonder, document.getElementById("highlight-title"), document.getElementById("highlight-media"), document.getElementById("highlight-content"), null);
       // Title++
@@ -198,14 +198,13 @@
         var domes = document.getElementById("main-grid");
         var hold = document.createElement("div"); domes.appendChild(hold);
         hold.className = "card";
-        //debug
-        hold.id = blonde[card];
+        hold.id = blonde[card]; // Call blondes
         var pic = document.createElement("div"); pic.className = "card-pic"; hold.appendChild(pic);
         var txt = document.createElement("div"); txt.className = "card-text"; hold.appendChild(txt);
         var tit = document.createElement("a"); tit.className = "card-title"; tit.href = "./viewer.html?id=" + blonde[card]; txt.appendChild(tit);
         var cont = document.createElement("div"); cont.className = "card-content"; txt.appendChild(cont);
         punch(blonde[card], tit, pic, cont, null); // This code is so out of context.
-        if (pic.innerHTML == "") {pic.remove(); cont.style = "max-width: 100%;"; txt.style = "max-width: 100%;";}
+        if (pic.innerHTML == "") {pic.remove(); cont.style = "max-width: 100%;"; txt.style = "max-width: 100%;";} // DOM Optimization
       }
       
     </script>
