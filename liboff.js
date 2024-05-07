@@ -28,12 +28,12 @@ const bar = [
   "manifest.json"
 ];
 
-self.addEventListener("install", function(e) {
+self.addEventListener("install", async function(e) {
   e.waitUntil(
-    caches.open(cacheBar).then(function(cache) {
+    caches.open(cacheBar).then(async function(cache) {
 
       // Clear Old CacheBar if Exists
-      for (stuff of bar) if (cache.match(stuff).then(function(result) { try { return result.ok; } catch (e) { return false; } })) {
+      for (stuff of bar) if (await cache.match(stuff).then(function(result) { try { return result.ok; } catch (e) { return false; } })) {
         cache.delete(stuff);
       }
       
@@ -43,12 +43,12 @@ self.addEventListener("install", function(e) {
   )
 })
 
-self.addEventListener("fetch", function(e) {
+self.addEventListener("fetch", async function(e) {
   e.respondWith(
     caches.match(e.request, {"ignoreSearch": true}).then(function(response) {
       // Caching 2.0
       try {
-        let result = (fetch(e.request) || fetch(response.url));
+        let result = await (fetch(e.request).then((r) => { if (r.ok) return r; throw new Error("Promise broken.");}) || fetch(response.url).then((r) => { if (r.ok) return r; throw new Error("Promise broken."); }));
         return result;
       } catch (e) {
         console.log("It appears that this page is in offline mode.");
