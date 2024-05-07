@@ -30,8 +30,9 @@ if (error.real) {
   // Load Article if Exists
   if ((typeof data.length != "undefined") ? ((data.length == 1) ? true : false) : true ) {
     document.getElementById("title").innerHTML = data.title;
-    document.getElementById("meta-title").innerHTML = data.title;
+    document.getElementById("meta-title").innerHTML = data.title + " - " + data.meta.author;
     document.title = data.title + " - " + data.meta.author;
+    doument.getElementById("author").innerHTML = data.meta.author;
     document.getElementById("words").innerHTML = "By: " + data.meta.author + "<br><br>" + data.content;
     document.getElementById("foot-desc").innerHTML = data.meta.description;
     for (metae of document.getElementsByClassName("description")) metae.setAttribute("content", data.meta.description);
