@@ -49,14 +49,14 @@ self.addEventListener("install", async function(e) {
 self.addEventListener("fetch", async function(e) {
   e.respondWith(
     // Search Cachebar
-    caches.match(e.request, {"ignoreSearch": true}).then(function(response) {
+    caches.match(e.request, {"ignoreSearch": true}).then(async function(response) {
       // Caching 2.0 (Dynamic Cache Use)
       try { // Try and not use cachebar
-        let result = await (fetch(e.request).then((r) => { if (r.ok) {return r;} throw new Error("Promise broken.");}) || fetch(response.url).then((r) => { if (r.ok) {return r;} throw new Error("Promise broken."); }));
+        let result = (await fetch(e.request).then((r) => { if (r.ok) {return r;} throw new Error("Promise broken.");}) || fetch(response.url).then((r) => { if (r.ok) {return r;} throw new Error("Promise broken."); }));
         return result;
       } catch (e) { // Catch the system in offline mode, then retrieve from cachebar
         console.log("It appears that this page is in offline mode.");
-        return response || (fetch(e.request) || fetch(response.url));
+        return response;
       }
 
 
@@ -65,4 +65,5 @@ self.addEventListener("fetch", async function(e) {
     })
   )
 })
+
 
