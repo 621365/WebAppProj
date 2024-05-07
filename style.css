@@ -645,6 +645,7 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    margin-bottom: 0.25cm;
 }
 
 #foot-nav li, #foot-nav ul {
