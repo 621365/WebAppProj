@@ -28,45 +28,35 @@ const bar = [
   "manifest.json"
 ];
 
-// Installation Caching
-self.addEventListener("install", async function(e) {
+self.addEventListener("install", function(e) {
   e.waitUntil(
-    // Open Cachebar
-    caches.open(cacheBar).then(async function(cache) {
+    caches.open(cacheBar).then(function(cache) {
 
       // Clear Old CacheBar if Exists
-      for (stuff of bar) if (await cache.match(stuff).then(function(result) { try { return result.ok; } catch (e) { return false; } })) {
+      for (stuff of bar) if (cache.match(stuff).then(function(result) { try { return result.ok; } catch (e) { return false; } })) {
         cache.delete(stuff);
       }
       
-      // Add Pages to CacheBar
+      
       return cache.addAll(bar);
     })
   )
 })
 
-// Use the Cachebar
-
-self.addEventListener("fetch", async function(e) {
-  e.respondWith((async () => {
-    // Search Cachebar
-    try { await caches.match(e.request, {"ignoreSearch": true}).then(async function(response) {
-      // Caching 2.0 (Dynamic Cache Use)
-      try { // Try and not use cachebar
-        let result; let i = (await fetch(e.request).then((r) => { if (r.ok) {result = r; return r;}}) || await fetch(response.url).then((r) => { if (r.ok) {result = r; return r;}}));
-        if (!(result instanceof Response)) throw new Error("Offline"); else if (result instanceof Response) return result; else throw new Error("");
-      } catch (err) { // Catch the system in offline mode, then retrieve from cachebar
-        if (!(response instanceof Response)) throw new Error("Offline"); else if (result instanceof Response) return response; else throw new Error("");
+self.addEventListener("fetch", function(e) {
+  e.respondWith(
+    caches.match(e.request, {"ignoreSearch": true}).then(function(response) {
+      // Caching 2.0
+      try {
+        return (fetch(e.request) || fetch(response.url));
+      } catch (e) {
+        console.log("It appears that this page is in offline mode.");
+        return response || (fetch(e.request) || fetch(response.url));
       }
 
 
-      // Simplified Version
-      // return response || (fetch(e.request) || fetch(response.url));
+      
+      //return response || (fetch(e.request) || fetch(response.url))
     })
-  } catch (e) {
-    console.log(e);
-    // In the rare case that an async error occurs
-    return (fetch(e.request) || fetch(response.url));
-  }
-  }));
+  )
 })
