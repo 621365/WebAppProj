@@ -52,7 +52,7 @@ self.addEventListener("fetch", async function(e) {
     // Search Cachebar
  caches.match(e.request, {"ignoreSearch": true}).then(async function(response) {
       // Caching 2.0 (Dynamic Cache Use)
-      try { // Try and not use cachebar
+      /*try { // Try and not use cachebar
         let result; let i = await (await fetch(e.request).then((r) => { if (r.ok) {result = r; return r;}}) || await fetch(response.url).then((r) => { if (r.ok) {result = r; return r;}})); if (result.ok) return result; else throw new Error("");
       } catch (err) { // Catch the system in offline mode, then retrieve from cachebar
         try {
@@ -62,9 +62,26 @@ self.addEventListener("fetch", async function(e) {
           return (fetch(e.request) || fetch(response.url));
         }
         if (!(response instanceof Response)) return (fetch(e.request) || fetch(response.url)); else if (result instanceof Response) return response; else return (fetch(e.request) || fetch(response.url));
-      }
+      }*/
+      // Caching 3.0 (Rewrite of cahing 2.0)
+      let result = await fetch(e.request).then((r) => { if (r.ok) {result = r; return r;} else { throw new Error(""); } }).catch(async function (e) {
+            let tr = fetch(response.url).then((r) => { if (r.ok) {result = r; return r;} else {throw new Error("");}}).catch(async function (e) {
+    
+                if (result.ok) return result; 
+                else {
+                    try {
+                        if (response.url.slice(0, ("https://621365.github.io/WebAppProj/").length) == "https://621365.github.io/WebAppProj/") return response; else return (fetch(e.request) || fetch(response.url));
+                      } catch (e) {
+                        // fix for offline?
+                        return (fetch(e.request) || fetch(response.url));
+                      }
+                      if (!(response instanceof Response)) return (fetch(e.request) || fetch(response.url)); else if (result instanceof Response) return response; else return (fetch(e.request) || fetch(response.url));
+                }
+            });
+        }); 
+        
 
-
+   
       // Simplified Version
       // return response || (fetch(e.request) || fetch(response.url));
     //console.log(e);
