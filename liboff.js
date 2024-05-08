@@ -56,7 +56,7 @@ self.addEventListener("fetch", async function(e) {
         let result; let i = (await fetch(e.request).then((r) => { if (r.ok) {result = r; return r;}}) || await fetch(response.url).then((r) => { if (r.ok) {result = r; return r;}}));
         if (!(result instanceof Response)) throw new Error("Offline"); else if (result instanceof Response) return result; else throw new Error("");
       } catch (err) { // Catch the system in offline mode, then retrieve from cachebar
-        if (!(response instanceof Response)) throw new Error("Offline"); else if (result instanceof Response) return response; else throw new Error("");
+        if (!(response instanceof Response)) return (fetch(e.request) || fetch(response.url)); else if (result instanceof Response) return response; else return (fetch(e.request) || fetch(response.url));
       }
 
 
