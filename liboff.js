@@ -53,7 +53,7 @@ self.addEventListener("fetch", async function(e) {
  caches.match(e.request, {"ignoreSearch": true}).then(async function(response) {
       // Caching 2.0 (Dynamic Cache Use)
       try { // Try and not use cachebar
-        let result; let i = (await fetch(e.request).then((r) => { if (r.ok) {result = r; return r;}}) || await fetch(response.url).then((r) => { if (r.ok) {result = r; return r;}})); if (result.ok) return result else throw new Error("");
+        let result; let i = (await fetch(e.request).then((r) => { if (r.ok) {result = r; return r;}}) || await fetch(response.url).then((r) => { if (r.ok) {result = r; return r;}})); if (result.ok) return result; else throw new Error("");
       } catch (err) { // Catch the system in offline mode, then retrieve from cachebar
         try {
           if (response.url.slice(0, ("https://621365.github.io/WebAppProj/").length) == "https://621365.github.io/WebAppProj/") return response; else return (fetch(e.request) || fetch(response.url));
