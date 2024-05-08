@@ -50,7 +50,7 @@ self.addEventListener("install", async function(e) {
 self.addEventListener("fetch", async function(e) {
   e.respondWith((async () => {
     // Search Cachebar
-    try { await caches.match(e.request, {"ignoreSearch": true}).then(async function(response) {
+ await caches.match(e.request, {"ignoreSearch": true}).then(async function(response) {
       // Caching 2.0 (Dynamic Cache Use)
       try { // Try and not use cachebar
         let result; let i = (await fetch(e.request).then((r) => { if (r.ok) {result = r; return r;}}) || await fetch(response.url).then((r) => { if (r.ok) {result = r; return r;}}));
@@ -62,11 +62,10 @@ self.addEventListener("fetch", async function(e) {
 
       // Simplified Version
       // return response || (fetch(e.request) || fetch(response.url));
-    })
-  } catch (e) {
-    console.log(e);
+    //console.log(e);
     // In the rare case that an async error occurs
     return (fetch(e.request) || fetch(response.url));
-  }
+  
+    })
   }));
 })
