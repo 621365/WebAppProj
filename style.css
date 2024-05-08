@@ -23,6 +23,7 @@ body {
 iframe {
     border: none;
     width: -webkit-fill-available;
+    margin-bottom: 0.25cm;
 }
 
 main, footer, nav {
@@ -67,6 +68,10 @@ header {
     width: 100%;
     color: black;
     background: repeating-linear-gradient(to bottom, rgba(255, 255, 255, 1) 0cm, rgba(255, 255, 255, 1) 0.15cm, rgba(225, 225, 225, 1) 0.15cm, rgba(230, 230, 230, 1) 0.2cm);
+}
+
+.media-container iframe {
+    height: 10cm;
 }
 
 a:focus {
