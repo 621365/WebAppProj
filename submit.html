@@ -100,8 +100,8 @@
         <textarea name="content" style="height: 10cm;" title="This is the text that is in the article." placeholder="Enter Information:" type="text" required></textarea><br>
         <br>
         
-        <label for="description">Article Description</label><br>
-        <input name="description" title="A summary of the article." placeholder="Enter Article Description:" type="text" required><br>
+        <label for="infomition">Article Description</label><br>
+        <input name="infomition" title="A summary of the article." placeholder="Enter Article Description:" type="text" required><br>
         <br>
         
         <label for="maker">Article Author</label><br>
@@ -308,7 +308,7 @@
         // Basic GET
         result.title = document.getElementsByName("title")[0].value;
         result.content = document.getElementsByName("content")[0].value.replace(/\n/g, "<br>").replace(/\t/g, "&emsp;");
-        result.meta.description = document.getElementsByName("description")[0].value;
+        result.meta.description = document.getElementsByName("infomition")[0].value;
         result.meta.author = document.getElementsByName("author")[0].value;
         result.meta.uuid = uuid(1, true);
         result.meta.tags = document.getElementsByName("tags")[0].value.split(",");
