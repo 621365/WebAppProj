@@ -331,6 +331,17 @@
             "type": [null]
           };
         }
+
+        // YouTube Embed Exception
+        if (document.getElementsByName("type")[0].value == "YTV") {
+          let srsR;
+          try {
+              srsR = new URL(document.getElementsByName("source")[0].value).search.slice(3, 14).toString();
+          } catch (e) {
+              srsR = document.getElementsByName("source")[0].value.slice(0, 11).toString();
+          }
+          result.meta.image.source = srsR;
+        }
     
         // Time GET
         result.meta.timestamp = {
