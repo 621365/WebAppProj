@@ -156,8 +156,8 @@
         <input name="tags" title="Used to help readers understand the topic of the article quickly before reading it." placeholder="Enter Tags, Seperated With a Comma (Used to Help Identify Article):" type="text">
         <br><br>
         
-        <label for="image" title="Click the checkbox if the article contains an image, video, or external link.">A visual, auditory, or interactive text medium does accompany this article: </label>
-        <input name="image" type="checkbox" title="Click the checkbox if the article contains an image, video, or external link." onclick="imageThing();" ontouchstart="imageThing();"onselect="imageThing();"><br><br>
+        <label for="medium" title="Click the checkbox if the article contains an image, video, or external link.">A visual, auditory, or interactive text medium does accompany this article: </label>
+        <input name="medium" type="checkbox" title="Click the checkbox if the article contains an image, video, or external link." onclick="imageThing();" ontouchstart="imageThing();"onselect="imageThing();"><br><br>
         
         <div id="imageReq">
           <label for="source" title="Where the medium is located as a URL">Medium Source (as URL):</label><br>
@@ -293,9 +293,9 @@
     <script>
       // Scripts Exclusive to this part of the site.
       function imageThing() {
-        if (document.getElementsByName("image")[0].checked) { document.getElementById("imageReq").style.display = "block"; document.getElementById("imageReq").style.height = "0cm"; }
-        let glc = setTimeout(() => { document.getElementById("imageReq").style.height = ((document.getElementsByName("image")[0].checked) ? "6cm" : "0cm"); clearTimeout(glc); }, 1);
-        let img = setTimeout(() => { document.getElementById("imageReq").style.display = (document.getElementsByName("image")[0].checked) ? "block" : "none"; clearTimeout(img); }, ((noMotion) ? 1 : 250));
+        if (document.getElementsByName("medium")[0].checked) { document.getElementById("imageReq").style.display = "block"; document.getElementById("imageReq").style.height = "0cm"; }
+        let glc = setTimeout(() => { document.getElementById("imageReq").style.height = ((document.getElementsByName("medium")[0].checked) ? "6cm" : "0cm"); clearTimeout(glc); }, 1);
+        let img = setTimeout(() => { document.getElementById("imageReq").style.display = (document.getElementsByName("medium")[0].checked) ? "block" : "none"; clearTimeout(img); }, ((noMotion) ? 1 : 250));
       }
 
       // porCorrero determines if sent through mail or not
