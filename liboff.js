@@ -56,12 +56,12 @@ self.addEventListener("fetch", async function(e) {
         let result; let i = await (await fetch(e.request).then((r) => { if (r.ok) {result = r; return r;}}) || await fetch(response.url).then((r) => { if (r.ok) {result = r; return r;}})); if (result.ok) return result; else throw new Error("");
       } catch (err) { // Catch the system in offline mode, then retrieve from cachebar
         try {
-          if (response.url.slice(0, ("https://621365.github.io/WebAppProj/").length) == "https://621365.github.io/WebAppProj/") return response; else return (fetch(e.request) || fetch(response.url));
+          if (response.url.slice(0, ("https://621365.github.io/WebAppProj/").length) == "https://621365.github.io/WebAppProj/") return response; else return (fetch(e.request));
         } catch (e) {
           // fix for offline?
           return (fetch(e.request) || fetch(response.url));
         }
-        if (!(response instanceof Response)) return (fetch(e.request) || fetch(response.url)); else if (result instanceof Response) return response; else return (fetch(e.request) || fetch(response.url));
+        if (!(response instanceof Response)) return (fetch(e.request) || fetch(response.url)); else if (result instanceof Response) return response; else return (fetch(e.request));
       }
       
       
