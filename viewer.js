@@ -44,8 +44,9 @@ if (error.real) {
       fancyDate[l] = muranize(fancyDate[l]);  
     }
     fancyDate = fancyDate.toString().replaceAll(",", "; ").replaceAll(":", ": ");
-    
-    document.getElementById("meta").innerHTML = "Error: " + ((data.meta.error) ? "Yes" : "None") + ", UUID: " + data.meta.uuid + ", Tags: #" + data.meta.tags.toString().replaceAll(",", " #") + ", Timestamp: " + fancyDate;
+
+    // Metadata placement
+    document.getElementById("meta").innerHTML = ((data.meta.error) ? "Error Encountered, " : "") + "UUID: " + data.meta.uuid + ", Tags: #" + data.meta.tags.toString().replaceAll(",", " #") + ", Timestamp: <time class=\"dateline\">" + fancyDate + "</time>";
   } else {
     // Duplicate Handler
       document.getElementById("title").innerHTML = "Duplicate Article Titles";
