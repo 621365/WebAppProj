@@ -48,9 +48,9 @@ self.addEventListener("install", async function(e) {
 // Use the Cachebar
 
 self.addEventListener("fetch", async function(e) {
-  e.respondWith((async () => {
+  e.respondWith(
     // Search Cachebar
- await caches.match(e.request, {"ignoreSearch": true}).then(async function(response) {
+ caches.match(e.request, {"ignoreSearch": true}).then(async function(response) {
       // Caching 2.0 (Dynamic Cache Use)
       try { // Try and not use cachebar
         let result; let i = (await fetch(e.request).then((r) => { if (r.ok) {result = r; return r;}}) || await fetch(response.url).then((r) => { if (r.ok) {result = r; return r;}}));
@@ -66,6 +66,6 @@ self.addEventListener("fetch", async function(e) {
     // In the rare case that an async error occurs
     return (fetch(e.request) || fetch(response.url));
   
-    })
-  }));
+    }))
+  });
 })
