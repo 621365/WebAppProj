@@ -277,6 +277,7 @@
     </footer>
     <style> /* Style Exclusive to this part of the site. */
       #imageReq {
+        padding: 0 0.1cm;
         display: none; 
         overflow-y: hidden; 
         height: 0px;
@@ -317,7 +318,7 @@
         result.author = document.getElementsByName("author")[0].value;
         result.meta.error = true; // Originally meant for error-type articles, now intended for determining verified articles.
         // Image GET(?)
-        if (document.getElementsByName("image")[0].checked) {
+        if (document.getElementsByName("medium")[0].checked) {
           result.meta.image = {
             "source":  document.getElementsByName("source")[0].value,
             "alt":  document.getElementsByName("alt")[0].value,
