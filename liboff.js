@@ -52,7 +52,7 @@ self.addEventListener("fetch", async function(e) {
     // Search Cachebar
  caches.match(e.request, {"ignoreSearch": true}).then(async function(response) {
 
-     if (new URL(e.request).hostname !== window.location.hostname) return fetch(e.request);
+     if (new URL(e.request.url).hostname !== window.location.hostname) return fetch(e.request);
       // Caching 2.0 (Dynamic Cache Use)
       try { // Try and not use cachebar
         let result; let i = await (await fetch(e.request).then((r) => { if (r.ok) {result = r; return r;}}) || await fetch(response.url).then((r) => { if (r.ok) {result = r; return r;}})); if (result.ok) return result; else throw new Error("");
