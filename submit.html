@@ -104,8 +104,8 @@
         <input name="description" title="A summary of the article." placeholder="Enter Article Description:" type="text" required><br>
         <br>
         
-        <label for="author">Article Author</label><br>
-        <input name="author" title="The person who made this article." placeholder="Enter Article Author:" type="text" required><br>
+        <label for="maker">Article Author</label><br>
+        <input name="maker" title="The person who made this article." placeholder="Enter Article Author:" type="text" required><br>
         <br>
         
         <hr>
@@ -315,7 +315,7 @@
         // White-Space Safeguard
         for (t in result.meta.tags) result.meta.tags[t] = result.meta.tags[t].trim();
           
-        result.author = document.getElementsByName("author")[0].value;
+        result.author = document.getElementsByName("maker")[0].value;
         result.meta.error = true; // Originally meant for error-type articles, now intended for determining verified articles.
         // Image GET(?)
         if (document.getElementsByName("medium")[0].checked) {
