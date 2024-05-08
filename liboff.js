@@ -53,7 +53,7 @@ self.addEventListener("fetch", async function(e) {
  caches.match(e.request, {"ignoreSearch": true}).then(async function(response) {
 
      // To Non-Main Hosters: Change Hostname to the local host name
-     if (new URL(e.request.url).hostname !== new URL(self.location.host).hostname) return fetch(e.request);
+     if (new URL(e.request.url).hostname !== self.location.hostname) return fetch(e.request);
       // Caching 2.0 (Dynamic Cache Use)
       try { // Try and not use cachebar
         let result; let i = await (await fetch(e.request).then((r) => { if (r.ok) {result = r; return r;}}) || await fetch(response.url).then((r) => { if (r.ok) {result = r; return r;}})); if (result.ok) return result; else throw new Error("");
