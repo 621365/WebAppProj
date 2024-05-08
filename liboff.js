@@ -88,7 +88,7 @@ self.addEventListener("fetch", async function(e) {
       // return response || (fetch(e.request) || fetch(response.url));
     //console.log(e);
     // In the rare case that an async error occurs
-    return (fetch(e.request) || fetch(response.url));
+    return (fetch(e.request));
   
     }))
   });
