@@ -50,21 +50,23 @@ self.addEventListener("install", async function(e) {
 self.addEventListener("fetch", async function(e) {
   e.respondWith((async () => {
     // Search Cachebar
-    await caches.match(e.request, {"ignoreSearch": true}).then(async function(response) {
+    try { await caches.match(e.request, {"ignoreSearch": true}).then(async function(response) {
       // Caching 2.0 (Dynamic Cache Use)
       try { // Try and not use cachebar
         let result; let i = (await fetch(e.request).then((r) => { if (r.ok) {result = r; return r;}}) || await fetch(response.url).then((r) => { if (r.ok) {result = r; return r;}}));
-        if (result == undefined) throw new Error("Offline");
-        return result;
+        if (!(result instanceof Promise)) throw new Error("Offline"); else return result;
       } catch (err) { // Catch the system in offline mode, then retrieve from cachebar
-        return response;
+        if (!(response instanceof Promise)) throw new Error("Offline"); else return response;
       }
 
 
       // Simplified Version
       // return response || (fetch(e.request) || fetch(response.url));
     })
+  } catch (e) {
+    console.log(e);
     // In the rare case that an async error occurs
     return response || (fetch(e.request) || fetch(response.url));
+  }
   }));
 })
