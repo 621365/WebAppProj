@@ -9,4 +9,4 @@ Besides those two issue, the site is complete "as-is." It features a CSS-media d
 
 ## Setting Up
 
-The PWA Functionality requires that the hosted domain use HTTPS or that the server is local. The offline capability requires that you change the domain name in the code to your curent domain, as it is set up to only cache websites in its own domain.
+The PWA Functionality requires that the hosted domain use HTTPS or that the server is local. 
