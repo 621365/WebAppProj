@@ -70,7 +70,7 @@ self.addEventListener("fetch", async function(e) {
                 if (result.ok) return result; 
                 else {
                     try {
-                        if (response.url.slice(0, ("https://621365.github.io/WebAppProj/").length) == "https://621365.github.io/WebAppProj/") return response; else return (fetch(e.request) || fetch(response.url));
+                        if (response == undefined || !(response instanceof Response)) throw new Error(""); if (response.url.slice(0, ("https://621365.github.io/WebAppProj/").length) == "https://621365.github.io/WebAppProj/") return response; else return (fetch(e.request) || fetch(response.url));
                       } catch (e) {
                         // fix for offline?
                         return (fetch(e.request) || fetch(response.url));
