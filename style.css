@@ -102,6 +102,14 @@ input, textarea, button {
     outline-offset: 0.1cm;
 }
 
+div {
+    font-size: 0.4cm;
+}
+
+footer div {
+    font-size: 0.33cm;
+}
+
 textarea {
     transition: all 0.25s ease-in, height 0s;
 }
