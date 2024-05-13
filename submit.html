@@ -309,7 +309,7 @@
         result.title = document.getElementsByName("title")[0].value;
         result.content = document.getElementsByName("content")[0].value.replace(/\n/g, "<br>").replace(/\t/g, "&emsp;");
         result.meta.description = document.getElementsByName("infomition")[0].value;
-        result.meta.author = document.getElementsByName("author")[0].value;
+        result.meta.author = document.getElementsByName("maker")[0].value;
         result.meta.uuid = uuid(1, true);
         result.meta.tags = document.getElementsByName("tags")[0].value.split(",");
         // White-Space Safeguard
