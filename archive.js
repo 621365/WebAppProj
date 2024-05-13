@@ -2,17 +2,17 @@
 // The test articles show the basic structure of the article JSON, with specific information about media structure found at libret.js
 var archive = [
   {
-    "title": "Test Article",
-    "content": "This is a test article. This holds the template for which all articles will be made.",
+    "title": "Sunset Video",
+    "content": "This is a sample sunset video, which was used in the past to test the video capabilities of this site.",
     "meta": {
       "error": false,
-      "description": "This is a test article.",
+      "description": "Video of a sunset in 2160p",
       "author": "Gabriel Lazaro",
       "uuid": "5FC9FE74-2A7A-2810-20BA-3FCC270F68F3",
-      "tags": ["Test", "Placeholder"],
+      "tags": ["Sun", "Sunset","Mountains","Beautiful","View","Sea"],
       "image": {
         "source": "https://assets.allsamplefiles.com/mp4/ns/60s/sample-file-4k-uhd.mp4",
-        "alt": "Video from the front of a car facing forward of an automobile driving down a curved highway through a mountain range.",
+        "alt": "Subset in the horizon as large mountains submerged in a sea are in front of the sun.",
         "type": ["VID", "LOOP"]
       },
       "timestamp": {
@@ -27,14 +27,14 @@ var archive = [
     }
   },
     {
-    "title": "Test Article",
-    "content": "This is a test article. This holds the template for which all articles will be made.",
+    "title": "Car Image",
+    "content": "This is an image of a car from Wikipedia which was used to test images in articles.",
     "meta": {
       "error": false,
-      "description": "This is a test article.",
+      "description": "This is an article which contains a photo of a white car.",
       "author": "Gabriel Lazaro",
       "uuid": "5FC9FE74-2A7A-2210-20BA-3FCC270F68F3",
-      "tags": ["Test", "Placeholder"],
+      "tags": ["Image", "Car"],
       "image": {
         "source": "https://upload.wikimedia.org/wikipedia/commons/a/a5/2020_Audi_Q3_S_Line_35_TFSi_MHEV_S-A_1.5_Front_%281%29.jpg",
         "alt": "Random car that is white",
@@ -52,14 +52,14 @@ var archive = [
     }
   },
   {
-    "title": "TODOLIST",
-    "content": "Fix article search algo (in closeTo), add author + date to article and author to home + hot page. Fix article formatting. Make forms work",
+    "title": "Lists",
+    "content": "This is a list of selling-features for this site, which include: Offline Mode, PWA Installation, Cool Alert System, an accessibility framework, and (somewhat) slow loading time.",
     "meta": {
       "error": false,
-      "description": "This is a test article.",
+      "description": "This is a list of things the editor wanted to talk about.",
       "author": "Gabriel Lazaro",
       "uuid": "51CEFE74-2A7A-2210-20BA-3FCC270F68F3",
-      "tags": ["Test", "Placeholder"],
+      "tags": ["Comments", "Opinion", "Blog"],
       "image": {
         "source": null,
         "alt": "No Image Shown",
