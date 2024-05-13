@@ -1,11 +1,11 @@
 # Gabriel-Chyler News
 
-This is the repository for the Web Project Gabriel-Chyler News (abbreviated as GCN). This site contains an advanced search ability, an archive viewer, media articles, and the ability to "submit" articles. As this site has no back-end, the "database" is a JavaScript file, and "submitting" articles is simply emailing the articles to the editors so that they can add the article to the JavaScript archive. As or right now, the site is finished except for two minor problems listed below:
+This is the repository for the Web Project Gabriel-Chyler News (abbreviated as GCN). This site contains an advanced search ability, an archive viewer, media articles, and the ability to "submit" articles. As this site has no back-end, the "database" is a JavaScript file, and "submitting" articles is simply emailing the articles to the editors to add them to the JavaScript archive. As of right now, the site is of release, and here are some of its prominent features:
 
-- Information page was mistaken as an attack by Chrome.
-- Article Viewer may be too tiny
+- Offline Mode
+- Installable as a Progressive Website Application
 
-Besides those two issue, the site is complete "as-is." It features a CSS-media dark theme, a basic search page with basic filters, and an interactive create article form. We hope you enjoy.
+Besides those two issue, the site is complete "as-is." It features a CSS-media dark theme, a basic search page with basic filters, and an interactive create article form. We hope you enjoy it.
 
 ## Setting Up
 
